@@ -142,13 +142,13 @@ int main(void)
   	  for(;;) {
 
 
-  			/*while(AS2_RecvChar(&X)!=ERR_OK){};
-  			// Comprobamos si es una V de velReferencia.
-  				if(X == 118)   AS2_RecvChar(&velReferencia);
-  						//Comprobamos la constante k
-  				if(X == 107){
-  					AS2_RecvChar(&k);
-  				}*/
+			/*while(AS2_RecvChar(&X)!=ERR_OK){};
+			// Comprobamos si es una V de velReferencia.
+				if(X == 118)   AS2_RecvChar(&velReferencia);
+						//Comprobamos la constante k
+				if(X == 107){
+					AS2_RecvChar(&k);
+				}*/
 
   		AS2_RecvChar(&velReferencia); //Introducimos la velReferencia por puerto serie
 

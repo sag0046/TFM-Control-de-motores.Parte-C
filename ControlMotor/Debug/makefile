@@ -53,7 +53,7 @@ all: ControlMotor.elf secondary-outputs
 ControlMotor.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/Sandra/workspace2.kds/ControlMotor/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/Sandra/workspace2.kds/ControlMotor/Project_Settings/Linker_Files" -Wl,-Map,"ControlMotor.map" -nanolibc -o "ControlMotor.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Project_Settings/Linker_Files" -Wl,-Map,"ControlMotor.map" -nanolibc -o "ControlMotor.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

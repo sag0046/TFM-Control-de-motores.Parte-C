@@ -121,7 +121,7 @@ void AS2_OnError(void)
 void AS2_OnRxChar(void)
 {
 	/* Write your code here ... */
-		/*if(AS2_RecvChar(&X) == ERR_OK){
+		if(AS2_RecvChar(&X) == ERR_OK){
 			// Comprobamos si es una V de velReferencia.
 			if(X == 118){
 				while(AS2_RecvChar(&velReferencia) != ERR_OK){};
@@ -130,7 +130,7 @@ void AS2_OnRxChar(void)
 				while(AS2_RecvChar(&k) != ERR_OK){};
 				}
 			  }
-			} */
+			}
 
 			//velReferencia = '0';
 	/*		AS2_RecvChar(&X);
