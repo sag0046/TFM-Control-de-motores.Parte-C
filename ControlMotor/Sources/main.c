@@ -19,11 +19,11 @@
 ** @brief
 **         Main module.
 **         This module contains user's application code.
-*/         
+*/
 /*!
 **  @addtogroup main_module main module documentation
 **  @{
-*/         
+*/
 /* MODULE main */
 
 
@@ -148,6 +148,19 @@ int main(void)
 
 
 
+		//COMANDOS PARA LA CONFIGURACION DEL MOTOR
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x36)!=ERR_OK){}; //COMANDO REGULADOR "disable regulator"
+
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x34)!=ERR_OK){}; //COMANDO MODO "set mode"
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //MANDAR MODO "0 (full reverse)  128 (stop)   255 (full forward)"
+		//while(AS1_SendChar(0x01)!=ERR_OK){}; //MANDAR MODO "-128(full reverse)0(stop) 127 (full forward)."
+
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x31)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1"
+		while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
+		//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
 
     }
 
@@ -166,21 +179,6 @@ int main(void)
       	if (llamada){
 
          		llamada = FALSE;
-
-
-        		//COMANDOS PARA LA CONFIGURACION DEL MOTOR
-        		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-        		while(AS1_SendChar(0x36)!=ERR_OK){}; //COMANDO REGULADOR "disable regulator"
-
-        		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-        		while(AS1_SendChar(0x34)!=ERR_OK){}; //COMANDO MODO "set mode"
-        		while(AS1_SendChar(0x00)!=ERR_OK){}; //MANDAR MODO "0 (full reverse)  128 (stop)   255 (full forward)"
-        		//while(AS1_SendChar(0x01)!=ERR_OK){}; //MANDAR MODO "-128(full reverse)0(stop) 127 (full forward)."
-
-        		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-        		while(AS1_SendChar(0x31)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1"
-        		while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
-        		//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
 
       		//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
       		encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
