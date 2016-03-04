@@ -82,26 +82,6 @@ void TI1_OnInterrupt(void)
 
 /*
 ** ===================================================================
-**     Event       :  AS2_OnError (module Events)
-**
-**     Component   :  AS2 [AsynchroSerial]
-**     Description :
-**         This event is called when a channel error (not the error
-**         returned by a given method) occurs. The errors can be read
-**         using <GetError> method.
-**         The event is available only when the <Interrupt
-**         service/event> property is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void AS2_OnError(void)
-{
-  /* Write your code here ... */
-}
-
-/*
-** ===================================================================
 **     Event       :  AS2_OnRxChar (module Events)
 **
 **     Component   :  AS2 [AsynchroSerial]
@@ -118,46 +98,107 @@ void AS2_OnError(void)
 //AS2_TComData velReferencia; //velocidad deseada
 //AS2_TComData k; // K=cte , constante
 //AS2_TComData X;
-void AS2_OnRxChar(void)
+/*
+** ===================================================================
+**     Event       :  AS2_OnFullRxBuf (module Events)
+**
+**     Component   :  AS2 [AsynchroSerial]
+**     Description :
+**         This event is called when the input buffer is full;
+**         i.e. after reception of the last character 
+**         that was successfully placed into input buffer.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void AS2_OnFullRxBuf(void)
 {
-	/* Write your code here ... */
-		if(AS2_RecvChar(&X) == ERR_OK){
-			// Comprobamos si es una V de velReferencia.
-			if(X == 118){
-				while(AS2_RecvChar(&velReferencia) != ERR_OK){};
-			//Comprobamos la constante k
-			if(X == 107){
-				while(AS2_RecvChar(&k) != ERR_OK){};
-				}
-			  }
-			}
-
-			//velReferencia = '0';
-	/*		AS2_RecvChar(&X);
-			// Comprobamos si es una V de velReferencia.
-				if(X == 118)   AS2_RecvChar(&velReferencia);
-						//Comprobamos la constante k
-				if(X == 107){
-					AS2_RecvChar(&k);
+  /* Write your code here ... */
 
 
-			}*/
 }
 
 /*
 ** ===================================================================
-**     Event       :  AS2_OnTxChar (module Events)
+**     Event       :  AS1_OnError (module Events)
 **
-**     Component   :  AS2 [AsynchroSerial]
+**     Component   :  AS1 [AsynchroSerial]
+**     Description :
+**         This event is called when a channel error (not the error
+**         returned by a given method) occurs. The errors can be read
+**         using <GetError> method.
+**         The event is available only when the <Interrupt
+**         service/event> property is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void AS1_OnError(void)
+{
+  /* Write your code here ... */
+}
+
+/*
+** ===================================================================
+**     Event       :  AS1_OnRxChar (module Events)
+**
+**     Component   :  AS1 [AsynchroSerial]
+**     Description :
+**         This event is called after a correct character is received.
+**         The event is available only when the <Interrupt
+**         service/event> property is enabled and either the <Receiver>
+**         property is enabled or the <SCI output mode> property (if
+**         supported) is set to Single-wire mode.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void AS1_OnRxChar(void)
+{
+  /* Write your code here ... */
+}
+
+/*
+** ===================================================================
+**     Event       :  AS1_OnTxChar (module Events)
+**
+**     Component   :  AS1 [AsynchroSerial]
 **     Description :
 **         This event is called after a character is transmitted.
 **     Parameters  : None
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AS2_OnTxChar(void)
+void AS1_OnTxChar(void)
 {
   /* Write your code here ... */
+}
+
+/*
+** ===================================================================
+**     Event       :  AS1_OnFullRxBuf (module Events)
+**
+**     Component   :  AS1 [AsynchroSerial]
+**     Description :
+**         This event is called when the input buffer is full;
+**         i.e. after reception of the last character 
+**         that was successfully placed into input buffer.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+extern struct {
+byte Comando;
+byte Valor;
+} datos;
+
+void AS1_OnFullRxBuf(void)
+{
+	word Received;
+
+	AS1_RecvBlock((byte*)&datos, sizeof(datos), &Received);
 }
 
 /* END Events */

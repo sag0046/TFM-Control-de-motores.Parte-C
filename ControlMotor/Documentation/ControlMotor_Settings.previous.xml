@@ -220,19 +220,9 @@
     <Compiler v="GNU C Compiler" />
     <CompilerProperties>
       <Compiler v="GNU C Compiler" />
-      <enumgroup name="Unhandled vectors" v="One handler for all">
-        <Unhandled_int_code>
-          <StrgList><![CDATA[/* This code can be changed using the CPU component property "Build Options / Unhandled int code" */
-PE_DEBUGHALT();
-]]></StrgList>
-        </Unhandled_int_code>
-      </enumgroup>
       <boolgroup name="Generate debugger files" v="yes">
         <Generate_mem_file v="yes" />
       </boolgroup>
-      <group name="Startup">
-        <Add_startup_file v="yes" />
-      </group>
       <boolgroup name="Generate linker file" v="yes">
         <Stack_size v="1024" />
         <Heap_size v="0" />
@@ -2857,7 +2847,7 @@ PE_DEBUGHALT();
         <Interrupt_TxD_priority v="medium priority" />
         <Interrupt_Error v="INT_UART0_ERR" />
         <Interrupt_Error_priority v="medium priority" />
-        <Input_buffer_size v="0" />
+        <Input_buffer_size v="2" />
         <Output_buffer_size v="0" />
         <group name="Handshake">
           <boolgroup name="CTS" v="Disabled" />
@@ -3018,9 +3008,9 @@ PE_DEBUGHALT();
       <DisableEvent v="don&amp;apos;t generate code" />
       <RecvChar v="generate code" />
       <SendChar v="generate code" />
-      <RecvBlock v="don&amp;apos;t generate code" />
+      <RecvBlock v="generate code" />
       <SendBlock v="don&amp;apos;t generate code" />
-      <ClearRxBuf v="don&amp;apos;t generate code" />
+      <ClearRxBuf v="generate code" />
       <ClearTxBuf v="don&amp;apos;t generate code" />
       <CharsInRxBuf v="don&amp;apos;t generate code" />
       <GetCharsInRxBuf v="generate code" />
@@ -3054,7 +3044,10 @@ PE_DEBUGHALT();
         <Event_procedure_name v="AS2_OnTxChar" />
         <Priority v="same as interrupt" />
       </event>
-      <event name="OnFullRxBuf" v="don&amp;apos;t generate code" />
+      <event name="OnFullRxBuf" v="generate code">
+        <Event_procedure_name v="AS2_OnFullRxBuf" />
+        <Priority v="same as interrupt" />
+      </event>
       <event name="OnFreeTxBuf" v="don&amp;apos;t generate code" />
       <event name="OnBreak" v="don&amp;apos;t generate code" />
       <event name="OnTxComplete" v="don&amp;apos;t generate code" />
@@ -3289,7 +3282,7 @@ PE_DEBUGHALT();
       <PutVal v="generate code" />
       <ClrVal v="generate code" />
       <SetVal v="generate code" />
-      <NegVal v="don&amp;apos;t generate code" />
+      <NegVal v="generate code" />
       <ConnectPin v="don&amp;apos;t generate code" />
       <GetRawVal v="don&amp;apos;t generate code" />
     </Methods>
@@ -3301,7 +3294,7 @@ PE_DEBUGHALT();
     <Enabled v="Y" />
     <Properties>
       <Component_name v="LED_AZUL" />
-      <Pin_for_I_O v="PTB22/SPI2_SOUT/FB_AD29/CMP2_OUT" />
+      <Pin_for_I_O v="PTB21/SPI2_SCK/FB_AD30/CMP1_OUT" />
       <Direction v="Output" />
       <group name="Initialization">
         <Init__direction v="Output" />
@@ -3321,7 +3314,7 @@ PE_DEBUGHALT();
       <PutVal v="generate code" />
       <ClrVal v="generate code" />
       <SetVal v="generate code" />
-      <NegVal v="don&amp;apos;t generate code" />
+      <NegVal v="generate code" />
       <ConnectPin v="don&amp;apos;t generate code" />
       <GetRawVal v="don&amp;apos;t generate code" />
     </Methods>
@@ -3353,7 +3346,7 @@ PE_DEBUGHALT();
       <PutVal v="generate code" />
       <ClrVal v="generate code" />
       <SetVal v="generate code" />
-      <NegVal v="don&amp;apos;t generate code" />
+      <NegVal v="generate code" />
       <ConnectPin v="don&amp;apos;t generate code" />
       <GetRawVal v="don&amp;apos;t generate code" />
     </Methods>

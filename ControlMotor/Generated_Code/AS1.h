@@ -6,7 +6,7 @@
 **     Component   : AsynchroSerial
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-02-20, 12:22, # CodeGen: 1
+**     Date/Time   : 2016-03-04, 18:04, # CodeGen: 9
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -22,7 +22,7 @@
 **             Stop bits               : 1
 **             Parity                  : none
 **             Breaks                  : Disabled
-**             Input buffer size       : 0
+**             Input buffer size       : 2
 **             Output buffer size      : 0
 **
 **         Registers
@@ -30,7 +30,13 @@
 **             Output buffer           : UART4_D   [0x400EA007]
 **             Control register        : UART4_C1  [0x400EA002]
 **
+**         Input interrupt
+**             Vector name             : INT_UART4_RX_TX
+**             Priority                : 112
 **
+**         Output interrupt
+**             Vector name             : INT_UART4_RX_TX
+**             Priority                : 112
 **
 **         Used pins:
 **         ----------------------------------------------------------
@@ -45,6 +51,8 @@
 **     Contents    :
 **         RecvChar        - byte AS1_RecvChar(AS1_TComData *Chr);
 **         SendChar        - byte AS1_SendChar(AS1_TComData Chr);
+**         RecvBlock       - byte AS1_RecvBlock(AS1_TComData *Ptr, word Size, word *Rcv);
+**         ClearRxBuf      - byte AS1_ClearRxBuf(void);
 **         GetCharsInRxBuf - word AS1_GetCharsInRxBuf(void);
 **         GetCharsInTxBuf - word AS1_GetCharsInTxBuf(void);
 **
@@ -132,6 +140,8 @@ extern "C" {
   typedef byte AS1_TComData;           /* User type for communication. Size of this type depends on the communication data witdh */
 #endif
 
+#define AS1_INP_BUF_SIZE  0x02U        /* Length of the RX buffer */
+
 /*
 ** ===================================================================
 **     Method      :  AS1_RecvChar (component AsynchroSerial)
@@ -192,6 +202,57 @@ byte AS1_SendChar(AS1_TComData Chr);
 
 /*
 ** ===================================================================
+**     Method      :  AS1_RecvBlock (component AsynchroSerial)
+**     Description :
+**         If any data is received, this method returns the block of
+**         the data and its length (and incidental error), otherwise it
+**         returns an error code (it does not wait for data).
+**         This method is available only if non-zero length of the
+**         input buffer is defined and the receiver property is enabled.
+**         If less than requested number of characters is received only
+**         the available data is copied from the receive buffer to the
+**         user specified destination. The value ERR_EXEMPTY is
+**         returned and the value of variable pointed by the Rcv
+**         parameter is set to the number of received characters.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**       * Ptr             - Pointer to the block of received data
+**         Size            - Size of the block
+**       * Rcv             - Pointer to real number of the received data
+**     Returns     :
+**         ---             - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+**                           ERR_RXEMPTY - The receive buffer didn't
+**                           contain the requested number of data. Only
+**                           available data has been returned.
+**                           ERR_COMMON - common error occurred (the
+**                           GetError method can be used for error
+**                           specification)
+** ===================================================================
+*/
+byte AS1_RecvBlock(AS1_TComData *Ptr,word Size,word *Rcv);
+
+/*
+** ===================================================================
+**     Method      :  AS1_ClearRxBuf (component AsynchroSerial)
+**     Description :
+**         Clears the receive buffer.
+**         This method is available only if non-zero length of the
+**         input buffer is defined and the receiver property is enabled.
+**     Parameters  : None
+**     Returns     :
+**         ---             - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+** ===================================================================
+*/
+byte AS1_ClearRxBuf(void);
+
+/*
+** ===================================================================
 **     Method      :  AS1_GetCharsInRxBuf (component AsynchroSerial)
 **     Description :
 **         Returns the number of characters in the input buffer. This
@@ -231,6 +292,42 @@ word AS1_GetCharsInTxBuf(void);
 ** ===================================================================
 */
 void AS1_Init(void);
+
+/*
+** ===================================================================
+**     Method      :  AS1_ASerialLdd1_OnBlockReceived (component AsynchroSerial)
+**
+**     Description :
+**         This event is called when the requested number of data is 
+**         moved to the input buffer.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+void ASerialLdd1_OnBlockReceived(LDD_TUserData *UserDataPtr);
+
+/*
+** ===================================================================
+**     Method      :  AS1_ASerialLdd1_OnBlockSent (component AsynchroSerial)
+**
+**     Description :
+**         This event is called after the last character from the output 
+**         buffer is moved to the transmitter.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+void ASerialLdd1_OnBlockSent(LDD_TUserData *UserDataPtr);
+
+/*
+** ===================================================================
+**     Method      :  AS1_ASerialLdd1_OnError (component AsynchroSerial)
+**
+**     Description :
+**         This event is called when a channel error (not the error 
+**         returned by a given method) occurs.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+void ASerialLdd1_OnError(LDD_TUserData *UserDataPtr);
 
 /*
 ** ===================================================================

@@ -66,10 +66,14 @@ char msg_velCalculada[] = "Velocidad calculada";
 char msg_velReferencia[] = "Velocidad deseada";
 char msg_k [] = "Constante K:";
 char messagek[] = "Introduce una cte K:";
+
 //extern AS2_TComData velReferencia; //velocidad deseada
+//extern AS2_TComData k; // K=cte , constante
+//extern AS2_TComData X;
+
 AS2_TComData velReferencia; //velocidad deseada
-extern AS2_TComData k; // K=cte , constante
-extern AS2_TComData X;
+AS2_TComData k=0.01; // K=cte , constante
+AS2_TComData X;
 
 
 
@@ -106,7 +110,11 @@ static float obtenerEncoder(){
 	// Devolvemos el resultado
 	return result;
 }
-
+ //ESTRUCTURA DATOS
+struct {
+byte Comando;
+byte Valor;
+} datos;
 
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
@@ -137,34 +145,36 @@ int main(void)
     velReferencia = '0';							//Lo inicializa a NULL
     for(i = 0; i < sizeof(message); i++) {
   	while(AS2_SendChar((byte)message[i]) != ERR_OK) {}
+
+
+
+		//COMANDOS PARA LA CONFIGURACION DEL MOTOR
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x36)!=ERR_OK){}; //COMANDO REGULADOR "disable regulator"
+
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x34)!=ERR_OK){}; //COMANDO MODO "set mode"
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //MANDAR MODO "0 (full reverse)  128 (stop)   255 (full forward)"
+		//while(AS1_SendChar(0x01)!=ERR_OK){}; //MANDAR MODO "-128(full reverse)0(stop) 127 (full forward)."
+
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x31)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1"
+		while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
+		//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
+
     }
 
   	  for(;;) {
-
-
-			/*while(AS2_RecvChar(&X)!=ERR_OK){};
 			// Comprobamos si es una V de velReferencia.
-				if(X == 118)   AS2_RecvChar(&velReferencia);
+				if(datos.Comando == 118)   velReferencia = datos.Valor;
 						//Comprobamos la constante k
-				if(X == 107){
-					AS2_RecvChar(&k);
-				}*/
+				if(datos.Valor == 107){
+					k = datos.Valor;
+				}
 
-  		AS2_RecvChar(&velReferencia); //Introducimos la velReferencia por puerto serie
+  		//AS2_RecvChar(&velReferencia); //Introducimos la velReferencia por puerto serie
 
-  		//COMANDOS PARA LA CONFIGURACION DEL MOTOR
-  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-  		while(AS1_SendChar(0x36)!=ERR_OK){}; //COMANDO REGULADOR "disable regulator"
 
-  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-  		while(AS1_SendChar(0x34)!=ERR_OK){}; //COMANDO MODO "set mode"
-  		while(AS1_SendChar(0x00)!=ERR_OK){}; //MANDAR MODO "0 (full reverse)  128 (stop)   255 (full forward)"
-  		//while(AS1_SendChar(0x01)!=ERR_OK){}; //MANDAR MODO "-128(full reverse)0(stop) 127 (full forward)."
-
-  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-  		while(AS1_SendChar(0x31)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1"
-  		while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
-  		//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
 
       	if (llamada){
 
@@ -186,6 +196,7 @@ int main(void)
       		//velCalculada = velCalculadaAnt + error (P=Proporcional y PI = P+Integral)
       		velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
       		//velCalculada = velCalculadaAnt + k*error;
+      		//velCalculada = velCalculadaAnt + error;
 
   				//la MAX velocidad que puede alcanzar velCalculada es 255
   			if(velCalculada>255) velCalculada=255;
@@ -193,8 +204,6 @@ int main(void)
   			else velCalculada = velCalculada;
 
   			velCalculadaAnt=velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
-  			 while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-  			 while(AS1_SendChar(0x00)!=ERR_OK){};
 
 
   			 //IMPRIMIR LAS VARIABLES velEncoder, velReferencia, error, velCalculada

@@ -6,7 +6,7 @@
 **     Component   : AsynchroSerial
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-02-20, 12:29, # CodeGen: 2
+**     Date/Time   : 2016-03-04, 18:04, # CodeGen: 9
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -30,13 +30,7 @@
 **             Output buffer           : UART0_D   [0x4006A007]
 **             Control register        : UART0_C1  [0x4006A002]
 **
-**         Input interrupt
-**             Vector name             : INT_UART0_RX_TX
-**             Priority                : 112
 **
-**         Output interrupt
-**             Vector name             : INT_UART0_RX_TX
-**             Priority                : 112
 **
 **         Used pins:
 **         ----------------------------------------------------------
@@ -104,7 +98,6 @@
 /* MODULE AS2. */
 
 #include "AS2.h"
-#include "Events.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -121,7 +114,6 @@ extern "C" {
 #define NOISE_ERR        0x80U         /* Noise error flag bit      */
 #define IDLE_ERR         0x0100U       /* Idle character flag bit   */
 #define BREAK_ERR        0x0200U       /* Break detect              */
-#define COMMON_ERR       0x0800U       /* Common error of RX       */
 
 LDD_TDeviceData *ASerialLdd2_DeviceDataPtr; /* Device data pointer */
 static word SerFlag;                   /* Flags for serial communication */
@@ -130,7 +122,7 @@ static word SerFlag;                   /* Flags for serial communication */
                                        /*       2 - Parity error */
                                        /*       3 - Char in RX buffer */
                                        /*       4 - Full TX buffer */
-                                       /*       5 - Running int from TX */
+                                       /*       5 - Unused */
                                        /*       6 - Full RX buffer */
                                        /*       7 - Noise error */
                                        /*       8 - Idle character  */
@@ -191,15 +183,21 @@ static void HWEnDi(void)
 byte AS2_RecvChar(AS2_TComData *Chr)
 {
   byte Result = ERR_OK;                /* Return error code */
+  LDD_SERIAL_TError SerialErrorMask;   /* Serial error mask variable */
 
-  if ((SerFlag & CHAR_IN_RX) == 0U) {  /* Is any char in RX buffer? */
-    return ERR_RXEMPTY;                /* If no then error */
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
+  if (ASerialLdd2_GetError(ASerialLdd2_DeviceDataPtr, &SerialErrorMask) == ERR_OK) { /* Get error state */
+    if (SerialErrorMask != 0U) {
+      Result = ERR_COMMON;             /* If yes then set common error value */
+    } else {
+      if (ASerialLdd2_GetReceivedDataNum(ASerialLdd2_DeviceDataPtr) == 0U) { /* Is not received char? */
+        return ERR_RXEMPTY;            /* If yes then error is returned */
+      }
+    }
   }
-  EnterCritical();                     /* Disable global interrupts */
-  *Chr = BufferRead;                   /* Received char */
-  Result = (byte)((SerFlag & (OVERRUN_ERR|COMMON_ERR))? ERR_COMMON : ERR_OK);
-  SerFlag &= (word)~(word)(OVERRUN_ERR|COMMON_ERR|CHAR_IN_RX); /* Clear all errors in the status variable */
-  ExitCritical();                      /* Enable global interrupts */
+  *Chr = BufferRead;                   /* Read the char */
+  (void)ASerialLdd2_ReceiveBlock(ASerialLdd2_DeviceDataPtr, &BufferRead, 1U); /* Receive one data byte */
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
   return Result;                       /* Return error code */
 }
 
@@ -227,14 +225,15 @@ byte AS2_RecvChar(AS2_TComData *Chr)
 */
 byte AS2_SendChar(AS2_TComData Chr)
 {
-  if ((SerFlag & FULL_TX) != 0U) {     /* Is any char is in TX buffer */
-    return ERR_TXFULL;                 /* If yes then error */
+  AS2_TComData TmpChr = OutBuffer;     /* Save OutBuffer value */
+
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
+  OutBuffer = Chr;                     /* Save character */
+  if (ASerialLdd2_SendBlock(ASerialLdd2_DeviceDataPtr, (LDD_TData *)&OutBuffer, 1U) == ERR_BUSY) { /* Send one data byte */
+    OutBuffer = TmpChr;                /* If is device busy, restore OutBuffer value */
+    return ERR_TXFULL;
   }
-  EnterCritical();                     /* Disable global interrupts */
-  OutBuffer = Chr;                     /* Store char to temporary variable */
-  (void)ASerialLdd2_SendBlock(ASerialLdd2_DeviceDataPtr, (LDD_TData *)&OutBuffer, 1U); /* Send one data byte */
-  SerFlag |= (FULL_TX);                /* Set the flag "full TX buffer" */
-  ExitCritical();                      /* Enable global interrupts */
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
   return ERR_OK;                       /* OK */
 }
 
@@ -252,7 +251,8 @@ byte AS2_SendChar(AS2_TComData Chr)
 */
 word AS2_GetCharsInRxBuf(void)
 {
-  return (word)(((SerFlag & CHAR_IN_RX) != 0U)? 1U : 0U); /* Return number of chars in receive buffer */
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
+  return (word)ASerialLdd2_GetReceivedDataNum(ASerialLdd2_DeviceDataPtr); /* Return number of chars in the receive buffer */
 }
 
 /*
@@ -270,7 +270,8 @@ word AS2_GetCharsInRxBuf(void)
 */
 word AS2_GetCharsInTxBuf(void)
 {
-  return (word)(((SerFlag & FULL_TX) != 0U)? 1U : 0U); /* Return number of chars in the transmitter buffer */
+  ASerialLdd2_Main(ASerialLdd2_DeviceDataPtr);
+  return ((word)(ASerialLdd2_GetSentDataNum(ASerialLdd2_DeviceDataPtr) != 0x00U) ? 0U:1U); /* Return number of chars in the transmit buffer */
 }
 
 /*
@@ -289,88 +290,6 @@ void AS2_Init(void)
   SerFlag = 0x00U;                     /* Reset flags */
   ASerialLdd2_DeviceDataPtr = ASerialLdd2_Init(NULL); /* Calling init method of the inherited component */
   HWEnDi();                            /* Enable/disable device according to status flags */
-}
-
-#define ON_ERROR    0x01U
-#define ON_FULL_RX  0x02U
-#define ON_RX_CHAR  0x04U
-/*
-** ===================================================================
-**     Method      :  AS2_ASerialLdd2_OnBlockReceived (component AsynchroSerial)
-**
-**     Description :
-**         This event is called when the requested number of data is 
-**         moved to the input buffer.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd2_OnBlockReceived(LDD_TUserData *UserDataPtr)
-{
-  register byte Flags = 0U;            /* Temporary variable for flags */
-
-  (void)UserDataPtr;                   /* Parameter is not used, suppress unused argument warning */
-  if ((SerFlag & CHAR_IN_RX) != 0U) {  /* Is the overrun error flag set? */
-    SerFlag |= OVERRUN_ERR;            /* If yes then set the Error flag for RecvChar/Block method */
-    Flags |= ON_ERROR;                 /* If yes then set the OnError flag */
-  }
-  SerFlag |= CHAR_IN_RX;               /* Set flag "char in RX buffer" */
-  if ((Flags & ON_ERROR) != 0U) {      /* Is any error flag set? */
-    AS2_OnError();                     /* Invoke user event */
-  } else {
-    AS2_OnRxChar();                    /* Invoke user event */
-  }
-  (void)ASerialLdd2_ReceiveBlock(ASerialLdd2_DeviceDataPtr, &BufferRead, 1U); /* Receive one data byte */
-}
-
-#define ON_FREE_TX  0x01U
-#define ON_TX_CHAR  0x02U
-/*
-** ===================================================================
-**     Method      :  AS2_ASerialLdd2_OnBlockSent (component AsynchroSerial)
-**
-**     Description :
-**         This event is called after the last character from the output 
-**         buffer is moved to the transmitter.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd2_OnBlockSent(LDD_TUserData *UserDataPtr)
-{
-  word OnFlags = 0x00U;                /* Temporary variable for flags */
-
-  (void)UserDataPtr;                   /* Parameter is not used, suppress unused argument warning */
-  if ((SerFlag & FULL_TX) != 0U) {     /* Is any char already present in the transmit buffer? */
-    OnFlags |= ON_TX_CHAR;             /* Set flag "OnTxChar" */
-  }
-  SerFlag &= (word)~(word)(FULL_TX);   /* Reset flag "full TX buffer" */
-  if ((OnFlags & ON_TX_CHAR) != 0x00U) { /* Is flag "OnTxChar" set? */
-    AS2_OnTxChar();                    /* If yes then invoke user event */
-  }
-}
-
-/*
-** ===================================================================
-**     Method      :  AS2_ASerialLdd2_OnError (component AsynchroSerial)
-**
-**     Description :
-**         This event is called when a channel error (not the error 
-**         returned by a given method) occurs.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd2_OnError(LDD_TUserData *UserDataPtr)
-{
-  LDD_SERIAL_TError SerialErrorMask;   /* Serial error mask variable */
-
-  (void)UserDataPtr;                   /* Parameter is not used, suppress unused argument warning */
-  (void)ASerialLdd2_GetError(ASerialLdd2_DeviceDataPtr, &SerialErrorMask); /* Get error state */
-  if (SerialErrorMask != 0U) {
-    SerFlag |= (((SerialErrorMask & LDD_SERIAL_PARITY_ERROR) != 0U ) ? PARITY_ERR : 0U);
-    SerFlag |= (((SerialErrorMask & LDD_SERIAL_NOISE_ERROR) != 0U ) ? NOISE_ERR : 0U);
-    SerFlag |= (((SerialErrorMask & LDD_SERIAL_RX_OVERRUN) != 0U ) ? OVERRUN_ERR : 0U);
-    SerFlag |= (((SerialErrorMask & LDD_SERIAL_FRAMING_ERROR) != 0U ) ? FRAMING_ERR : 0U);
-  }
-  AS2_OnError();                       /* Invoke user event */
 }
 
 /*

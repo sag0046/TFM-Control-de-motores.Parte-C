@@ -35,67 +35,67 @@
     <FLASHsize>1M</FLASHsize>
   </PROCESSOR>
   <PATHS>
-    <LinkerCommandFile>C:\Users\Sandra\workspace2.kds\ControlMotor\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
+    <LinkerCommandFile>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
     <IncludePaths>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\</Path>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\</Path>
-      <Path>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\</Path>
-      <Path>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\</Path>
+      <Path>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\</Path>
+      <Path>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\</Path>
     </IncludePaths>
     <SourceCodePaths>
-      <Path>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\</Path>
-      <Path>C:\Users\Sandra\workspace2.kds\ControlMotor\Project_Settings\Startup_Code\</Path>
-      <Path>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\</Path>
+      <Path>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\</Path>
+      <Path>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Project_Settings\Startup_Code\</Path>
+      <Path>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\</Path>
       <Path>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
     <GeneratedCs>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\AS1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\AS2.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\ASerialLdd1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\ASerialLdd2.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Cpu.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_AZUL.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_ROJO.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_VERDE.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\PE_LDD.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Pins1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TI1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TU1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TimerIntLdd1.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Project_Settings\Startup_Code\startup.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\Events.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\UART.c</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\main.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\AS1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\AS2.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\ASerialLdd1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\ASerialLdd2.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_AZUL.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_ROJO.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_VERDE.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\PE_LDD.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Pins1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TI1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TU1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TimerIntLdd1.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Events.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\UART.c</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\main.c</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\CPU_Init.c</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\Peripherals_Init.c</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\AS1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\AS2.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\ASerialLdd1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\ASerialLdd2.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\CPU_Config.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Cpu.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\IO_Map.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Init_Config.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_AZUL.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_ROJO.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\LED_VERDE.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\PE_Const.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\PE_Error.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\PE_LDD.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\PE_Types.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Pins1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TI1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TU1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\TimerIntLdd1.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Generated_Code\Vectors_Config.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\Events.h</PathName>
-      <PathName>C:\Users\Sandra\workspace2.kds\ControlMotor\Sources\UART.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\AS1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\AS2.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\ASerialLdd1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\ASerialLdd2.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\CPU_Config.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\IO_Map.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Init_Config.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_AZUL.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_ROJO.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\LED_VERDE.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\PE_Const.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\PE_Error.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\PE_LDD.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Pins1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TI1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TU1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\TimerIntLdd1.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Generated_Code\Vectors_Config.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Events.h</PathName>
+      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\UART.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\MK64F12.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\CAN_PDD.h</PathName>
