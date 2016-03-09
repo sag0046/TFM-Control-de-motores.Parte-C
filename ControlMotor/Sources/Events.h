@@ -99,9 +99,9 @@ void AS2_OnFullRxBuf(void);
 
 /*
 ** ===================================================================
-**     Event       :  AS1_OnError (module Events)
+**     Event       :  AS2_OnError (module Events)
 **
-**     Component   :  AS1 [AsynchroSerial]
+**     Component   :  AS2 [AsynchroSerial]
 **     Description :
 **         This event is called when a channel error (not the error
 **         returned by a given method) occurs. The errors can be read
@@ -112,13 +112,13 @@ void AS2_OnFullRxBuf(void);
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AS1_OnError(void);
+void AS2_OnError(void);
 
 /*
 ** ===================================================================
-**     Event       :  AS1_OnRxChar (module Events)
+**     Event       :  AS2_OnRxChar (module Events)
 **
-**     Component   :  AS1 [AsynchroSerial]
+**     Component   :  AS2 [AsynchroSerial]
 **     Description :
 **         This event is called after a correct character is received.
 **         The event is available only when the <Interrupt
@@ -129,35 +129,20 @@ void AS1_OnError(void);
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AS1_OnRxChar(void);
+void AS2_OnRxChar(void);
 
 /*
 ** ===================================================================
-**     Event       :  AS1_OnTxChar (module Events)
+**     Event       :  AS2_OnTxChar (module Events)
 **
-**     Component   :  AS1 [AsynchroSerial]
+**     Component   :  AS2 [AsynchroSerial]
 **     Description :
 **         This event is called after a character is transmitted.
 **     Parameters  : None
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AS1_OnTxChar(void);
-
-/*
-** ===================================================================
-**     Event       :  AS1_OnFullRxBuf (module Events)
-**
-**     Component   :  AS1 [AsynchroSerial]
-**     Description :
-**         This event is called when the input buffer is full;
-**         i.e. after reception of the last character 
-**         that was successfully placed into input buffer.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void AS1_OnFullRxBuf(void);
+void AS2_OnTxChar(void);
 
 /* END Events */
 

@@ -72,7 +72,7 @@ char messagek[] = "Introduce una cte K:";
 //extern AS2_TComData X;
 
 AS2_TComData velReferencia; //velocidad deseada
-AS2_TComData k=0.01; // K=cte , constante
+//AS2_TComData k=0.01; // K=cte , constante
 AS2_TComData X;
 
 
@@ -120,7 +120,8 @@ int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 {
   /* Write your local variable definition here */
-
+int k;
+// k = 1;
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
   /*** End of Processor Expert internal initialization.                    ***/
@@ -134,7 +135,6 @@ int main(void)
     int velCalculadaAnt=0; //velocidad calculada anterior
     int velEncoder = 0; //velocidad real
     int error = 0; //variable que recoge el error
-    int pulsador; // SWITCH
     byte err; /*????*/
 
 
@@ -194,8 +194,8 @@ int main(void)
       		//CALCULAMOS EL ERROR
       		error= velReferencia - velEncoder;
       		//velCalculada = velCalculadaAnt + error (P=Proporcional y PI = P+Integral)
-      		velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
-      		//velCalculada = velCalculadaAnt + k*error;
+      		//velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
+      		velCalculada = velCalculadaAnt + (float)k/100*error;
       		//velCalculada = velCalculadaAnt + error;
 
   				//la MAX velocidad que puede alcanzar velCalculada es 255
