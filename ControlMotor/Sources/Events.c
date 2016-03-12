@@ -71,12 +71,12 @@ void Cpu_OnNMI(void)
 **     Returns     : Nothing
 ** ===================================================================
 */
-int t=0;
+int ti=0;
 bool llamada;
 void TI1_OnInterrupt(void)
 {
   /* Write your code here ... */
-	t++;
+	ti++;
 	llamada=TRUE;
 }
 

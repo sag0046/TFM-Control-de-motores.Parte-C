@@ -56,7 +56,7 @@ float encoder;  //ponerla como externa
 float encoderAnt; // con el valor del encoder de la anterior posicion del encoder
 float distEncoder; //distancia recorrida del encoder
 //---------------------------ENCODER--------------------------------//
-extern int t; // ver events.c
+extern int ti; // ver events.c
 extern bool llamada;
 
 
@@ -65,7 +65,6 @@ extern bool llamada;
 //extern AS2_TComData X;
 
 AS2_TComData velReferencia; //velocidad deseada
-//AS2_TComData k=0.01; // K=cte , constante
 AS2_TComData X;
 
 
@@ -140,7 +139,7 @@ static void imprimirVariables(int error, int velEncoder, int velCalculada){
 	char msg_velCalculada[] = "Velocidad calculada";
 	char msg_velReferencia[] = "Velocidad deseada";
 	char msg_k [] = "Constante K:";
-	char messagek[] = "Introduce una cte K:";
+
 	int a,b,c,d,f;
 	 //IMPRIMIR LAS VARIABLES velEncoder, velReferencia, error, velCalculada
 	  			 	 //imprime velocidadEncoder
@@ -190,17 +189,20 @@ static void imprimirVariables(int error, int velEncoder, int velCalculada){
 	  				while(AS2_SendChar(10)!=ERR_OK){};
 	  				while(AS2_SendChar(13)!=ERR_OK){};*/
 }
-static void comprobarDatos(int *k){
-
-	// Comprobamos si es una V de velReferencia.
+static void comprobarDatos(int *k, int *t){
+ //k = 107, t = 116, v = 118
+	// Comprobamos si es una v de velReferencia.
 					if(datos.Comando == 118) {  velReferencia = datos.Valor;
 							//Comprobamos la constante k
 					}if(datos.Comando == 107){
 						*k = datos.Valor;
+						// Comprobamos la cte t
+					}if(datos.Comando == 116){
+						*t =datos.Valor;
 					}
 
 }
-static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int k){
+static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int k, int t){
      	//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
   		encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
   		encoder= obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
@@ -217,6 +219,7 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
   		//velCalculada = velCalculadaAnt + error; //(P=Proporcional y PI = P+Integral)
   		//velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
   		*velCalculada = *velCalculadaAnt + (float)k/100*(*error);
+  		//*velCalculada = *velCalculadaAnt + (float)k/100*(*error) + (float)t/100;
 
 
 				//la MAX velocidad que puede alcanzar velCalculada es 255
@@ -254,20 +257,20 @@ int main(void)
   	  configuracionMotor();
 
   	  for(;;) {
-  		// Comprobamos si es una V de velReferencia.
   							/*if(datos.Comando == 118) {  velReferencia = datos.Valor;
   									//Comprobamos la constante k
   							}if(datos.Valor == 107){
   								k = datos.Valor;
   							}*/
-  		 comprobarDatos(&k);
+  		 //comprobarDatos(&k);
+  		 comprobarDatos(&k, &t);
 		//AS2_RecvChar(&velReferencia); //Introducimos la velReferencia por puerto serie
       	if (llamada){
 
          		llamada = FALSE;
 
 
-      		calcularDatosEncoder(&velCalculada, &velCalculadaAnt, &velEncoder, &error, k);
+      		calcularDatosEncoder(&velCalculada, &velCalculadaAnt, &velEncoder, &error, k, t);
 
   			 //IMPRIMIR LAS VARIABLES velEncoder, velReferencia, error, velCalculada
   			 imprimirVariables(error, velCalculada, velEncoder);
