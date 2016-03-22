@@ -221,7 +221,7 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
   		//velCalculada = velCalculadaAnt + error; //(P=Proporcional y PI = P+Integral)
   		//velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
   		//*velCalculada = *velCalculadaAnt + (float)k/100*(*error);
-  		*velCalculada = *velCalculadaAnt + (float)k/100*(*error) + (float)t/100*(*errorK);
+  		*velCalculada = *velCalculadaAnt + (float)k/100*(*error) + (float)k/t*(*errorK)*0.1;
 
 
 				//la MAX velocidad que puede alcanzar velCalculada es 255
