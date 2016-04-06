@@ -5,7 +5,7 @@
 **     Processor   : MK64FN1M0VLQ12
 **     Version     : Component 01.045, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-02-20, 12:22, # CodeGen: 1
+**     Date/Time   : 2016-03-31, 17:58, # CodeGen: 23
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -141,8 +141,8 @@ bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
   switch (PrphBaseAddress) {
     /* Base address allocated by peripheral(s) UART4 */
     case 0x400EA000UL:
-    /* Base address allocated by peripheral(s) UART0 */
-    case 0x4006A000UL:
+    /* Base address allocated by peripheral(s) UART1 */
+    case 0x4006B000UL:
     /* Base address allocated by peripheral(s) FTM0 */
     case 0x40038000UL:
     /* Base address allocated by peripheral(s) PTB */

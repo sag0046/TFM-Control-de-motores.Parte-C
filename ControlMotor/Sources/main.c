@@ -57,15 +57,16 @@ float encoderAnt; // con el valor del encoder de la anterior posicion del encode
 float distEncoder; //distancia recorrida del encoder
 //---------------------------ENCODER--------------------------------//
 extern int ti; // ver events.c
+//extern word Received;
 extern bool llamada;
 
 
-//extern AS2_TComData velReferencia; //velocidad deseada
+//extern AS2_TComData datosEntrada; //velocidad deseada
 //extern AS2_TComData k; // K=cte , constante
 //extern AS2_TComData X;
 
-AS2_TComData velReferencia; //velocidad deseada
-AS2_TComData X;
+AS2_TComData datosEntrada; //velocidad deseada
+//AS2_TComData X;
 
 
 struct {
@@ -74,7 +75,6 @@ byte Valor;
 } datos;
 
 static float obtenerEncoder(){
-
 	// Contador
 	int i;
 	// Variable del resultado
@@ -85,6 +85,7 @@ static float obtenerEncoder(){
 	// Mandamos los bytes del mensaje
 	while(AS1_SendChar(0x00) != ERR_OK) {};
 	while(AS1_SendChar(0x24) != ERR_OK) {};//get encoder2
+
 	// Bucle para recibir los 4 bytes de la respuesta
 	for(i = 0; i < 4; i++){
 		// Recibimos el dato
@@ -109,11 +110,11 @@ static float obtenerEncoder(){
 }
 static void configuracionMotor(){
 	int i;
-	char message[] = "Introduce una velocidad de 0 (full reverse)  128 (stop)   255 (full forward):";
-	// Imprime 1er mensaje para introducir la "velReferencia" o velocidad deseada
-	    velReferencia = '0';							//Lo inicializa a NULL
+	/*char message[] = "Introduce una velocidad de 0 (full reverse)  128 (stop)   255 (full forward):";
+	// Imprime 1er mensaje para introducir la "datosEntrada" o velocidad deseada
+	    datosEntrada = '0';							//Lo inicializa a NULL
 	    for(i = 0; i < sizeof(message); i++) {
-	  	while(AS2_SendChar((byte)message[i]) != ERR_OK) {}
+	  	while(AS2_SendChar((byte)message[i]) != ERR_OK) {}*/
 
 
 			//COMANDOS PARA LA CONFIGURACION DEL MOTOR
@@ -130,23 +131,28 @@ static void configuracionMotor(){
 			while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
 			//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
 
-	    }
+	    //}
 }
 static void imprimirVariables(int error, int velEncoder, int velCalculada){
 
 	char msg_velEncoder[] = "Velocidad Encoder:";
 	char msg_error[] = "Error:";
 	char msg_velCalculada[] = "Velocidad calculada";
-	char msg_velReferencia[] = "Velocidad deseada";
+	char msg_datosEntrada[] = "Velocidad deseada";
 	char msg_k [] = "Constante K:";
 
 	int a,b,c,d,f;
-	 //IMPRIMIR LAS VARIABLES velEncoder, velReferencia, error, velCalculada
+	 //IMPRIMIR LAS VARIABLES velEncoder, datosEntrada, error, velCalculada
 	  			 	 //imprime velocidadEncoder
-	  			 for(a = 0; a < sizeof(msg_velEncoder); a++) {
+	// Prueba borrar
+	AS2_SendChar(velEncoder);
+	AS2_SendChar(velCalculada);
+
+	  		/*	 for(a = 0; a < sizeof(msg_velEncoder); a++) {
 	  				while(AS2_SendChar((byte)msg_velEncoder[a]) != ERR_OK) {}
 	  			  }
-
+	  		 */
+/*
 	  			 UART_Write_Numero_Int(velEncoder); //escribe el valor de velocidadEncoder
 	  			 while(AS2_SendChar(10)!=ERR_OK){};//tabulacion vertical
 	  			 while(AS2_SendChar(13)!=ERR_OK){};//retorno de carro
@@ -171,15 +177,15 @@ static void imprimirVariables(int error, int velEncoder, int velCalculada){
 	  			  while(AS2_SendChar(13)!=ERR_OK){};
 
 
-	  				//Imprime la velReferencia --> velocidad deseada
-	  			  for(d = 0; d < sizeof(msg_velReferencia); d++) {
-	  				while(AS2_SendChar((byte)msg_velReferencia[d]) != ERR_OK) {}
+	  				//Imprime la datosEntrada --> velocidad deseada
+	  			  for(d = 0; d < sizeof(msg_datosEntrada); d++) {
+	  				while(AS2_SendChar((byte)msg_datosEntrada[d]) != ERR_OK) {}
 	  			  }
 
-	  				UART_Write_Numero_Int(velReferencia) ;
+	  				UART_Write_Numero_Int(datosEntrada) ;
 	  				while(AS2_SendChar(10)!=ERR_OK){};
 	  				while(AS2_SendChar(13)!=ERR_OK){};
-
+*/
 	  			/*	Imprime la k --> cte deseada
 	  			  for(f = 0; f < sizeof(msg_ctek); d++) {
 	  				while(AS2_SendChar((byte)msg_ctek[f]) != ERR_OK) {}
@@ -189,48 +195,112 @@ static void imprimirVariables(int error, int velEncoder, int velCalculada){
 	  				while(AS2_SendChar(10)!=ERR_OK){};
 	  				while(AS2_SendChar(13)!=ERR_OK){};*/
 }
-static void comprobarDatos(int *k, int *t){
+//static void comprobarDatos(int *k, int *t){
+static void comprobarDatos(int *k){
  //k = 107, t = 116, v = 118
-	// Comprobamos si es una v de velReferencia.
-					if(datos.Comando == 118) {  velReferencia = datos.Valor;
+
+
+	//System.Text.ASCIIEncoding codificador = new System.Text.ASCIIEncoding();
+	//String valor = codificador.GetString(datos);
+
+
+
+	// Comprobamos si es una v de datosEntrada.
+					if(datos.Comando == 118) {
+						datosEntrada = datos.Valor;
 							//Comprobamos la constante k
 					}if(datos.Comando == 107){
 						*k = datos.Valor;
 						// Comprobamos la cte t
-					}if(datos.Comando == 116){
+					}/*if(datos.Comando == 116){
 						*t =datos.Valor;
-					}
+					}*/
+
 
 }
-static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int k, int t){
-     	//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
-  		encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
-  		encoder= obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
+//static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int k, int t){
+static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int k){
 
-  			//distancia recorrida
-  		distEncoder = (encoder - encoderAnt); // Obtenemos la distancia recorrida por el enconder
-  			//velocidad rps
-  		//velocidadEncoder = (distEncoder1) * 10 / 360; //cada 0.1 seg
-  			//velocidad rpm --> *60
-  		*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
+	//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
+	encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
+	encoder= obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
 
-  		//CALCULAMOS EL ERROR
-  		*error= velReferencia - *velEncoder;
-  		*errorK += *error;// acumulo todos los errores para el integral
+		//distancia recorrida
+	distEncoder = (encoder - encoderAnt); // Obtenemos la distancia recorrida por el enconder
+		//velocidad rps
+	//velocidadEncoder = (distEncoder1) * 10 / 360; //cada 0.1 seg
+		//velocidad rpm --> *60
+	*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
 
-  		//velCalculada = velCalculadaAnt + error; //(P=Proporcional y PI = P+Integral)
-  		//velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
-  		//*velCalculada = *velCalculadaAnt + (float)k/100*(*error);
-  		*velCalculada = *velCalculadaAnt + (float)k/100*(*error) + (float)k/t*(*errorK)*0.1;
+	//CALCULAMOS EL ERROR
+	*error= datosEntrada - *velEncoder;
+	//*errorK += *error;// acumulo todos los errores para el integral
+
+	//velCalculada = velCalculadaAnt + error; //(P=Proporcional y PI = P+Integral)
+	//velCalculada = velCalculadaAnt + 0.01*error;    //MODIFICAR ESTA PARA LA DEL PI 0.01 es la "k"
+	*velCalculada = *velCalculadaAnt + (float)k/100*(*error);
+	//*velCalculada = *velCalculadaAnt + (float)k/100*(*error) + (float)k/t*(*errorK)*0.1;
 
 
-				//la MAX velocidad que puede alcanzar velCalculada es 255
+			//la MAX velocidad que puede alcanzar velCalculada es 255
+		if(*velCalculada>255) *velCalculada=255;
+		if(*velCalculada<0) *velCalculada=0;
+		else *velCalculada = *velCalculada;
+
+		*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
+}
+
+static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int constK, int constT){
+
+	// Calculamos la velocidad en función del algoritmo recibido.
+	if(algoritmo=='P'){
+
+		enviarVelocidad(constK);
+
+			//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
+			encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
+			encoder= obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
+
+				//distancia recorrida
+			distEncoder = (encoder - encoderAnt); // Obtenemos la distancia recorrida por el enconder
+				//velocidad rps
+			//velocidadEncoder = (distEncoder1) * 10 / 360; //cada 0.1 seg
+				//velocidad rpm --> *60
+			*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
+
+			//CALCULAMOS EL ERROR
+			*error= datosEntrada - *velEncoder;
+			//*errorK += *error;// acumulo todos los errores para el integral
+			*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
+
+			//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error) + (float)constK/constT*(*errorK)*0.1;
+
+
+			//la MAX velocidad que puede alcanzar velCalculada es 255
 			if(*velCalculada>255) *velCalculada=255;
 			if(*velCalculada<0) *velCalculada=0;
 			else *velCalculada = *velCalculada;
 
 			*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
-  	}
+
+			//enviarVelocidad(velEncoder);
+	} else if(algoritmo=='I'){
+		*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
+	}
+
+}
+
+/**
+ * @brief Resetea los encoder
+ *
+ * Manda a la controladora la orden de poner a 0 los encodres.
+ */
+void resetearEncoders(){
+	// Mandamos los bytes del mensaje
+	while(AS1_SendChar(0x00) != ERR_OK) {};
+	while(AS1_SendChar(0x35) != ERR_OK) {};
+}
+
 
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
@@ -250,33 +320,119 @@ int main(void)
     int errorK = 0;
     byte err; /*????*/
 
-  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
-  PE_low_level_init();
-  /*** End of Processor Expert internal initialization.                    ***/
 
-  /* Write your code here */
+	int velocidad=0;
+	int constK=0;
+	int constT=0;
+	char algoritmo;
 
+	/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+	PE_low_level_init();
+	/*** End of Processor Expert internal initialization.                    ***/
+
+	/* Write your code here */
+
+	// Reseteamos los encoders
+  	resetearEncoders();
+enviarVelocidad('d');
     /*CODIGO*/
-  	  configuracionMotor();
+  	configuracionMotor();
 
-  	  for(;;) {
-  							/*if(datos.Comando == 118) {  velReferencia = datos.Valor;
-  									//Comprobamos la constante k
-  							}if(datos.Valor == 107){
-  								k = datos.Valor;
-  							}*/
-  		 //comprobarDatos(&k);
-  		 comprobarDatos(&k, &t);
-		//AS2_RecvChar(&velReferencia); //Introducimos la velReferencia por puerto serie
-      	if (llamada){
+  	while(AS1_SendChar(0x00) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
 
-         		llamada = FALSE;
+  	for(;;) {
+	  AS2_TComData datoRecibido; // Dato recibido por el puerto serie perteneciente al modulo bluetooth.
+		if(AS2_RecvChar(&datoRecibido) == ERR_OK){
+		  // Comprobamos si es una P, lo que significa que es el algorimo rdProporcional
+		  if(datoRecibido == 80){
+enviarVelocidad('z');
+			// Vamos obteniendo el resto del mensaje y localizando la velocidad, son siempre 3 caracteres.
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			if(datoRecibido == 0){
+				enviarVelocidad('q');
+			} else if(datoRecibido == 1){
+				enviarVelocidad('w');
+			} else if(datoRecibido == 2){
+				enviarVelocidad('e');
+			} else if(datoRecibido == 3){
+				enviarVelocidad('r');
+			} else if(datoRecibido == 4){
+				enviarVelocidad('t');
+			} else if(datoRecibido == 5){
+				enviarVelocidad('y');
+			} else if(datoRecibido == 7){
+				enviarVelocidad('u');
+			} else if(datoRecibido == 8){
+				enviarVelocidad('i');
+			} else if(datoRecibido == 9){
+				enviarVelocidad('o');
+			} else {
+				enviarVelocidad('p');
+			}
+/*			velocidad=datoRecibido*100;
+enviarVelocidad('q');
+enviarVelocidad((char)velocidad);*/
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			velocidad+=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			velocidad+=datoRecibido;
+
+			// Vamos obteniendo el resto del mensaje y localizando la constanteK, son siempre 3 caracteres.
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK+=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK+=datoRecibido;
+
+			// Al ser el algoritmo rdProporcional, no hay valor para constT.
+			constT=0;
+			algoritmo='P';
+
+			calcularDatosEncoder2(algoritmo, &velocidad, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT);
+
+		  // Comprobamos si es una I, lo que significa que es el algorimo rdIntegral
+		  }else if (datoRecibido == 73){
+			  // Vamos obteniendo el resto del mensaje y localizando la velocidad, son siempre 3 caracteres.
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			velocidad=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			velocidad+=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			velocidad+=datoRecibido;
+
+			// Vamos obteniendo el resto del mensaje y localizando la constanteK, son siempre 3 caracteres.
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK+=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK+=datoRecibido;
+
+			// Al ser el algoritmo rdIntegral, si hay valor para constt, son siempre 3 caracteres.
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constT=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constT+=datoRecibido;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constT+=datoRecibido;
+
+			// Al ser el algoritmo rdIntegral, variable 'I'.
+			algoritmo='I';
+
+			}else if (datoRecibido == 83){
+			  // Botón pulsado STOP, parada del motor.
+			}
+		}
 
 
-      		calcularDatosEncoder(&velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, k, t);
+		//calcularDatosEncoder(&velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, k, t);
+		//calcularDatosEncoder(&velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, k);
 
-  			 //IMPRIMIR LAS VARIABLES velEncoder, velReferencia, error, velCalculada
-  			 imprimirVariables(error, velCalculada, velEncoder);
+
+
+		//IMPRIMIR LAS VARIABLES velEncoder, datosEntrada, error, velCalculada
+		//imprimirVariables(error, velCalculada, velEncoder);
 
   		//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
   		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
@@ -284,12 +440,13 @@ int main(void)
   		while(AS1_SendChar(velCalculada) != ERR_OK) {};
 
 
+
   		LED_ROJO_SetVal(Rojo_Ptr);
   		LED_VERDE_SetVal(Verde_Ptr);
   		LED_AZUL_NegVal(Azul_Ptr);
-
       	}
-      }
+
+
   /* For example: for(;;) { } */
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

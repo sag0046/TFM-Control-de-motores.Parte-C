@@ -95,19 +95,96 @@ void TI1_OnInterrupt(void)
 ** ===================================================================
 */
 
-extern struct {
+/*extern struct {
 byte Comando;
 byte Valor;
-} datos;
-void AS2_OnFullRxBuf(void)
+} datos;*/
+/*void AS2_OnFullRxBuf(void)
 {
-  /* Write your code here ... */
-	word Received;
+	/* Write your code here ... */
+	//word Received;
 
-		AS2_RecvBlock((byte*)&datos, sizeof(datos), &Received);
+	//AS2_TComData datoRecibido; // Dato recibido por el puerto serie perteneciente al modulo bluetooth.
+
+	//AS2_RecvBlock((byte*)&datos, sizeof(datos), &Received);
+
+	//AS2_RecvBlock(datoRecibido, sizeof(datoRecibido), &Received);
 
 
-}
+
+	/*char valor; // Valor recibido por el modulo bluetooth.
+
+	int velo;
+	int k;
+	int t;
+
+	//while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+
+
+
+	if(AS2_RecvChar(&datoRecibido) == ERR_OK){
+		//enviarVelocidad('y');
+	//enviarVelocidad(1);
+	// Comprobamos si es una X, lo que significa que es un movimiento a un punto concreto
+	if(datoRecibido == 80){
+	// Vamos obteniendo el resto del mensaje y construyendo el número
+		//enviarVelocidad('k');
+
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	if(datoRecibido == '0'){
+		enviarVelocidad('a');
+	}else{
+		enviarVelocidad('b');
+	}
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	if(datoRecibido == '1'){
+			enviarVelocidad('c');
+		}else{
+			enviarVelocidad('d');
+		}
+
+	velo = (datoRecibido)*100;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	velo += (datoRecibido)*10;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	velo += (datoRecibido);
+	enviarVelocidad(velo);
+
+
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	k = (datoRecibido)*100;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	k += (datoRecibido)*10;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	k += (datoRecibido);
+	enviarVelocidad(k);
+
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	t = (datoRecibido)*100;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	t += (datoRecibido)*10;
+	while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+	t += (datoRecibido);
+	enviarVelocidad(t);
+
+
+	}
+	else if(datoRecibido == "P"){
+	while(AS2_SendChar('y') != ERR_OK) {};
+	} else {
+	while(AS2_SendChar('z') != ERR_OK) {};
+	}
+	}
+	else{
+		//enviarVelocidad('y');
+	}
+
+	//valor = datoRecibido;
+
+	//enviarVelocidad(valor);
+	//enviarVelocidad((int)datos.Valor);
+	//enviarVelocidad((int)datos.Valor);
+}*/
 
 /*
 ** ===================================================================
@@ -161,6 +238,24 @@ void AS2_OnRxChar(void)
 ** ===================================================================
 */
 void AS2_OnTxChar(void)
+{
+  /* Write your code here ... */
+}
+
+/*
+** ===================================================================
+**     Event       :  AS2_OnFullRxBuf (module Events)
+**
+**     Component   :  AS2 [AsynchroSerial]
+**     Description :
+**         This event is called when the input buffer is full;
+**         i.e. after reception of the last character 
+**         that was successfully placed into input buffer.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void AS2_OnFullRxBuf(void)
 {
   /* Write your code here ... */
 }

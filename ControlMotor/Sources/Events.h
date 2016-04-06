@@ -84,21 +84,6 @@ void TI1_OnInterrupt(void);
 
 /*
 ** ===================================================================
-**     Event       :  AS2_OnFullRxBuf (module Events)
-**
-**     Component   :  AS2 [AsynchroSerial]
-**     Description :
-**         This event is called when the input buffer is full;
-**         i.e. after reception of the last character 
-**         that was successfully placed into input buffer.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void AS2_OnFullRxBuf(void);
-
-/*
-** ===================================================================
 **     Event       :  AS2_OnError (module Events)
 **
 **     Component   :  AS2 [AsynchroSerial]
@@ -143,6 +128,21 @@ void AS2_OnRxChar(void);
 ** ===================================================================
 */
 void AS2_OnTxChar(void);
+
+/*
+** ===================================================================
+**     Event       :  AS2_OnFullRxBuf (module Events)
+**
+**     Component   :  AS2 [AsynchroSerial]
+**     Description :
+**         This event is called when the input buffer is full;
+**         i.e. after reception of the last character 
+**         that was successfully placed into input buffer.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void AS2_OnFullRxBuf(void);
 
 /* END Events */
 

@@ -116,10 +116,10 @@ extern "C" {
 #define VECTOR_44         (tIsrFunc)&UnhandledInterrupt         /* 0x2C -    ivINT_I2S0_Tx                  unused by PE */
 #define VECTOR_45         (tIsrFunc)&UnhandledInterrupt         /* 0x2D -    ivINT_I2S0_Rx                  unused by PE */
 #define VECTOR_46         (tIsrFunc)&UnhandledInterrupt         /* 0x2E -    ivINT_UART0_LON                unused by PE */
-#define VECTOR_47         (tIsrFunc)&ASerialLdd2_Interrupt      /* 0x2F 112  ivINT_UART0_RX_TX              used by PE */
-#define VECTOR_48         (tIsrFunc)&ASerialLdd2_Interrupt      /* 0x30 112  ivINT_UART0_ERR                used by PE */
-#define VECTOR_49         (tIsrFunc)&UnhandledInterrupt         /* 0x31 -    ivINT_UART1_RX_TX              unused by PE */
-#define VECTOR_50         (tIsrFunc)&UnhandledInterrupt         /* 0x32 -    ivINT_UART1_ERR                unused by PE */
+#define VECTOR_47         (tIsrFunc)&UnhandledInterrupt         /* 0x2F -    ivINT_UART0_RX_TX              unused by PE */
+#define VECTOR_48         (tIsrFunc)&UnhandledInterrupt         /* 0x30 -    ivINT_UART0_ERR                unused by PE */
+#define VECTOR_49         (tIsrFunc)&ASerialLdd2_Interrupt      /* 0x31 112  ivINT_UART1_RX_TX              used by PE */
+#define VECTOR_50         (tIsrFunc)&ASerialLdd2_Interrupt      /* 0x32 112  ivINT_UART1_ERR                used by PE */
 #define VECTOR_51         (tIsrFunc)&UnhandledInterrupt         /* 0x33 -    ivINT_UART2_RX_TX              unused by PE */
 #define VECTOR_52         (tIsrFunc)&UnhandledInterrupt         /* 0x34 -    ivINT_UART2_ERR                unused by PE */
 #define VECTOR_53         (tIsrFunc)&UnhandledInterrupt         /* 0x35 -    ivINT_UART3_RX_TX              unused by PE */

@@ -3,8 +3,8 @@
   <Header>
     <Name>ControlMotor</Name>
     <SavedBy>Sandra</SavedBy>
-    <ModificationStamp>11</ModificationStamp>
-    <Date>2016-03-16</Date>
+    <ModificationStamp>20</ModificationStamp>
+    <Date>2016-04-06</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.10.1.RT6_b1444-1070</PEversion>
   </Header>
@@ -29,7 +29,7 @@
     <UseExistingModules>true</UseExistingModules>
     <RenamePeripheries>false</RenamePeripheries>
     <Autodependency>true</Autodependency>
-    <ProjectCompNumb>25</ProjectCompNumb>
+    <ProjectCompNumb>31</ProjectCompNumb>
     <DelUnusedPreviouslyGenFiles>true</DelUnusedPreviouslyGenFiles>
     <GeneratedCodeFrozen>false</GeneratedCodeFrozen>
     <AssignInitComponentNameToPrph>true</AssignInitComponentNameToPrph>
@@ -22364,7 +22364,7 @@
         <ItemSymbol>Ser</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>UART0</Value>
+        <Value>UART1</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -22382,12 +22382,12 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SpecInt</ItemSymbol>
-        <Value>INT_UART0_ERR</Value>
+        <Value>INT_UART1_ERR</Value>
         <ItemWasNeverEnabledInChgScript>true</ItemWasNeverEnabledInChgScript>
       </ItemState>
       <ItemState>
         <ItemSymbol>InpInt</ItemSymbol>
-        <Value>INT_UART0_RX_TX</Value>
+        <Value>INT_UART1_RX_TX</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>InitPriority</ItemSymbol>
@@ -22412,7 +22412,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>OutInt</ItemSymbol>
-        <Value>INT_UART0_RX_TX</Value>
+        <Value>INT_UART1_RX_TX</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>IntTxDPriority</ItemSymbol>
@@ -22442,7 +22442,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>ErrInt</ItemSymbol>
-        <Value>INT_UART0_ERR</Value>
+        <Value>INT_UART1_ERR</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>IntErrorPriority</ItemSymbol>
@@ -22747,7 +22747,7 @@
         <ItemSymbol>Inp</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>PTB16/SPI1_SOUT/UART0_RX/FTM_CLKIN0/FB_AD17/EWM_IN</Value>
+        <Value>CMP1_IN1/PTC3/LLWU_P7/SPI0_PCS1/UART1_RX/FTM0_CH2/CLKOUT/I2S0_TX_BCLK</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -22791,7 +22791,7 @@
         <ItemSymbol>Out</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>PTB17/SPI1_SIN/UART0_TX/FTM_CLKIN1/FB_AD16/EWM_OUT_b</Value>
+        <Value>PTC4/LLWU_P8/SPI0_PCS0/UART1_TX/FTM0_CH3/FB_AD11/CMP1_OUT</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -23244,7 +23244,7 @@
               <ItemSymbol>Device</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>UART0</Value>
+              <Value>UART1</Value>
               <SharedPrphMode>false</SharedPrphMode>
             </ItemState>
             <ItemState>
@@ -23265,7 +23265,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>InpInt</ItemSymbol>
-              <Value>INT_UART0_RX_TX</Value>
+              <Value>INT_UART1_RX_TX</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>InitPriority</ItemSymbol>
@@ -23300,7 +23300,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>OutInt</ItemSymbol>
-              <Value>INT_UART0_RX_TX</Value>
+              <Value>INT_UART1_RX_TX</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>IntTxDPriority</ItemSymbol>
@@ -23335,7 +23335,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>ErrInt</ItemSymbol>
-              <Value>INT_UART0_ERR</Value>
+              <Value>INT_UART1_ERR</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>IntErrorPriority</ItemSymbol>
@@ -23566,7 +23566,7 @@
               <ItemSymbol>Inp</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>PTB16/SPI1_SOUT/UART0_RX/FTM_CLKIN0/FB_AD17/EWM_IN</Value>
+              <Value>CMP1_IN1/PTC3/LLWU_P7/SPI0_PCS1/UART1_RX/FTM0_CH2/CLKOUT/I2S0_TX_BCLK</Value>
               <SharedPrphMode>false</SharedPrphMode>
             </ItemState>
             <ItemState>
@@ -23587,7 +23587,7 @@
               <ItemSymbol>Out</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>PTB17/SPI1_SIN/UART0_TX/FTM_CLKIN1/FB_AD16/EWM_OUT_b</Value>
+              <Value>PTC4/LLWU_P8/SPI0_PCS0/UART1_TX/FTM0_CH3/FB_AD11/CMP1_OUT</Value>
               <SharedPrphMode>false</SharedPrphMode>
             </ItemState>
             <ItemState>

@@ -4,5 +4,6 @@
 
 void UART_Write_Numero_Int(unsigned int velocidad);
 
+void enviarVelocidad(int x);
 
 #endif /* UART_H_ */

@@ -6,7 +6,7 @@
 **     Component   : AsynchroSerial
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-09, 18:32, # CodeGen: 13
+**     Date/Time   : 2016-04-06, 19:05, # CodeGen: 36
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -15,7 +15,7 @@
 **         Communication speed can be changed also in runtime.
 **         The component requires one on-chip asynchronous serial channel.
 **     Settings    :
-**         Serial channel              : UART0
+**         Serial channel              : UART1
 **
 **         Protocol
 **             Width                   : 8 bits
@@ -26,24 +26,24 @@
 **             Output buffer size      : 0
 **
 **         Registers
-**             Input buffer            : UART0_D   [0x4006A007]
-**             Output buffer           : UART0_D   [0x4006A007]
-**             Control register        : UART0_C1  [0x4006A002]
+**             Input buffer            : UART1_D   [0x4006B007]
+**             Output buffer           : UART1_D   [0x4006B007]
+**             Control register        : UART1_C1  [0x4006B002]
 **
 **         Input interrupt
-**             Vector name             : INT_UART0_RX_TX
+**             Vector name             : INT_UART1_RX_TX
 **             Priority                : 112
 **
 **         Output interrupt
-**             Vector name             : INT_UART0_RX_TX
+**             Vector name             : INT_UART1_RX_TX
 **             Priority                : 112
 **
 **         Used pins:
 **         ----------------------------------------------------------
 **           Function | On package           |    Name
 **         ----------------------------------------------------------
-**            Input   |     95               |  PTB16/SPI1_SOUT/UART0_RX/FTM_CLKIN0/FB_AD17/EWM_IN
-**            Output  |     96               |  PTB17/SPI1_SIN/UART0_TX/FTM_CLKIN1/FB_AD16/EWM_OUT_b
+**            Input   |     106              |  CMP1_IN1/PTC3/LLWU_P7/SPI0_PCS1/UART1_RX/FTM0_CH2/CLKOUT/I2S0_TX_BCLK
+**            Output  |     109              |  PTC4/LLWU_P8/SPI0_PCS0/UART1_TX/FTM0_CH3/FB_AD11/CMP1_OUT
 **         ----------------------------------------------------------
 **
 **
