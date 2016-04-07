@@ -31,7 +31,7 @@ void enviarVelocidad(int x){
 	}
 	else{
 		//while(AS2_SendChar(x) != ERR_OK) {};
-		while(AS2_SendChar('l') != ERR_OK) {};
+		//while(AS2_SendChar('l') != ERR_OK) {};
 		while(AS2_SendChar(x) != ERR_OK) {};
 		/*while(AS2_SendChar((char)((x%10000)/1000))!= ERR_OK) {};
 		while(AS2_SendChar((char)((x%1000)/100))!= ERR_OK) {};
