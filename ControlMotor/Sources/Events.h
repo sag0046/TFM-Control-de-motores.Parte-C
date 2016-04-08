@@ -45,6 +45,8 @@
 #include "LED_ROJO.h"
 #include "LED_AZUL.h"
 #include "LED_VERDE.h"
+#include "AS3.h"
+#include "ASerialLdd3.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -15,7 +15,8 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
  ../Generated_Code/LED_ROJO.h \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
- ../Generated_Code/LED_AZUL.h ../Generated_Code/LED_VERDE.h
+ ../Generated_Code/LED_AZUL.h ../Generated_Code/LED_VERDE.h \
+ ../Generated_Code/AS3.h ../Generated_Code/ASerialLdd3.h
 
 ../Generated_Code/PE_LDD.h:
 
@@ -66,3 +67,7 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
 ../Generated_Code/LED_AZUL.h:
 
 ../Generated_Code/LED_VERDE.h:
+
+../Generated_Code/AS3.h:
+
+../Generated_Code/ASerialLdd3.h:

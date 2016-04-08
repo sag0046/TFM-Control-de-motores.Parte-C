@@ -5,7 +5,7 @@
 **     Processor   : MK64FN1M0VLQ12
 **     Version     : Component 01.045, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-02-20, 12:22, # CodeGen: 1
+**     Date/Time   : 2016-04-08, 18:19, # CodeGen: 42
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -65,6 +65,8 @@
 #include "LED_ROJO.h"
 #include "LED_AZUL.h"
 #include "LED_VERDE.h"
+#include "AS3.h"
+#include "ASerialLdd3.h"
 
 
 /*

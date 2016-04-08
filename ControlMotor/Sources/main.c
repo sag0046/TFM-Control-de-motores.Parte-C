@@ -41,6 +41,8 @@
 #include "LED_ROJO.h"
 #include "LED_AZUL.h"
 #include "LED_VERDE.h"
+#include "AS3.h"
+#include "ASerialLdd3.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -153,6 +155,7 @@ static void configuracionMotor(){
 			while(AS1_SendChar(0x31)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1" Inhabilitamos el motor1 por ejemplo enviando 128
 			while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
 			//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 0 stop, ya que cogemos el modo1
+
 }
 static void imprimirVariables(int error, int velEncoder, int velCalculada){
 
@@ -271,7 +274,7 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
 		*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
 }
 
-static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK,int constK,int constT){
+static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK,int constK,int constT, int velocidad){
 	int llamadaMotor;
 	// Calculamos la velocidad en función del algoritmo recibido.
 	if(algoritmo=='P'){
@@ -290,7 +293,7 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 			*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
 
 			//CALCULAMOS EL ERROR
-			*error= datosEntrada - *velEncoder;
+			*error= velocidad - *velEncoder;
 			//*errorK += *error;// acumulo todos los errores para el integral
 			*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
 
@@ -304,13 +307,17 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 
 			*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
 
-			establecerVelocidad(velCalculada);
+			//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
+			  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+			  		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
+			  		while(AS1_SendChar(velCalculada) != ERR_OK) {};
+			//establecerVelocidad(velCalculada);
 			enviarVelocidad(velCalculada);
 
 			//enviarVelocidad(velEncoder);
 		}
 	} else if(algoritmo=='I'){
-		//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
+		//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error) + (float)constK/constT*(*errorK)*0.1;
 	}
 
 }
@@ -330,8 +337,8 @@ void stopMotor(){
 	enviarVelocidad('S');
 	// Mandamos los bytes del mensaje
 	while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-	while(AS1_SendChar(0x35)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1" Inhabilitamos el motor1 por ejemplo enviando 128
-	//while(AS1_SendChar(0) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
+	while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1" Inhabilitamos el motor1 por ejemplo enviando 128
+	while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
 }
 
 
@@ -371,8 +378,7 @@ int main(void)
     /*CODIGO*/
   	configuracionMotor();
 
-  	//while(AS1_SendChar(0x00) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
-
+  	//while(AS1_SendChar(0x00) != ERR_OK) {}; //
   	for(;;) {
 	  AS2_TComData datoRecibido; // Dato recibido por el puerto serie perteneciente al modulo bluetooth.
 		if(AS2_RecvChar(&datoRecibido) == ERR_OK){
@@ -385,7 +391,7 @@ int main(void)
 			velocidad+=(datoRecibido-48);
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
 			velocidad+=(datoRecibido-48);
-
+			UART_Write_Numero_Int(velocidad);
 			// Vamos obteniendo el resto del mensaje y localizando la constanteK, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
 			constK=(datoRecibido-48);
@@ -398,7 +404,7 @@ int main(void)
 			constT=0;
 			algoritmo='P';
 
-			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT);
+			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
 
 		  // Comprobamos si es una I, lo que significa que es el algorimo rdIntegral
 		  }else if (datoRecibido == 73){
@@ -597,7 +603,7 @@ int main(void)
 			// Al ser el algoritmo rdIntegral, variable 'I'.
 			algoritmo='I';
 
-			}else if (datoRecibido == 83){
+			}else if (datoRecibido == 83){// una S
 			  // Botón pulsado STOP, parada del motor.
 				stopMotor();
 			}
@@ -613,9 +619,9 @@ int main(void)
 		//imprimirVariables(error, velCalculada, velEncoder);
 
   		//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
-  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-  		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ¿xq al 2 y no al 0x31 como arriba?
-  		while(AS1_SendChar(velCalculada) != ERR_OK) {};
+  		/*while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+  		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
+  		while(AS1_SendChar(velCalculada) != ERR_OK) {};*/
 
 
 

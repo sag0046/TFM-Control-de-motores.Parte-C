@@ -6,8 +6,10 @@
 C_SRCS += \
 ../Generated_Code/AS1.c \
 ../Generated_Code/AS2.c \
+../Generated_Code/AS3.c \
 ../Generated_Code/ASerialLdd1.c \
 ../Generated_Code/ASerialLdd2.c \
+../Generated_Code/ASerialLdd3.c \
 ../Generated_Code/Cpu.c \
 ../Generated_Code/LED_AZUL.c \
 ../Generated_Code/LED_ROJO.c \
@@ -21,8 +23,10 @@ C_SRCS += \
 OBJS += \
 ./Generated_Code/AS1.o \
 ./Generated_Code/AS2.o \
+./Generated_Code/AS3.o \
 ./Generated_Code/ASerialLdd1.o \
 ./Generated_Code/ASerialLdd2.o \
+./Generated_Code/ASerialLdd3.o \
 ./Generated_Code/Cpu.o \
 ./Generated_Code/LED_AZUL.o \
 ./Generated_Code/LED_ROJO.o \
@@ -36,8 +40,10 @@ OBJS += \
 C_DEPS += \
 ./Generated_Code/AS1.d \
 ./Generated_Code/AS2.d \
+./Generated_Code/AS3.d \
 ./Generated_Code/ASerialLdd1.d \
 ./Generated_Code/ASerialLdd2.d \
+./Generated_Code/ASerialLdd3.d \
 ./Generated_Code/Cpu.d \
 ./Generated_Code/LED_AZUL.d \
 ./Generated_Code/LED_ROJO.d \

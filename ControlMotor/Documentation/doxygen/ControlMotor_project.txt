@@ -33,6 +33,7 @@
 - \subpage LED_ROJO
 - \subpage LED_AZUL
 - \subpage LED_VERDE
+- \subpage ASerialLdd3
 
 */
 
@@ -72,6 +73,7 @@
 - \subpage LED_ROJO
 - \subpage LED_AZUL
 - \subpage LED_VERDE
+- \subpage ASerialLdd3
 
 */
 

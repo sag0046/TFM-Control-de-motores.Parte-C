@@ -2847,7 +2847,7 @@ PE_DEBUGHALT();
         <Interrupt_TxD_priority v="medium priority" />
         <Interrupt_Error v="INT_UART1_ERR" />
         <Interrupt_Error_priority v="medium priority" />
-        <Input_buffer_size v="0" />
+        <Input_buffer_size v="2" />
         <Output_buffer_size v="0" />
         <group name="Handshake">
           <boolgroup name="CTS" v="Disabled" />
@@ -3008,9 +3008,9 @@ PE_DEBUGHALT();
       <DisableEvent v="don&amp;apos;t generate code" />
       <RecvChar v="generate code" />
       <SendChar v="generate code" />
-      <RecvBlock v="don&amp;apos;t generate code" />
+      <RecvBlock v="generate code" />
       <SendBlock v="don&amp;apos;t generate code" />
-      <ClearRxBuf v="don&amp;apos;t generate code" />
+      <ClearRxBuf v="generate code" />
       <ClearTxBuf v="don&amp;apos;t generate code" />
       <CharsInRxBuf v="don&amp;apos;t generate code" />
       <GetCharsInRxBuf v="generate code" />
@@ -3044,7 +3044,10 @@ PE_DEBUGHALT();
         <Event_procedure_name v="AS2_OnTxChar" />
         <Priority v="same as interrupt" />
       </event>
-      <event name="OnFullRxBuf" v="don&amp;apos;t generate code" />
+      <event name="OnFullRxBuf" v="generate code">
+        <Event_procedure_name v="AS2_OnFullRxBuf" />
+        <Priority v="same as interrupt" />
+      </event>
       <event name="OnFreeTxBuf" v="don&amp;apos;t generate code" />
       <event name="OnBreak" v="don&amp;apos;t generate code" />
       <event name="OnTxComplete" v="don&amp;apos;t generate code" />

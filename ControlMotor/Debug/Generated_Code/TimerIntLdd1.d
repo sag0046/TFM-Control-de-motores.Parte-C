@@ -8,7 +8,7 @@ Generated_Code/TimerIntLdd1.o: ../Generated_Code/TimerIntLdd1.c \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
  ../Generated_Code/Cpu.h \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd2/MK64FN1M0LQ12/system/CPU_Init.h \
- C:/Users/Sandra/workspace2.kds/ControlMotor/Generated_Code/CPU_Config.h
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/CPU_Config.h
 
 ../Generated_Code/TI1.h:
 
@@ -34,4 +34,4 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
 
 C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd2/MK64FN1M0LQ12/system/CPU_Init.h:
 
-C:/Users/Sandra/workspace2.kds/ControlMotor/Generated_Code/CPU_Config.h:
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/CPU_Config.h:

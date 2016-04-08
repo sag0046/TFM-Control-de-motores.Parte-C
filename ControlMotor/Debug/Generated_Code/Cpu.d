@@ -35,6 +35,9 @@ Generated_Code/Cpu.o: ../Generated_Code/Cpu.c ../Generated_Code/Cpu.h \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h \
  ../Generated_Code/Init_Config.h
 
 ../Generated_Code/Cpu.h:
@@ -114,5 +117,11 @@ C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.h:
 
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h:
 
 ../Generated_Code/Init_Config.h:

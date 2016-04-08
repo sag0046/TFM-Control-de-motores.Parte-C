@@ -29,6 +29,8 @@ Static_Code/System/CPU_Init.o: \
  C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Sources/Events.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/PE_Error.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/PE_Const.h \
@@ -43,7 +45,9 @@ Static_Code/System/CPU_Init.o: \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/TU1.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_ROJO.h \
  C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.h \
- C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h \
+ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h
 
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/PE_Types.h:
 
@@ -103,6 +107,10 @@ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.
 
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h:
 
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h:
+
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Sources/Events.h:
 
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/PE_Error.h:
@@ -132,3 +140,7 @@ C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_ROJO.
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_AZUL.h:
 
 C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/LED_VERDE.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/AS3.h:
+
+C:/Users/Sandra/GitHubKinetis/ControlMotor/ControlMotor/Generated_Code/ASerialLdd3.h:
