@@ -311,8 +311,11 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 			  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
 			  		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
 			  		while(AS1_SendChar(velCalculada) != ERR_OK) {};
+					UART_Write_Numero_Int(velCalculada);
+
+
 			//establecerVelocidad(velCalculada);
-			enviarVelocidad(velCalculada);
+			enviarVelocidad(velCalculada); //para el movil
 
 			//enviarVelocidad(velEncoder);
 		}
@@ -339,6 +342,7 @@ void stopMotor(){
 	while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
 	while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD "set speed1" Inhabilitamos el motor1 por ejemplo enviando 128
 	while(AS1_SendChar(128) != ERR_OK) {}; // lo ponemos a 128 stop, ya que cogemos el MODO0
+
 }
 
 
@@ -386,19 +390,20 @@ int main(void)
 		  if(datoRecibido == 80){
 			// Vamos obteniendo el resto del mensaje y localizando la velocidad, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			velocidad=(datoRecibido-48);
+			velocidad=(datoRecibido-48)*100;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			velocidad+=(datoRecibido-48);
+			velocidad+=(datoRecibido-48)*10;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
 			velocidad+=(datoRecibido-48);
 			UART_Write_Numero_Int(velocidad);
 			// Vamos obteniendo el resto del mensaje y localizando la constanteK, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			constK=(datoRecibido-48);
+			constK=(datoRecibido-48)*100;
+			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
+			constK+=(datoRecibido-48)*10;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
 			constK+=(datoRecibido-48);
-			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			constK+=(datoRecibido-48);
+			UART_Write_Numero_Int(constK);
 
 			// Al ser el algoritmo rdProporcional, no hay valor para constT.
 			constT=0;
