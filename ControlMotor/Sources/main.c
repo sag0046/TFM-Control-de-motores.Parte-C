@@ -274,7 +274,7 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
 		*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
 }
 
-static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK,int constK,int constT, int velocidad){
+static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int constK, int constT, int velocidad){
 	int llamadaMotor;
 	// Calculamos la velocidad en función del algoritmo recibido.
 	if(algoritmo=='P'){
@@ -308,10 +308,10 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 			*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
 
 			//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
-			  		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-			  		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
-			  		while(AS1_SendChar(velCalculada) != ERR_OK) {};
-					UART_Write_Numero_Int(velCalculada);
+			while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+			while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
+			while(AS1_SendChar(velCalculada) != ERR_OK) {};
+			UART_Write_Numero_Int(velCalculada);
 
 
 			//establecerVelocidad(velCalculada);
@@ -364,6 +364,7 @@ int main(void)
     int errorK = 0;
     byte err; /*????*/
 
+    int cont=0; // Contador
 
 	int velocidad=0;
 	int constK=0;
@@ -409,7 +410,6 @@ int main(void)
 			constT=0;
 			algoritmo='P';
 
-			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
 
 		  // Comprobamos si es una I, lo que significa que es el algorimo rdIntegral
 		  }else if (datoRecibido == 73){
@@ -633,7 +633,18 @@ int main(void)
   		LED_ROJO_SetVal(Rojo_Ptr);
   		LED_VERDE_SetVal(Verde_Ptr);
   		LED_AZUL_NegVal(Azul_Ptr);
-      	}
+
+  		calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
+
+  		// Cada cierto tiempo, o numero de iteraciones realizamos las operaciones
+		if (cont == 5){
+			// Llamamos a la función
+
+			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
+			// Iniciamos el contador
+			cont = 0;
+		}
+	}
 
 
   /* For example: for(;;) { } */
