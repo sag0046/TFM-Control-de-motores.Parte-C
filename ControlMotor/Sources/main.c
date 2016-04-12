@@ -274,12 +274,14 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
 		*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
 }
 
-static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int constK, int constT, int velocidad){
+static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int constK, int constT, int *velocidad){
 	int llamadaMotor;
 	// Calculamos la velocidad en función del algoritmo recibido.
 	if(algoritmo=='P'){
+		if (llamada){
+					llamada = FALSE;
 		// Realizar 20 llamadas al motor para ajustar su velocidad con el margen del error.
-		for(llamadaMotor = 0; llamadaMotor < 200; llamadaMotor++){
+		//for(llamadaMotor = 0; llamadaMotor < 200; llamadaMotor++){
 
 			//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
 			encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
@@ -293,7 +295,7 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 			*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
 
 			//CALCULAMOS EL ERROR
-			*error= velocidad - *velEncoder;
+			*error= *velocidad - *velEncoder;
 			//*errorK += *error;// acumulo todos los errores para el integral
 			*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
 
@@ -310,12 +312,12 @@ static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculad
 			//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
 			while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
 			while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
-			while(AS1_SendChar(velCalculada) != ERR_OK) {};
-			UART_Write_Numero_Int(velCalculada);
+			while(AS1_SendChar(*velCalculada) != ERR_OK) {};
+			UART_Write_Numero_Int(*velCalculada);
 
 
 			//establecerVelocidad(velCalculada);
-			enviarVelocidad(velCalculada); //para el movil
+			//enviarVelocidad(*velCalculada); //para el movil
 
 			//enviarVelocidad(velEncoder);
 		}
@@ -385,6 +387,8 @@ int main(void)
 
   	//while(AS1_SendChar(0x00) != ERR_OK) {}; //
   	for(;;) {
+
+  		//cont ++;
 	  AS2_TComData datoRecibido; // Dato recibido por el puerto serie perteneciente al modulo bluetooth.
 		if(AS2_RecvChar(&datoRecibido) == ERR_OK){
 		  // Comprobamos si es una P, lo que significa que es el algorimo rdProporcional
@@ -634,16 +638,16 @@ int main(void)
   		LED_VERDE_SetVal(Verde_Ptr);
   		LED_AZUL_NegVal(Azul_Ptr);
 
-  		calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
+  		calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, &velocidad);
 
   		// Cada cierto tiempo, o numero de iteraciones realizamos las operaciones
-		if (cont == 5){
+		/*if (cont == 500000){
 			// Llamamos a la función
 
-			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, velocidad);
+			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, &velocidad);
 			// Iniciamos el contador
 			cont = 0;
-		}
+		}*/
 	}
 
 
