@@ -277,53 +277,58 @@ static calcularDatosEncoder(int *velCalculada, int *velCalculadaAnt, int *velEnc
 static calcularDatosEncoder2(char algoritmo, int *velCalculada, int *velCalculadaAnt, int *velEncoder, int *error, int *errorK, int constK, int constT, int *velocidad){
 	int llamadaMotor;
 	// Calculamos la velocidad en función del algoritmo recibido.
-	if(algoritmo=='P'){
-		if (llamada){
-					llamada = FALSE;
-		// Realizar 20 llamadas al motor para ajustar su velocidad con el margen del error.
-		//for(llamadaMotor = 0; llamadaMotor < 200; llamadaMotor++){
+	//if(algoritmo=='P'){
+	if (llamada){
+		llamada = FALSE;
+	// Realizar 20 llamadas al motor para ajustar su velocidad con el margen del error.
+	//for(llamadaMotor = 0; llamadaMotor < 200; llamadaMotor++){
 
-			//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
-			encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
-			encoder = obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
+		//CALCULAMOS DATOS DEL ENCODER: distancia recorrida y velocidad
+		encoderAnt = encoder; // Guardamos los valores para el siguiente calculo
+		encoder = obtenerEncoder(); // Obtenemos los valores de los encoders --- llamarla cada 0,1seg
 
-				//distancia recorrida
-			distEncoder = (encoder - encoderAnt); // Obtenemos la distancia recorrida por el enconder
-				//velocidad rps
-			//velocidadEncoder = (distEncoder1) * 10 / 360; //cada 0.1 seg
-				//velocidad rpm --> *60
-			*velEncoder = (distEncoder) * 10/ 360*60; //cada 0.1seg
+			//distancia recorrida
+		distEncoder = (encoder - encoderAnt); // Obtenemos la distancia recorrida por el enconder
+			//velocidad rps
+		//velocidadEncoder = (distEncoder1) * 10 / 360; //cada 0.1 seg
+			//velocidad rpm --> *60
+		*velEncoder = (((distEncoder) * 10)/ 360)*60; //cada 0.1seg
 
-			//CALCULAMOS EL ERROR
-			*error= *velocidad - *velEncoder;
-			//*errorK += *error;// acumulo todos los errores para el integral
-			*velCalculada = *velCalculadaAnt + (float)constK/100*(*error);
+		//CALCULAMOS EL ERROR
+		*error= *velocidad - *velEncoder;
 
-			//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error) + (float)constK/constT*(*errorK)*0.1;
-
-
-			//la MAX velocidad que puede alcanzar velCalculada es 255
-			if(*velCalculada>255) *velCalculada=255;
-			if(*velCalculada<0) *velCalculada=0;
-			else *velCalculada = *velCalculada;
-
-			*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
-
-			//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
-			while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
-			while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
-			while(AS1_SendChar(*velCalculada) != ERR_OK) {};
-			UART_Write_Numero_Int(*velCalculada);
-
-
-			//establecerVelocidad(velCalculada);
-			//enviarVelocidad(*velCalculada); //para el movil
-
-			//enviarVelocidad(velEncoder);
+		if (algoritmo == 'P'){
+			*velCalculada = *velCalculadaAnt + ((float)constK/100)*(*error);
+		} else if (algoritmo == 'I'){
+			*errorK += *error;// acumulo todos los errores para el integral
+			*velCalculada = *velCalculadaAnt + ((float)constK/100)*(*error) + ((float)constK/constT)*(*errorK)*0.1;
 		}
-	} else if(algoritmo=='I'){
-		//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error) + (float)constK/constT*(*errorK)*0.1;
+
+
+		//la MAX velocidad que puede alcanzar velCalculada es 255
+		if(*velCalculada>255) *velCalculada=255;
+		if(*velCalculada<0) *velCalculada=0;
+		else *velCalculada = *velCalculada;
+
+		*velCalculadaAnt=*velCalculada;  //Igualamos la varCalculada a velCalculadaAnt
+
+		//ENVIO AL MOTOR de la velCalculada ----> se añadiria antes de empezar las impresiones x pantalla
+		while(AS1_SendChar(0x00)!=ERR_OK){}; //SINCRONIZAR
+		while(AS1_SendChar(0x32)!=ERR_OK){}; //COMANDO VELOCIDAD set speed2 ya que el 0x31 es el parado-
+//		while(AS1_SendChar(*velCalculada) != ERR_OK) {};
+		while(AS1_SendChar(-111) != ERR_OK) {};
+		//while(AS1_SendChar(51) != ERR_OK) {};
+		UART_Write_Numero_Int(*velCalculada);
+
+
+		//establecerVelocidad(velCalculada);
+		//enviarVelocidad(*velCalculada); //para el movil
+
+		//enviarVelocidad(velEncoder);
 	}
+	//} else if(algoritmo=='I'){
+		//*velCalculada = *velCalculadaAnt + (float)constK/100*(*error) + (float)constK/constT*(*errorK)*0.1;
+	//}
 
 }
 
@@ -389,7 +394,7 @@ int main(void)
   	for(;;) {
 
   		//cont ++;
-	  AS2_TComData datoRecibido; // Dato recibido por el puerto serie perteneciente al modulo bluetooth.
+	  AS2_TComData datoRecibido; // Dato recibido por el puerto serie del modulo bluetooth.
 		if(AS2_RecvChar(&datoRecibido) == ERR_OK){
 		  // Comprobamos si es una P, lo que significa que es el algorimo rdProporcional
 		  if(datoRecibido == 80){
@@ -414,207 +419,40 @@ int main(void)
 			constT=0;
 			algoritmo='P';
 
-
 		  // Comprobamos si es una I, lo que significa que es el algorimo rdIntegral
 		  }else if (datoRecibido == 73){
 			  // Vamos obteniendo el resto del mensaje y localizando la velocidad, son siempre 3 caracteres.
+		// Vamos obteniendo el resto del mensaje y localizando la velocidad, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			velocidad=datoRecibido;
+			velocidad=(datoRecibido-48)*100;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			velocidad+=datoRecibido;
+			velocidad+=(datoRecibido-48)*10;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			velocidad+=datoRecibido;
-
+			velocidad+=(datoRecibido-48);
+			UART_Write_Numero_Int(velocidad);
 			// Vamos obteniendo el resto del mensaje y localizando la constanteK, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			constK=datoRecibido;
+			constK=(datoRecibido-48)*100;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			constK+=datoRecibido;
+			constK+=(datoRecibido-48)*10;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-			constK+=datoRecibido;
-
+			constK+=(datoRecibido-48);
+			UART_Write_Numero_Int(constK);
 			// Al ser el algoritmo rdIntegral, si hay valor para constt, son siempre 3 caracteres.
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			constT=datoRecibido;
+			constT=(datoRecibido-48)*100;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			constT+=datoRecibido;
+			constT+=(datoRecibido-48)*10;
 			while(AS2_RecvChar(&datoRecibido) != ERR_OK){};
-
-			if(datoRecibido == 48){		   // Es un 0
-				enviarVelocidad('q');
-			} else if(datoRecibido == 49){ // Es un 1
-				enviarVelocidad('w');
-			} else if(datoRecibido == 50){ // Es un 2
-				enviarVelocidad('e');
-			} else if(datoRecibido == 51){ // Es un 3
-				enviarVelocidad('r');
-			} else if(datoRecibido == 52){ // Es un 4
-				enviarVelocidad('t');
-			} else if(datoRecibido == 53){ // Es un 5
-				enviarVelocidad('y');
-			} else if(datoRecibido == 54){ // Es un 6
-				enviarVelocidad('u');
-			} else if(datoRecibido == 55){ // Es un 7
-				enviarVelocidad('i');
-			} else if(datoRecibido == 56){ // Es un 8
-				enviarVelocidad('o');
-			} else if(datoRecibido == 57){ // Es un 9
-				enviarVelocidad('p');
-			}else {
-				enviarVelocidad('a');
-			}
-			constT+=datoRecibido;
+			constT+=(datoRecibido-48);
+			UART_Write_Numero_Int(constT);
 
 			// Al ser el algoritmo rdIntegral, variable 'I'.
 			algoritmo='I';
 
 			}else if (datoRecibido == 83){// una S
 			  // Botón pulsado STOP, parada del motor.
-				stopMotor();
+				algoritmo='S';
 			}
 		}
 
@@ -638,7 +476,11 @@ int main(void)
   		LED_VERDE_SetVal(Verde_Ptr);
   		LED_AZUL_NegVal(Azul_Ptr);
 
-  		calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, &velocidad);
+		if (algoritmo == 'P' || algoritmo == 'I'){
+			calcularDatosEncoder2(algoritmo, &velCalculada, &velCalculadaAnt, &velEncoder, &error, &errorK, constK, constT, &velocidad);
+		} else if (algoritmo == 'S'){
+			stopMotor();
+		}
 
   		// Cada cierto tiempo, o numero de iteraciones realizamos las operaciones
 		/*if (cont == 500000){
@@ -652,6 +494,7 @@ int main(void)
 
 
   /* For example: for(;;) { } */
+
 
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
