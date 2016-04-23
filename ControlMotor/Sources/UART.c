@@ -39,18 +39,21 @@ void enviarVelocidad(int x){
 	var += (char)(j%10)+48;*/
 
 	if(x == ERR_OK){
-		while(AS2_SendChar('n') != ERR_OK) {};
+		//while(AS2_SendChar('n') != ERR_OK) {};
 
 	}
 	else{
-		while(AS2_SendChar(x) != ERR_OK) {};
-		while(AS2_SendChar('j') != ERR_OK) {};
+		//120
+
+		//while(AS2_SendChar(52) != ERR_OK) {};
+		//while(AS2_SendChar(x) != ERR_OK) {};
+		//while(AS2_SendChar('j') != ERR_OK) {};
 		//while(AS2_SendChar(var) != ERR_OK) {};
 		//while(AS2_SendChar(x) != ERR_OK) {};
-		/*while(AS2_SendChar((char)((x%10000)/1000))!= ERR_OK) {};
-		while(AS2_SendChar((char)((x%1000)/100))!= ERR_OK) {};
-		while(AS2_SendChar((char)((x%100)/10))!= ERR_OK) {};
-		while(AS2_SendChar((char)((x%10)))!= ERR_OK) {};*/
+		//while(AS2_SendChar((char)((x%10000)/1000))!= ERR_OK) {};
+		while(AS2_SendChar((char)(48+(x%1000)/100))!= ERR_OK) {};
+		while(AS2_SendChar((char)(48+(x%100)/10))!= ERR_OK) {};
+		while(AS2_SendChar((char)(48+(x%10)))!= ERR_OK) {};
 
 	}
 
