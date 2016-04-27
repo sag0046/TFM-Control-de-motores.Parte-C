@@ -559,17 +559,13 @@ Discarded input sections
  .text          0x00000000        0x0 ./Sources/main.o
  .data          0x00000000        0x0 ./Sources/main.o
  .bss           0x00000000        0x0 ./Sources/main.o
- .text.obtenerModo
-                0x00000000       0x3c ./Sources/main.o
  .text.establecerVelocidad
                 0x00000000       0x3c ./Sources/main.o
  .rodata        0x00000000       0x54 ./Sources/main.o
  .text.imprimirVariables
-                0x00000000       0xa0 ./Sources/main.o
+                0x00000000       0x8c ./Sources/main.o
  .text.comprobarDatos
-                0x00000000       0x54 ./Sources/main.o
- .text.calcularDatosEncoder
-                0x00000000      0x124 ./Sources/main.o
+                0x00000000       0x74 ./Sources/main.o
  .debug_macro   0x00000000      0x850 ./Sources/main.o
  .debug_macro   0x00000000      0x214 ./Sources/main.o
  .debug_macro   0x00000000     0x17a6 ./Sources/main.o
@@ -1531,7 +1527,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x00000400                _cfm
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410     0x38d4
+.text           0x00000410     0x3970
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410      0x370 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_addsubdf3.o)
@@ -1607,273 +1603,273 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x000016b4       0xd8 ./Sources/UART.o
                 0x000016b4                UART_Write_Numero_Int
  .text.enviarVelocidad
-                0x0000178c       0x44 ./Sources/UART.o
+                0x0000178c       0xcc ./Sources/UART.o
                 0x0000178c                enviarVelocidad
  .text.obtenerEncoder
-                0x000017d0       0xcc ./Sources/main.o
+                0x00001858       0xcc ./Sources/main.o
  .text.configuracionMotor
-                0x0000189c       0x78 ./Sources/main.o
- *fill*         0x00001914        0x4 
+                0x00001924       0x78 ./Sources/main.o
+ *fill*         0x0000199c        0x4 
  .text.calcularDatosEncoder2
-                0x00001918      0x238 ./Sources/main.o
+                0x000019a0      0x248 ./Sources/main.o
  .text.resetearEncoders
-                0x00001b50       0x24 ./Sources/main.o
-                0x00001b50                resetearEncoders
+                0x00001be8       0x24 ./Sources/main.o
+                0x00001be8                resetearEncoders
  .text.stopMotor
-                0x00001b74       0x38 ./Sources/main.o
-                0x00001b74                stopMotor
- .text.main     0x00001bac      0x2d0 ./Sources/main.o
-                0x00001bac                main
+                0x00001c0c       0x3c ./Sources/main.o
+                0x00001c0c                stopMotor
+ .text.main     0x00001c48      0x2d0 ./Sources/main.o
+                0x00001c48                main
  .text.__flush_cache
-                0x00001e7c       0x14 ./Project_Settings/Startup_Code/startup.o
-                0x00001e7c                __flush_cache
+                0x00001f18       0x14 ./Project_Settings/Startup_Code/startup.o
+                0x00001f18                __flush_cache
  .text.__copy_rom_section
-                0x00001e90       0xe4 ./Project_Settings/Startup_Code/startup.o
-                0x00001e90                __copy_rom_section
+                0x00001f2c       0xe4 ./Project_Settings/Startup_Code/startup.o
+                0x00001f2c                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x00001f74       0xf8 ./Project_Settings/Startup_Code/startup.o
-                0x00001f74                __copy_rom_sections_to_ram
+                0x00002010       0xf8 ./Project_Settings/Startup_Code/startup.o
+                0x00002010                __copy_rom_sections_to_ram
  .text.zero_fill_bss
-                0x0000206c       0xbc ./Project_Settings/Startup_Code/startup.o
+                0x00002108       0xbc ./Project_Settings/Startup_Code/startup.o
  .text.__init_registers
-                0x00002128       0x20 ./Project_Settings/Startup_Code/startup.o
-                0x00002128                __init_registers
+                0x000021c4       0x20 ./Project_Settings/Startup_Code/startup.o
+                0x000021c4                __init_registers
  .text.__init_user
-                0x00002148        0xc ./Project_Settings/Startup_Code/startup.o
-                0x00002148                __init_user
+                0x000021e4        0xc ./Project_Settings/Startup_Code/startup.o
+                0x000021e4                __init_user
  .text.__thumb_startup
-                0x00002154       0x50 ./Project_Settings/Startup_Code/startup.o
-                0x00002154                __thumb_startup
- .text.HWEnDi   0x000021a4       0x20 ./Generated_Code/AS1.o
+                0x000021f0       0x50 ./Project_Settings/Startup_Code/startup.o
+                0x000021f0                __thumb_startup
+ .text.HWEnDi   0x00002240       0x20 ./Generated_Code/AS1.o
  .text.AS1_RecvChar
-                0x000021c4       0xa0 ./Generated_Code/AS1.o
-                0x000021c4                AS1_RecvChar
+                0x00002260       0xa0 ./Generated_Code/AS1.o
+                0x00002260                AS1_RecvChar
  .text.AS1_SendChar
-                0x00002264       0x7c ./Generated_Code/AS1.o
-                0x00002264                AS1_SendChar
+                0x00002300       0x7c ./Generated_Code/AS1.o
+                0x00002300                AS1_SendChar
  .text.AS1_Init
-                0x000022e0       0x28 ./Generated_Code/AS1.o
-                0x000022e0                AS1_Init
+                0x0000237c       0x28 ./Generated_Code/AS1.o
+                0x0000237c                AS1_Init
  .text.ASerialLdd1_OnBreak
-                0x00002308       0x2c ./Generated_Code/AS1.o
-                0x00002308                ASerialLdd1_OnBreak
- .text.HWEnDi   0x00002334       0x20 ./Generated_Code/AS2.o
+                0x000023a4       0x2c ./Generated_Code/AS1.o
+                0x000023a4                ASerialLdd1_OnBreak
+ .text.HWEnDi   0x000023d0       0x20 ./Generated_Code/AS2.o
  .text.AS2_RecvChar
-                0x00002354      0x12c ./Generated_Code/AS2.o
-                0x00002354                AS2_RecvChar
+                0x000023f0      0x12c ./Generated_Code/AS2.o
+                0x000023f0                AS2_RecvChar
  .text.AS2_SendChar
-                0x00002480       0xd0 ./Generated_Code/AS2.o
-                0x00002480                AS2_SendChar
+                0x0000251c       0xd0 ./Generated_Code/AS2.o
+                0x0000251c                AS2_SendChar
  .text.AS2_Init
-                0x00002550       0x4c ./Generated_Code/AS2.o
-                0x00002550                AS2_Init
+                0x000025ec       0x4c ./Generated_Code/AS2.o
+                0x000025ec                AS2_Init
  .text.ASerialLdd2_OnBlockReceived
-                0x0000259c      0x100 ./Generated_Code/AS2.o
-                0x0000259c                ASerialLdd2_OnBlockReceived
+                0x00002638      0x100 ./Generated_Code/AS2.o
+                0x00002638                ASerialLdd2_OnBlockReceived
  .text.ASerialLdd2_OnBlockSent
-                0x0000269c       0x54 ./Generated_Code/AS2.o
-                0x0000269c                ASerialLdd2_OnBlockSent
+                0x00002738       0x54 ./Generated_Code/AS2.o
+                0x00002738                ASerialLdd2_OnBlockSent
  .text.ASerialLdd2_OnError
-                0x000026f0       0xc8 ./Generated_Code/AS2.o
-                0x000026f0                ASerialLdd2_OnError
+                0x0000278c       0xc8 ./Generated_Code/AS2.o
+                0x0000278c                ASerialLdd2_OnError
  .text.ASerialLdd2_OnBreak
-                0x000027b8       0x2c ./Generated_Code/AS2.o
-                0x000027b8                ASerialLdd2_OnBreak
- .text.HWEnDi   0x000027e4       0x20 ./Generated_Code/AS3.o
+                0x00002854       0x2c ./Generated_Code/AS2.o
+                0x00002854                ASerialLdd2_OnBreak
+ .text.HWEnDi   0x00002880       0x20 ./Generated_Code/AS3.o
  .text.AS3_SendChar
-                0x00002804       0x7c ./Generated_Code/AS3.o
-                0x00002804                AS3_SendChar
+                0x000028a0       0x7c ./Generated_Code/AS3.o
+                0x000028a0                AS3_SendChar
  .text.AS3_Init
-                0x00002880       0x28 ./Generated_Code/AS3.o
-                0x00002880                AS3_Init
+                0x0000291c       0x28 ./Generated_Code/AS3.o
+                0x0000291c                AS3_Init
  .text.ASerialLdd3_OnBreak
-                0x000028a8       0x2c ./Generated_Code/AS3.o
-                0x000028a8                ASerialLdd3_OnBreak
+                0x00002944       0x2c ./Generated_Code/AS3.o
+                0x00002944                ASerialLdd3_OnBreak
  .text.ASerialLdd1_Init
-                0x000028d4      0x224 ./Generated_Code/ASerialLdd1.o
-                0x000028d4                ASerialLdd1_Init
+                0x00002970      0x224 ./Generated_Code/ASerialLdd1.o
+                0x00002970                ASerialLdd1_Init
  .text.ASerialLdd1_ReceiveBlock
-                0x00002af8       0x48 ./Generated_Code/ASerialLdd1.o
-                0x00002af8                ASerialLdd1_ReceiveBlock
+                0x00002b94       0x48 ./Generated_Code/ASerialLdd1.o
+                0x00002b94                ASerialLdd1_ReceiveBlock
  .text.ASerialLdd1_SendBlock
-                0x00002b40       0x58 ./Generated_Code/ASerialLdd1.o
-                0x00002b40                ASerialLdd1_SendBlock
+                0x00002bdc       0x58 ./Generated_Code/ASerialLdd1.o
+                0x00002bdc                ASerialLdd1_SendBlock
  .text.ASerialLdd1_GetReceivedDataNum
-                0x00002b98       0x1c ./Generated_Code/ASerialLdd1.o
-                0x00002b98                ASerialLdd1_GetReceivedDataNum
+                0x00002c34       0x1c ./Generated_Code/ASerialLdd1.o
+                0x00002c34                ASerialLdd1_GetReceivedDataNum
  .text.InterruptRx
-                0x00002bb4       0x54 ./Generated_Code/ASerialLdd1.o
+                0x00002c50       0x54 ./Generated_Code/ASerialLdd1.o
  .text.InterruptTx
-                0x00002c08       0x64 ./Generated_Code/ASerialLdd1.o
+                0x00002ca4       0x64 ./Generated_Code/ASerialLdd1.o
  .text.ASerialLdd1_Main
-                0x00002c6c       0xe0 ./Generated_Code/ASerialLdd1.o
-                0x00002c6c                ASerialLdd1_Main
+                0x00002d08       0xe0 ./Generated_Code/ASerialLdd1.o
+                0x00002d08                ASerialLdd1_Main
  .text.ASerialLdd1_GetError
-                0x00002d4c       0x2c ./Generated_Code/ASerialLdd1.o
-                0x00002d4c                ASerialLdd1_GetError
+                0x00002de8       0x2c ./Generated_Code/ASerialLdd1.o
+                0x00002de8                ASerialLdd1_GetError
  .text.ASerialLdd2_Init
-                0x00002d78      0x2c0 ./Generated_Code/ASerialLdd2.o
-                0x00002d78                ASerialLdd2_Init
+                0x00002e14      0x2c0 ./Generated_Code/ASerialLdd2.o
+                0x00002e14                ASerialLdd2_Init
  .text.ASerialLdd2_ReceiveBlock
-                0x00003038       0xb0 ./Generated_Code/ASerialLdd2.o
-                0x00003038                ASerialLdd2_ReceiveBlock
+                0x000030d4       0xb0 ./Generated_Code/ASerialLdd2.o
+                0x000030d4                ASerialLdd2_ReceiveBlock
  .text.ASerialLdd2_SendBlock
-                0x000030e8       0xf0 ./Generated_Code/ASerialLdd2.o
-                0x000030e8                ASerialLdd2_SendBlock
+                0x00003184       0xf0 ./Generated_Code/ASerialLdd2.o
+                0x00003184                ASerialLdd2_SendBlock
  .text.InterruptRx
-                0x000031d8       0x5c ./Generated_Code/ASerialLdd2.o
+                0x00003274       0x5c ./Generated_Code/ASerialLdd2.o
  .text.InterruptTx
-                0x00003234       0x9c ./Generated_Code/ASerialLdd2.o
+                0x000032d0       0x9c ./Generated_Code/ASerialLdd2.o
  .text.ASerialLdd2_Interrupt
-                0x000032d0      0x100 ./Generated_Code/ASerialLdd2.o
-                0x000032d0                ASerialLdd2_Interrupt
+                0x0000336c      0x100 ./Generated_Code/ASerialLdd2.o
+                0x0000336c                ASerialLdd2_Interrupt
  .text.ASerialLdd2_GetError
-                0x000033d0       0x90 ./Generated_Code/ASerialLdd2.o
-                0x000033d0                ASerialLdd2_GetError
+                0x0000346c       0x90 ./Generated_Code/ASerialLdd2.o
+                0x0000346c                ASerialLdd2_GetError
  .text.ASerialLdd3_Init
-                0x00003460      0x224 ./Generated_Code/ASerialLdd3.o
-                0x00003460                ASerialLdd3_Init
+                0x000034fc      0x224 ./Generated_Code/ASerialLdd3.o
+                0x000034fc                ASerialLdd3_Init
  .text.ASerialLdd3_ReceiveBlock
-                0x00003684       0x48 ./Generated_Code/ASerialLdd3.o
-                0x00003684                ASerialLdd3_ReceiveBlock
+                0x00003720       0x48 ./Generated_Code/ASerialLdd3.o
+                0x00003720                ASerialLdd3_ReceiveBlock
  .text.ASerialLdd3_SendBlock
-                0x000036cc       0x58 ./Generated_Code/ASerialLdd3.o
-                0x000036cc                ASerialLdd3_SendBlock
+                0x00003768       0x58 ./Generated_Code/ASerialLdd3.o
+                0x00003768                ASerialLdd3_SendBlock
  .text.InterruptRx
-                0x00003724       0x54 ./Generated_Code/ASerialLdd3.o
+                0x000037c0       0x54 ./Generated_Code/ASerialLdd3.o
  .text.InterruptTx
-                0x00003778       0x64 ./Generated_Code/ASerialLdd3.o
+                0x00003814       0x64 ./Generated_Code/ASerialLdd3.o
  .text.ASerialLdd3_Main
-                0x000037dc       0xe0 ./Generated_Code/ASerialLdd3.o
-                0x000037dc                ASerialLdd3_Main
+                0x00003878       0xe0 ./Generated_Code/ASerialLdd3.o
+                0x00003878                ASerialLdd3_Main
  .text.Components_Init
-                0x000038bc       0x18 ./Generated_Code/Cpu.o
-                0x000038bc                Components_Init
+                0x00003958       0x18 ./Generated_Code/Cpu.o
+                0x00003958                Components_Init
  .text.Cpu_INT_NMIInterrupt
-                0x000038d4       0x1c ./Generated_Code/Cpu.o
-                0x000038d4                Cpu_INT_NMIInterrupt
+                0x00003970       0x1c ./Generated_Code/Cpu.o
+                0x00003970                Cpu_INT_NMIInterrupt
  .text.LED_AZUL_NegVal
-                0x000038f0       0x20 ./Generated_Code/LED_AZUL.o
-                0x000038f0                LED_AZUL_NegVal
+                0x0000398c       0x20 ./Generated_Code/LED_AZUL.o
+                0x0000398c                LED_AZUL_NegVal
  .text.LED_ROJO_SetVal
-                0x00003910       0x20 ./Generated_Code/LED_ROJO.o
-                0x00003910                LED_ROJO_SetVal
+                0x000039ac       0x20 ./Generated_Code/LED_ROJO.o
+                0x000039ac                LED_ROJO_SetVal
  .text.LED_VERDE_SetVal
-                0x00003930       0x20 ./Generated_Code/LED_VERDE.o
-                0x00003930                LED_VERDE_SetVal
+                0x000039cc       0x20 ./Generated_Code/LED_VERDE.o
+                0x000039cc                LED_VERDE_SetVal
  .text.TimerIntLdd1_OnInterrupt
-                0x00003950       0x14 ./Generated_Code/TI1.o
-                0x00003950                TimerIntLdd1_OnInterrupt
+                0x000039ec       0x14 ./Generated_Code/TI1.o
+                0x000039ec                TimerIntLdd1_OnInterrupt
  .text.TU1_Init
-                0x00003964      0x174 ./Generated_Code/TU1.o
-                0x00003964                TU1_Init
+                0x00003a00      0x174 ./Generated_Code/TU1.o
+                0x00003a00                TU1_Init
  .text.TU1_Interrupt
-                0x00003ad8       0x7c ./Generated_Code/TU1.o
-                0x00003ad8                TU1_Interrupt
+                0x00003b74       0x7c ./Generated_Code/TU1.o
+                0x00003b74                TU1_Interrupt
  .text.TimerIntLdd1_Init
-                0x00003b54       0x58 ./Generated_Code/TimerIntLdd1.o
-                0x00003b54                TimerIntLdd1_Init
+                0x00003bf0       0x58 ./Generated_Code/TimerIntLdd1.o
+                0x00003bf0                TimerIntLdd1_Init
  .text.TU1_OnCounterRestart
-                0x00003bac       0x24 ./Generated_Code/TimerIntLdd1.o
-                0x00003bac                TU1_OnCounterRestart
+                0x00003c48       0x24 ./Generated_Code/TimerIntLdd1.o
+                0x00003c48                TU1_OnCounterRestart
  *(.rodata)
  *(.rodata*)
  .rodata.ClockGenModeMatrix
-                0x00003bd0       0x80 ./Static_Code/System/CPU_Init.o
+                0x00003c6c       0x80 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockConfigDescriptors
-                0x00003c50       0x1c ./Static_Code/System/CPU_Init.o
+                0x00003cec       0x1c ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEI
-                0x00003c6c        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d08        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBI
-                0x00003c74        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d10        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPI
-                0x00003c7c        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d18        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEE
-                0x00003c84        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d20        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBE
-                0x00003c8c        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d28        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPE
-                0x00003c94        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d30        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPBE
-                0x00003c9c        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d38        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPEE
-                0x00003ca4        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d40        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockGenModeRegs
-                0x00003cac       0x20 ./Static_Code/System/CPU_Init.o
+                0x00003d48       0x20 ./Static_Code/System/CPU_Init.o
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00003ccc        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+ .eh_frame      0x00003d68        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
  *(.init)
- .init          0x00003ccc        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
-                0x00003ccc                _init
- .init          0x00003cd0        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
+ .init          0x00003d68        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
+                0x00003d68                _init
+ .init          0x00003d6c        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
  *(.fini)
- .fini          0x00003cd8        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
-                0x00003cd8                _fini
- .fini          0x00003cdc        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
-                0x00003ce4                . = ALIGN (0x4)
-                0x00003ce4                _etext = .
+ .fini          0x00003d74        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
+                0x00003d74                _fini
+ .fini          0x00003d78        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
+                0x00003d80                . = ALIGN (0x4)
+                0x00003d80                _etext = .
 
-.vfp11_veneer   0x00003ce4        0x0
+.vfp11_veneer   0x00003d80        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00003ce4        0x0
+.v4_bx          0x00003d80        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00003ce4        0x0
+.iplt           0x00003d80        0x0
  .iplt          0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
-.rel.dyn        0x00003ce4        0x0
+.rel.dyn        0x00003d80        0x0
  .rel.iplt      0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00003ce4        0x0
-                0x00003ce4                __exidx_start = .
+.ARM            0x00003d80        0x0
+                0x00003d80                __exidx_start = .
  *(.ARM.exidx*)
-                0x00003ce4                __exidx_end = .
+                0x00003d80                __exidx_end = .
 
-.ctors          0x00003ce4        0x0
-                0x00003ce4                __CTOR_LIST__ = .
+.ctors          0x00003d80        0x0
+                0x00003d80                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00003ce4                __CTOR_END__ = .
+                0x00003d80                __CTOR_END__ = .
 
-.dtors          0x00003ce4        0x0
-                0x00003ce4                __DTOR_LIST__ = .
+.dtors          0x00003d80        0x0
+                0x00003d80                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00003ce4                __DTOR_END__ = .
+                0x00003d80                __DTOR_END__ = .
 
-.preinit_array  0x00003ce4        0x0
-                0x00003ce4                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00003d80        0x0
+                0x00003d80                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00003ce4                PROVIDE (__preinit_array_end, .)
+                0x00003d80                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00003ce4        0x4
-                0x00003ce4                PROVIDE (__init_array_start, .)
+.init_array     0x00003d80        0x4
+                0x00003d80                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x00003ce4        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
-                0x00003ce8                PROVIDE (__init_array_end, .)
+ .init_array    0x00003d80        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+                0x00003d84                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00003ce8        0x4
-                0x00003ce8                PROVIDE (__fini_array_start, .)
+.fini_array     0x00003d84        0x4
+                0x00003d84                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00003ce8        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
-                0x00003cec                PROVIDE (__fini_array_end, .)
-                0x00003cec                ___ROM_AT = .
+ .fini_array    0x00003d84        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+                0x00003d88                PROVIDE (__fini_array_end, .)
+                0x00003d88                ___ROM_AT = .
 
-.data           0x20000000        0x0 load address 0x00003cec
+.data           0x20000000        0x0 load address 0x00003d88
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -1881,7 +1877,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _edata = .
                 0x00000000                ___data_size = (_edata - _sdata)
-                0x00003cec                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
+                0x00003d88                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
 
 .jcr            0x20000000        0x0
  .jcr           0x20000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
@@ -1897,7 +1893,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
  .igot.plt      0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
 .m_data_1FFF0000
-                0x1fff0000        0x0 load address 0x00003cec
+                0x1fff0000        0x0 load address 0x00003d88
                 0x1fff0000                . = ALIGN (0x4)
                 0x1fff0000                ___m_data_1FFF0000_RAMStart = .
  *(.m_data_1FFF0000)
@@ -1988,14 +1984,14 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x20000130                . = ALIGN (0x4)
                 0x20000130                __END_BSS = .
                 0x20000130                PROVIDE (__bss_end__, __END_BSS)
-                0x00003cec                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
+                0x00003d88                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
 
-.romp           0x20000130       0x24 load address 0x00003cec
-                0x00003cec                __S_romp = _romp_at
-                0x20000130        0x4 LONG 0x3cec ___ROM_AT
+.romp           0x20000130       0x24 load address 0x00003d88
+                0x00003d88                __S_romp = _romp_at
+                0x20000130        0x4 LONG 0x3d88 ___ROM_AT
                 0x20000134        0x4 LONG 0x20000000 _sdata
                 0x20000138        0x4 LONG 0x0 ___data_size
-                0x2000013c        0x4 LONG 0x3cec ___m_data_1FFF0000_ROMStart
+                0x2000013c        0x4 LONG 0x3d88 ___m_data_1FFF0000_ROMStart
                 0x20000140        0x4 LONG 0x1fff0000 ___m_data_1FFF0000_RAMStart
                 0x20000144        0x4 LONG 0x0 ___m_data_1FFF0000_ROMSize
                 0x20000148        0x4 LONG 0x0
@@ -2003,7 +1999,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x20000150        0x4 LONG 0x0
 
 ._user_heap_stack
-                0x20000154      0x400 load address 0x00003d10
+                0x20000154      0x400 load address 0x00003dac
                 0x20000154                . = ALIGN (0x4)
                 0x20000154                PROVIDE (end, .)
                 0x20000154                PROVIDE (_end, .)
@@ -2099,51 +2095,51 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .comment       0x00000000       0x2b ./Generated_Code/TimerIntLdd1.o
  .comment       0x00000000       0x2b c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtend.o
 
-.debug_info     0x00000000     0x5ca5
+.debug_info     0x00000000     0x5c24
  .debug_info    0x00000000      0xa5a ./Static_Code/System/CPU_Init.o
  .debug_info    0x00000a5a      0x816 ./Static_Code/System/Vectors.o
  .debug_info    0x00001270      0x118 ./Sources/Events.o
  .debug_info    0x00001388      0x12f ./Sources/UART.o
- .debug_info    0x000014b7      0x5f7 ./Sources/main.o
- .debug_info    0x00001aae      0x498 ./Project_Settings/Startup_Code/startup.o
- .debug_info    0x00001f46      0x216 ./Generated_Code/AS1.o
- .debug_info    0x0000215c      0x3e1 ./Generated_Code/AS2.o
- .debug_info    0x0000253d      0x216 ./Generated_Code/AS3.o
- .debug_info    0x00002753      0x87c ./Generated_Code/ASerialLdd1.o
- .debug_info    0x00002fcf      0x9bb ./Generated_Code/ASerialLdd2.o
- .debug_info    0x0000398a      0x87c ./Generated_Code/ASerialLdd3.o
- .debug_info    0x00004206       0xa7 ./Generated_Code/Cpu.o
- .debug_info    0x000042ad      0x521 ./Generated_Code/LED_AZUL.o
- .debug_info    0x000047ce      0x521 ./Generated_Code/LED_ROJO.o
- .debug_info    0x00004cef      0x521 ./Generated_Code/LED_VERDE.o
- .debug_info    0x00005210      0x23b ./Generated_Code/PE_LDD.o
- .debug_info    0x0000544b       0xb2 ./Generated_Code/TI1.o
- .debug_info    0x000054fd      0x631 ./Generated_Code/TU1.o
- .debug_info    0x00005b2e      0x177 ./Generated_Code/TimerIntLdd1.o
+ .debug_info    0x000014b7      0x576 ./Sources/main.o
+ .debug_info    0x00001a2d      0x498 ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x00001ec5      0x216 ./Generated_Code/AS1.o
+ .debug_info    0x000020db      0x3e1 ./Generated_Code/AS2.o
+ .debug_info    0x000024bc      0x216 ./Generated_Code/AS3.o
+ .debug_info    0x000026d2      0x87c ./Generated_Code/ASerialLdd1.o
+ .debug_info    0x00002f4e      0x9bb ./Generated_Code/ASerialLdd2.o
+ .debug_info    0x00003909      0x87c ./Generated_Code/ASerialLdd3.o
+ .debug_info    0x00004185       0xa7 ./Generated_Code/Cpu.o
+ .debug_info    0x0000422c      0x521 ./Generated_Code/LED_AZUL.o
+ .debug_info    0x0000474d      0x521 ./Generated_Code/LED_ROJO.o
+ .debug_info    0x00004c6e      0x521 ./Generated_Code/LED_VERDE.o
+ .debug_info    0x0000518f      0x23b ./Generated_Code/PE_LDD.o
+ .debug_info    0x000053ca       0xb2 ./Generated_Code/TI1.o
+ .debug_info    0x0000547c      0x631 ./Generated_Code/TU1.o
+ .debug_info    0x00005aad      0x177 ./Generated_Code/TimerIntLdd1.o
 
-.debug_abbrev   0x00000000     0x19ec
+.debug_abbrev   0x00000000     0x19a4
  .debug_abbrev  0x00000000      0x1bd ./Static_Code/System/CPU_Init.o
  .debug_abbrev  0x000001bd       0xd6 ./Static_Code/System/Vectors.o
  .debug_abbrev  0x00000293       0x8c ./Sources/Events.o
  .debug_abbrev  0x0000031f       0xa7 ./Sources/UART.o
- .debug_abbrev  0x000003c6      0x259 ./Sources/main.o
- .debug_abbrev  0x0000061f      0x1a1 ./Project_Settings/Startup_Code/startup.o
- .debug_abbrev  0x000007c0      0x131 ./Generated_Code/AS1.o
- .debug_abbrev  0x000008f1      0x1d6 ./Generated_Code/AS2.o
- .debug_abbrev  0x00000ac7      0x131 ./Generated_Code/AS3.o
- .debug_abbrev  0x00000bf8      0x1c3 ./Generated_Code/ASerialLdd1.o
- .debug_abbrev  0x00000dbb      0x1db ./Generated_Code/ASerialLdd2.o
- .debug_abbrev  0x00000f96      0x1c3 ./Generated_Code/ASerialLdd3.o
- .debug_abbrev  0x00001159       0x45 ./Generated_Code/Cpu.o
- .debug_abbrev  0x0000119e      0x186 ./Generated_Code/LED_AZUL.o
- .debug_abbrev  0x00001324      0x186 ./Generated_Code/LED_ROJO.o
- .debug_abbrev  0x000014aa      0x186 ./Generated_Code/LED_VERDE.o
- .debug_abbrev  0x00001630      0x10d ./Generated_Code/PE_LDD.o
- .debug_abbrev  0x0000173d       0x68 ./Generated_Code/TI1.o
- .debug_abbrev  0x000017a5      0x16a ./Generated_Code/TU1.o
- .debug_abbrev  0x0000190f       0xdd ./Generated_Code/TimerIntLdd1.o
+ .debug_abbrev  0x000003c6      0x211 ./Sources/main.o
+ .debug_abbrev  0x000005d7      0x1a1 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x00000778      0x131 ./Generated_Code/AS1.o
+ .debug_abbrev  0x000008a9      0x1d6 ./Generated_Code/AS2.o
+ .debug_abbrev  0x00000a7f      0x131 ./Generated_Code/AS3.o
+ .debug_abbrev  0x00000bb0      0x1c3 ./Generated_Code/ASerialLdd1.o
+ .debug_abbrev  0x00000d73      0x1db ./Generated_Code/ASerialLdd2.o
+ .debug_abbrev  0x00000f4e      0x1c3 ./Generated_Code/ASerialLdd3.o
+ .debug_abbrev  0x00001111       0x45 ./Generated_Code/Cpu.o
+ .debug_abbrev  0x00001156      0x186 ./Generated_Code/LED_AZUL.o
+ .debug_abbrev  0x000012dc      0x186 ./Generated_Code/LED_ROJO.o
+ .debug_abbrev  0x00001462      0x186 ./Generated_Code/LED_VERDE.o
+ .debug_abbrev  0x000015e8      0x10d ./Generated_Code/PE_LDD.o
+ .debug_abbrev  0x000016f5       0x68 ./Generated_Code/TI1.o
+ .debug_abbrev  0x0000175d      0x16a ./Generated_Code/TU1.o
+ .debug_abbrev  0x000018c7       0xdd ./Generated_Code/TimerIntLdd1.o
 
-.debug_aranges  0x00000000      0x888
+.debug_aranges  0x00000000      0x878
  .debug_aranges
                 0x00000000       0x40 ./Static_Code/System/CPU_Init.o
  .debug_aranges
@@ -2153,59 +2149,59 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .debug_aranges
                 0x000003c8       0x28 ./Sources/UART.o
  .debug_aranges
-                0x000003f0       0x70 ./Sources/main.o
+                0x000003f0       0x60 ./Sources/main.o
  .debug_aranges
-                0x00000460       0x60 ./Project_Settings/Startup_Code/startup.o
+                0x00000450       0x60 ./Project_Settings/Startup_Code/startup.o
  .debug_aranges
-                0x000004c0       0x50 ./Generated_Code/AS1.o
+                0x000004b0       0x50 ./Generated_Code/AS1.o
  .debug_aranges
-                0x00000510       0x78 ./Generated_Code/AS2.o
+                0x00000500       0x78 ./Generated_Code/AS2.o
  .debug_aranges
-                0x00000588       0x50 ./Generated_Code/AS3.o
+                0x00000578       0x50 ./Generated_Code/AS3.o
  .debug_aranges
-                0x000005d8       0x60 ./Generated_Code/ASerialLdd1.o
+                0x000005c8       0x60 ./Generated_Code/ASerialLdd1.o
  .debug_aranges
-                0x00000638       0x50 ./Generated_Code/ASerialLdd2.o
+                0x00000628       0x50 ./Generated_Code/ASerialLdd2.o
  .debug_aranges
-                0x00000688       0x60 ./Generated_Code/ASerialLdd3.o
+                0x00000678       0x60 ./Generated_Code/ASerialLdd3.o
  .debug_aranges
-                0x000006e8       0x28 ./Generated_Code/Cpu.o
+                0x000006d8       0x28 ./Generated_Code/Cpu.o
  .debug_aranges
-                0x00000710       0x48 ./Generated_Code/LED_AZUL.o
+                0x00000700       0x48 ./Generated_Code/LED_AZUL.o
  .debug_aranges
-                0x00000758       0x48 ./Generated_Code/LED_ROJO.o
+                0x00000748       0x48 ./Generated_Code/LED_ROJO.o
  .debug_aranges
-                0x000007a0       0x48 ./Generated_Code/LED_VERDE.o
+                0x00000790       0x48 ./Generated_Code/LED_VERDE.o
  .debug_aranges
-                0x000007e8       0x30 ./Generated_Code/PE_LDD.o
+                0x000007d8       0x30 ./Generated_Code/PE_LDD.o
  .debug_aranges
-                0x00000818       0x20 ./Generated_Code/TI1.o
+                0x00000808       0x20 ./Generated_Code/TI1.o
  .debug_aranges
-                0x00000838       0x28 ./Generated_Code/TU1.o
+                0x00000828       0x28 ./Generated_Code/TU1.o
  .debug_aranges
-                0x00000860       0x28 ./Generated_Code/TimerIntLdd1.o
+                0x00000850       0x28 ./Generated_Code/TimerIntLdd1.o
 
-.debug_ranges   0x00000000      0x748
+.debug_ranges   0x00000000      0x738
  .debug_ranges  0x00000000       0x30 ./Static_Code/System/CPU_Init.o
  .debug_ranges  0x00000030      0x330 ./Static_Code/System/Vectors.o
  .debug_ranges  0x00000360       0x38 ./Sources/Events.o
  .debug_ranges  0x00000398       0x18 ./Sources/UART.o
- .debug_ranges  0x000003b0       0x60 ./Sources/main.o
- .debug_ranges  0x00000410       0x50 ./Project_Settings/Startup_Code/startup.o
- .debug_ranges  0x00000460       0x40 ./Generated_Code/AS1.o
- .debug_ranges  0x000004a0       0x68 ./Generated_Code/AS2.o
- .debug_ranges  0x00000508       0x40 ./Generated_Code/AS3.o
- .debug_ranges  0x00000548       0x50 ./Generated_Code/ASerialLdd1.o
- .debug_ranges  0x00000598       0x40 ./Generated_Code/ASerialLdd2.o
- .debug_ranges  0x000005d8       0x50 ./Generated_Code/ASerialLdd3.o
- .debug_ranges  0x00000628       0x18 ./Generated_Code/Cpu.o
- .debug_ranges  0x00000640       0x38 ./Generated_Code/LED_AZUL.o
- .debug_ranges  0x00000678       0x38 ./Generated_Code/LED_ROJO.o
- .debug_ranges  0x000006b0       0x38 ./Generated_Code/LED_VERDE.o
- .debug_ranges  0x000006e8       0x20 ./Generated_Code/PE_LDD.o
- .debug_ranges  0x00000708       0x10 ./Generated_Code/TI1.o
- .debug_ranges  0x00000718       0x18 ./Generated_Code/TU1.o
- .debug_ranges  0x00000730       0x18 ./Generated_Code/TimerIntLdd1.o
+ .debug_ranges  0x000003b0       0x50 ./Sources/main.o
+ .debug_ranges  0x00000400       0x50 ./Project_Settings/Startup_Code/startup.o
+ .debug_ranges  0x00000450       0x40 ./Generated_Code/AS1.o
+ .debug_ranges  0x00000490       0x68 ./Generated_Code/AS2.o
+ .debug_ranges  0x000004f8       0x40 ./Generated_Code/AS3.o
+ .debug_ranges  0x00000538       0x50 ./Generated_Code/ASerialLdd1.o
+ .debug_ranges  0x00000588       0x40 ./Generated_Code/ASerialLdd2.o
+ .debug_ranges  0x000005c8       0x50 ./Generated_Code/ASerialLdd3.o
+ .debug_ranges  0x00000618       0x18 ./Generated_Code/Cpu.o
+ .debug_ranges  0x00000630       0x38 ./Generated_Code/LED_AZUL.o
+ .debug_ranges  0x00000668       0x38 ./Generated_Code/LED_ROJO.o
+ .debug_ranges  0x000006a0       0x38 ./Generated_Code/LED_VERDE.o
+ .debug_ranges  0x000006d8       0x20 ./Generated_Code/PE_LDD.o
+ .debug_ranges  0x000006f8       0x10 ./Generated_Code/TI1.o
+ .debug_ranges  0x00000708       0x18 ./Generated_Code/TU1.o
+ .debug_ranges  0x00000720       0x18 ./Generated_Code/TimerIntLdd1.o
 
 .debug_macro    0x00000000    0x2f6b3
  .debug_macro   0x00000000      0x1fc ./Static_Code/System/CPU_Init.o
@@ -2309,29 +2305,29 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .debug_macro   0x0002f4b3       0xfb ./Generated_Code/TU1.o
  .debug_macro   0x0002f5ae      0x105 ./Generated_Code/TimerIntLdd1.o
 
-.debug_line     0x00000000     0x6201
+.debug_line     0x00000000     0x61aa
  .debug_line    0x00000000      0x5c4 ./Static_Code/System/CPU_Init.o
  .debug_line    0x000005c4      0xb6a ./Static_Code/System/Vectors.o
  .debug_line    0x0000112e      0x64d ./Sources/Events.o
- .debug_line    0x0000177b      0x356 ./Sources/UART.o
- .debug_line    0x00001ad1      0x888 ./Sources/main.o
- .debug_line    0x00002359      0x3d3 ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x0000272c      0x385 ./Generated_Code/AS1.o
- .debug_line    0x00002ab1      0x669 ./Generated_Code/AS2.o
- .debug_line    0x0000311a      0x385 ./Generated_Code/AS3.o
- .debug_line    0x0000349f      0x469 ./Generated_Code/ASerialLdd1.o
- .debug_line    0x00003908      0x488 ./Generated_Code/ASerialLdd2.o
- .debug_line    0x00003d90      0x469 ./Generated_Code/ASerialLdd3.o
- .debug_line    0x000041f9      0x4c1 ./Generated_Code/Cpu.o
- .debug_line    0x000046ba      0x3c2 ./Generated_Code/LED_AZUL.o
- .debug_line    0x00004a7c      0x3c2 ./Generated_Code/LED_ROJO.o
- .debug_line    0x00004e3e      0x3c4 ./Generated_Code/LED_VERDE.o
- .debug_line    0x00005202      0x469 ./Generated_Code/PE_LDD.o
- .debug_line    0x0000566b      0x465 ./Generated_Code/TI1.o
- .debug_line    0x00005ad0      0x3a0 ./Generated_Code/TU1.o
- .debug_line    0x00005e70      0x391 ./Generated_Code/TimerIntLdd1.o
+ .debug_line    0x0000177b      0x35b ./Sources/UART.o
+ .debug_line    0x00001ad6      0x82c ./Sources/main.o
+ .debug_line    0x00002302      0x3d3 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x000026d5      0x385 ./Generated_Code/AS1.o
+ .debug_line    0x00002a5a      0x669 ./Generated_Code/AS2.o
+ .debug_line    0x000030c3      0x385 ./Generated_Code/AS3.o
+ .debug_line    0x00003448      0x469 ./Generated_Code/ASerialLdd1.o
+ .debug_line    0x000038b1      0x488 ./Generated_Code/ASerialLdd2.o
+ .debug_line    0x00003d39      0x469 ./Generated_Code/ASerialLdd3.o
+ .debug_line    0x000041a2      0x4c1 ./Generated_Code/Cpu.o
+ .debug_line    0x00004663      0x3c2 ./Generated_Code/LED_AZUL.o
+ .debug_line    0x00004a25      0x3c2 ./Generated_Code/LED_ROJO.o
+ .debug_line    0x00004de7      0x3c4 ./Generated_Code/LED_VERDE.o
+ .debug_line    0x000051ab      0x469 ./Generated_Code/PE_LDD.o
+ .debug_line    0x00005614      0x465 ./Generated_Code/TI1.o
+ .debug_line    0x00005a79      0x3a0 ./Generated_Code/TU1.o
+ .debug_line    0x00005e19      0x391 ./Generated_Code/TimerIntLdd1.o
 
-.debug_str      0x00000000    0xe3141
+.debug_str      0x00000000    0xe3120
  .debug_str     0x00000000    0x74b26 ./Static_Code/System/CPU_Init.o
                               0x74c90 (size before relaxing)
  .debug_str     0x00074b26      0x9c3 ./Static_Code/System/Vectors.o
@@ -2340,57 +2336,57 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
                               0xde7ed (size before relaxing)
  .debug_str     0x000e0610       0x58 ./Sources/UART.o
                               0x69384 (size before relaxing)
- .debug_str     0x000e0668      0x1d9 ./Sources/main.o
-                              0xde9bd (size before relaxing)
- .debug_str     0x000e0841     0x1998 ./Project_Settings/Startup_Code/startup.o
+ .debug_str     0x000e0668      0x1b8 ./Sources/main.o
+                              0xde99c (size before relaxing)
+ .debug_str     0x000e0820     0x1998 ./Project_Settings/Startup_Code/startup.o
                               0x62315 (size before relaxing)
- .debug_str     0x000e21d9      0x1b8 ./Generated_Code/AS1.o
+ .debug_str     0x000e21b8      0x1b8 ./Generated_Code/AS1.o
                               0x694fe (size before relaxing)
- .debug_str     0x000e2391      0x191 ./Generated_Code/AS2.o
+ .debug_str     0x000e2370      0x191 ./Generated_Code/AS2.o
                               0x73a18 (size before relaxing)
- .debug_str     0x000e2522       0x91 ./Generated_Code/AS3.o
+ .debug_str     0x000e2501       0x91 ./Generated_Code/AS3.o
                               0x694fe (size before relaxing)
- .debug_str     0x000e25b3      0x2ab ./Generated_Code/ASerialLdd1.o
+ .debug_str     0x000e2592      0x2ab ./Generated_Code/ASerialLdd1.o
                               0x777b6 (size before relaxing)
- .debug_str     0x000e285e      0x1bf ./Generated_Code/ASerialLdd2.o
+ .debug_str     0x000e283d      0x1bf ./Generated_Code/ASerialLdd2.o
                               0x77899 (size before relaxing)
- .debug_str     0x000e2a1d       0xf3 ./Generated_Code/ASerialLdd3.o
+ .debug_str     0x000e29fc       0xf3 ./Generated_Code/ASerialLdd3.o
                               0x777b6 (size before relaxing)
- .debug_str     0x000e2b10       0x28 ./Generated_Code/Cpu.o
+ .debug_str     0x000e2aef       0x28 ./Generated_Code/Cpu.o
                               0x73741 (size before relaxing)
- .debug_str     0x000e2b38       0xea ./Generated_Code/LED_AZUL.o
+ .debug_str     0x000e2b17       0xea ./Generated_Code/LED_AZUL.o
                               0x6a232 (size before relaxing)
- .debug_str     0x000e2c22       0xa8 ./Generated_Code/LED_ROJO.o
+ .debug_str     0x000e2c01       0xa8 ./Generated_Code/LED_ROJO.o
                               0x6a232 (size before relaxing)
- .debug_str     0x000e2cca       0xb1 ./Generated_Code/LED_VERDE.o
+ .debug_str     0x000e2ca9       0xb1 ./Generated_Code/LED_VERDE.o
                               0x6a246 (size before relaxing)
- .debug_str     0x000e2d7b      0x15f ./Generated_Code/PE_LDD.o
+ .debug_str     0x000e2d5a      0x15f ./Generated_Code/PE_LDD.o
                               0x738c5 (size before relaxing)
- .debug_str     0x000e2eda       0x31 ./Generated_Code/TI1.o
+ .debug_str     0x000e2eb9       0x31 ./Generated_Code/TI1.o
                               0x7374f (size before relaxing)
- .debug_str     0x000e2f0b      0x178 ./Generated_Code/TU1.o
+ .debug_str     0x000e2eea      0x178 ./Generated_Code/TU1.o
                               0x7285a (size before relaxing)
- .debug_str     0x000e3083       0xbe ./Generated_Code/TimerIntLdd1.o
+ .debug_str     0x000e3062       0xbe ./Generated_Code/TimerIntLdd1.o
                               0x7266e (size before relaxing)
 
-.debug_frame    0x00000000     0x1aa4
+.debug_frame    0x00000000     0x1a60
  .debug_frame   0x00000000       0x9c ./Static_Code/System/CPU_Init.o
  .debug_frame   0x0000009c      0xcb0 ./Static_Code/System/Vectors.o
  .debug_frame   0x00000d4c       0xa0 ./Sources/Events.o
  .debug_frame   0x00000dec       0x50 ./Sources/UART.o
- .debug_frame   0x00000e3c      0x168 ./Sources/main.o
- .debug_frame   0x00000fa4      0x108 ./Project_Settings/Startup_Code/startup.o
- .debug_frame   0x000010ac       0xdc ./Generated_Code/AS1.o
- .debug_frame   0x00001188      0x170 ./Generated_Code/AS2.o
- .debug_frame   0x000012f8       0xdc ./Generated_Code/AS3.o
- .debug_frame   0x000013d4      0x11c ./Generated_Code/ASerialLdd1.o
- .debug_frame   0x000014f0       0xec ./Generated_Code/ASerialLdd2.o
- .debug_frame   0x000015dc      0x11c ./Generated_Code/ASerialLdd3.o
- .debug_frame   0x000016f8       0x50 ./Generated_Code/Cpu.o
- .debug_frame   0x00001748       0xb8 ./Generated_Code/LED_AZUL.o
- .debug_frame   0x00001800       0xb8 ./Generated_Code/LED_ROJO.o
- .debug_frame   0x000018b8       0xb8 ./Generated_Code/LED_VERDE.o
- .debug_frame   0x00001970       0x64 ./Generated_Code/PE_LDD.o
- .debug_frame   0x000019d4       0x30 ./Generated_Code/TI1.o
- .debug_frame   0x00001a04       0x50 ./Generated_Code/TU1.o
- .debug_frame   0x00001a54       0x50 ./Generated_Code/TimerIntLdd1.o
+ .debug_frame   0x00000e3c      0x124 ./Sources/main.o
+ .debug_frame   0x00000f60      0x108 ./Project_Settings/Startup_Code/startup.o
+ .debug_frame   0x00001068       0xdc ./Generated_Code/AS1.o
+ .debug_frame   0x00001144      0x170 ./Generated_Code/AS2.o
+ .debug_frame   0x000012b4       0xdc ./Generated_Code/AS3.o
+ .debug_frame   0x00001390      0x11c ./Generated_Code/ASerialLdd1.o
+ .debug_frame   0x000014ac       0xec ./Generated_Code/ASerialLdd2.o
+ .debug_frame   0x00001598      0x11c ./Generated_Code/ASerialLdd3.o
+ .debug_frame   0x000016b4       0x50 ./Generated_Code/Cpu.o
+ .debug_frame   0x00001704       0xb8 ./Generated_Code/LED_AZUL.o
+ .debug_frame   0x000017bc       0xb8 ./Generated_Code/LED_ROJO.o
+ .debug_frame   0x00001874       0xb8 ./Generated_Code/LED_VERDE.o
+ .debug_frame   0x0000192c       0x64 ./Generated_Code/PE_LDD.o
+ .debug_frame   0x00001990       0x30 ./Generated_Code/TI1.o
+ .debug_frame   0x000019c0       0x50 ./Generated_Code/TU1.o
+ .debug_frame   0x00001a10       0x50 ./Generated_Code/TimerIntLdd1.o

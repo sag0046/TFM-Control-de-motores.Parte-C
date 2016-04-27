@@ -105,7 +105,7 @@ static float obtenerEncoder(){
 	return result;
 }
 
-void establecerVelocidad(byte velocidad){
+void establecerVelocidad(byte velocidad){ //QUITAR
 	// Mandamos los bytes del mensaje
 	while(AS1_SendChar(0x00) != ERR_OK) {};
 	while(AS1_SendChar(0x32) != ERR_OK) {};
