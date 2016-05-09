@@ -25,7 +25,9 @@ S_UPPER_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Static_Code/System \
+Sources/Modelo \
 Sources \
+Sources/Controlador \
 Project_Settings/Startup_Code \
 Generated_Code \
 

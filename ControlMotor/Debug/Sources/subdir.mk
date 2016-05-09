@@ -4,19 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Sources/Events.c \
-../Sources/UART.c \
-../Sources/main.c 
+../Sources/Events.c 
 
 OBJS += \
-./Sources/Events.o \
-./Sources/UART.o \
-./Sources/main.o 
+./Sources/Events.o 
 
 C_DEPS += \
-./Sources/Events.d \
-./Sources/UART.d \
-./Sources/main.d 
+./Sources/Events.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

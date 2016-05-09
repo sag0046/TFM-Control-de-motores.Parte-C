@@ -1,11 +1,11 @@
 Archive member included because of file (symbol)
 
 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_addsubdf3.o)
-                              ./Sources/main.o (__aeabi_dadd)
+                              ./Sources/Controlador/algoritmo.o (__aeabi_dadd)
 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_muldivdf3.o)
-                              ./Sources/main.o (__aeabi_dmul)
+                              ./Sources/Controlador/algoritmo.o (__aeabi_dmul)
 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_fixdfsi.o)
-                              ./Sources/main.o (__aeabi_d2iz)
+                              ./Sources/Controlador/algoritmo.o (__aeabi_d2iz)
 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib/m4/fp/v4-sp-d16\libg_s.a(lib_a-atexit.o)
                               c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib/m4/fp/v4-sp-d16/crt0.o (atexit)
 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib/m4/fp/v4-sp-d16\libg_s.a(lib_a-exit.o)
@@ -42,19 +42,17 @@ Common symbol       size              file
 
 ASerialLdd1_DeviceDataPtr
                     0x4               ./Generated_Code/AS1.o
-datos               0x2               ./Sources/main.o
 errno               0x4               c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib/m4/fp/v4-sp-d16\libg_s.a(lib_a-reent.o)
 llamada             0x1               ./Sources/Events.o
-encoderAnt          0x4               ./Sources/main.o
-encoder             0x4               ./Sources/main.o
-distEncoder         0x4               ./Sources/main.o
+encoderAnt          0x4               ./Sources/Controlador/algoritmo.o
+encoder             0x4               ./Sources/Controlador/algoritmo.o
+distEncoder         0x4               ./Sources/Controlador/algoritmo.o
 ASerialLdd2_DeviceDataPtr
                     0x4               ./Generated_Code/AS2.o
 ASerialLdd3_DeviceDataPtr
                     0x4               ./Generated_Code/AS3.o
 SR_reg              0x1               ./Static_Code/System/CPU_Init.o
-velEncoder          0x4               ./Sources/main.o
-datosEntrada        0x1               ./Sources/main.o
+velEncoder          0x4               ./Sources/Controlador/algoritmo.o
 
 Discarded input sections
 
@@ -383,6 +381,267 @@ Discarded input sections
  .debug_macro   0x00000000       0x65 ./Static_Code/System/Vectors.o
  .debug_macro   0x00000000       0x11 ./Static_Code/System/Vectors.o
  .debug_macro   0x00000000      0x29e ./Static_Code/System/Vectors.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Modelo/comunicacion.o
+ .text          0x00000000        0x0 ./Sources/Modelo/comunicacion.o
+ .data          0x00000000        0x0 ./Sources/Modelo/comunicacion.o
+ .bss           0x00000000        0x0 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000      0x850 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000      0x214 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000     0x17a6 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000      0x14e ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x6a ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000    0x10f7a ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x2e ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x2e ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x95 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x16 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000      0x472 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x11 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x65 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00000000       0x18 ./Sources/Modelo/comunicacion.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/algoritmo.o
+ .text          0x00000000        0x0 ./Sources/Controlador/algoritmo.o
+ .data          0x00000000        0x0 ./Sources/Controlador/algoritmo.o
+ .bss           0x00000000        0x0 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x850 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x214 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000     0x17a6 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x14e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x6a ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000    0x10f7a ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x2e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x2e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x95 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x16 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x472 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x5f ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x11 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x65 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x18 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x94 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x6a0 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x49 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x1c ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x131 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x40 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x46 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x46 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x65 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x11 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x10 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x100 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x3a ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x52 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x19 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000      0x16d ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00000000       0x1c ./Sources/Controlador/algoritmo.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .group         0x00000000        0x8 ./Sources/Controlador/main.o
+ .text          0x00000000        0x0 ./Sources/Controlador/main.o
+ .data          0x00000000        0x0 ./Sources/Controlador/main.o
+ .bss           0x00000000        0x0 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x850 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x214 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000     0x17a6 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x14e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x6a ./Sources/Controlador/main.o
+ .debug_macro   0x00000000    0x10f7a ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x2e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x2e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x95 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x16 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x472 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x5f ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x11 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x65 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x18 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x94 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x6a0 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x49 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x1c ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x131 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x40 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x46 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x46 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x65 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x11 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x61c ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x626 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x327 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x1e8 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x109 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x17e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x200 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x91e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x588 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x9e ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x1f7 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x50f ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x297 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x318 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x25a ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x13d ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x30b ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0xba ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0xe9 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x4e9 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x191 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0xea ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x348 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x7d6 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x179 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x645 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x8d8 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x11c ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x648 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000       0x81 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x7bf ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x10f ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x614 ./Sources/Controlador/main.o
+ .debug_macro   0x00000000      0x181 ./Sources/Controlador/main.o
  .group         0x00000000        0x8 ./Sources/Events.o
  .group         0x00000000        0x8 ./Sources/Events.o
  .group         0x00000000        0x8 ./Sources/Events.o
@@ -456,6 +715,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 ./Sources/Events.o
  .debug_macro   0x00000000       0x16 ./Sources/Events.o
  .debug_macro   0x00000000      0x472 ./Sources/Events.o
+ .debug_macro   0x00000000       0x5f ./Sources/Events.o
  .debug_macro   0x00000000       0x11 ./Sources/Events.o
  .debug_macro   0x00000000       0x65 ./Sources/Events.o
  .debug_macro   0x00000000       0x18 ./Sources/Events.o
@@ -469,162 +729,40 @@ Discarded input sections
  .debug_macro   0x00000000       0x46 ./Sources/Events.o
  .debug_macro   0x00000000       0x65 ./Sources/Events.o
  .debug_macro   0x00000000       0x11 ./Sources/Events.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/UART.o
- .text          0x00000000        0x0 ./Sources/UART.o
- .data          0x00000000        0x0 ./Sources/UART.o
- .bss           0x00000000        0x0 ./Sources/UART.o
- .debug_macro   0x00000000      0x850 ./Sources/UART.o
- .debug_macro   0x00000000      0x214 ./Sources/UART.o
- .debug_macro   0x00000000     0x17a6 ./Sources/UART.o
- .debug_macro   0x00000000      0x14e ./Sources/UART.o
- .debug_macro   0x00000000       0x6a ./Sources/UART.o
- .debug_macro   0x00000000    0x10f7a ./Sources/UART.o
- .debug_macro   0x00000000       0x2e ./Sources/UART.o
- .debug_macro   0x00000000       0x2e ./Sources/UART.o
- .debug_macro   0x00000000       0x95 ./Sources/UART.o
- .debug_macro   0x00000000       0x16 ./Sources/UART.o
- .debug_macro   0x00000000      0x472 ./Sources/UART.o
- .debug_macro   0x00000000       0x18 ./Sources/UART.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
- .text          0x00000000        0x0 ./Sources/main.o
- .data          0x00000000        0x0 ./Sources/main.o
- .bss           0x00000000        0x0 ./Sources/main.o
- .text.establecerVelocidad
-                0x00000000       0x3c ./Sources/main.o
- .rodata        0x00000000       0x54 ./Sources/main.o
- .text.imprimirVariables
-                0x00000000       0x8c ./Sources/main.o
- .text.comprobarDatos
-                0x00000000       0x74 ./Sources/main.o
- .debug_macro   0x00000000      0x850 ./Sources/main.o
- .debug_macro   0x00000000      0x214 ./Sources/main.o
- .debug_macro   0x00000000     0x17a6 ./Sources/main.o
- .debug_macro   0x00000000      0x14e ./Sources/main.o
- .debug_macro   0x00000000       0x6a ./Sources/main.o
- .debug_macro   0x00000000    0x10f7a ./Sources/main.o
- .debug_macro   0x00000000       0x2e ./Sources/main.o
- .debug_macro   0x00000000       0x2e ./Sources/main.o
- .debug_macro   0x00000000       0x95 ./Sources/main.o
- .debug_macro   0x00000000       0x16 ./Sources/main.o
- .debug_macro   0x00000000      0x472 ./Sources/main.o
- .debug_macro   0x00000000       0x5f ./Sources/main.o
- .debug_macro   0x00000000       0x11 ./Sources/main.o
- .debug_macro   0x00000000       0x65 ./Sources/main.o
- .debug_macro   0x00000000       0x18 ./Sources/main.o
- .debug_macro   0x00000000       0x94 ./Sources/main.o
- .debug_macro   0x00000000      0x6a0 ./Sources/main.o
- .debug_macro   0x00000000       0x49 ./Sources/main.o
- .debug_macro   0x00000000       0x1c ./Sources/main.o
- .debug_macro   0x00000000      0x131 ./Sources/main.o
- .debug_macro   0x00000000       0x40 ./Sources/main.o
- .debug_macro   0x00000000       0x46 ./Sources/main.o
- .debug_macro   0x00000000       0x46 ./Sources/main.o
- .debug_macro   0x00000000       0x65 ./Sources/main.o
- .debug_macro   0x00000000       0x11 ./Sources/main.o
- .debug_macro   0x00000000      0x61c ./Sources/main.o
- .debug_macro   0x00000000      0x626 ./Sources/main.o
- .debug_macro   0x00000000      0x327 ./Sources/main.o
- .debug_macro   0x00000000      0x1e8 ./Sources/main.o
- .debug_macro   0x00000000      0x109 ./Sources/main.o
- .debug_macro   0x00000000      0x17e ./Sources/main.o
- .debug_macro   0x00000000      0x200 ./Sources/main.o
- .debug_macro   0x00000000      0x91e ./Sources/main.o
- .debug_macro   0x00000000      0x588 ./Sources/main.o
- .debug_macro   0x00000000       0x9e ./Sources/main.o
- .debug_macro   0x00000000      0x1f7 ./Sources/main.o
- .debug_macro   0x00000000      0x50f ./Sources/main.o
- .debug_macro   0x00000000      0x297 ./Sources/main.o
- .debug_macro   0x00000000      0x318 ./Sources/main.o
- .debug_macro   0x00000000      0x25a ./Sources/main.o
- .debug_macro   0x00000000      0x13d ./Sources/main.o
- .debug_macro   0x00000000      0x30b ./Sources/main.o
- .debug_macro   0x00000000       0xba ./Sources/main.o
- .debug_macro   0x00000000       0xe9 ./Sources/main.o
- .debug_macro   0x00000000      0x4e9 ./Sources/main.o
- .debug_macro   0x00000000      0x191 ./Sources/main.o
- .debug_macro   0x00000000       0xea ./Sources/main.o
- .debug_macro   0x00000000      0x348 ./Sources/main.o
- .debug_macro   0x00000000      0x7d6 ./Sources/main.o
- .debug_macro   0x00000000      0x179 ./Sources/main.o
- .debug_macro   0x00000000      0x645 ./Sources/main.o
- .debug_macro   0x00000000      0x8d8 ./Sources/main.o
- .debug_macro   0x00000000      0x11c ./Sources/main.o
- .debug_macro   0x00000000      0x648 ./Sources/main.o
- .debug_macro   0x00000000       0x81 ./Sources/main.o
- .debug_macro   0x00000000      0x7bf ./Sources/main.o
- .debug_macro   0x00000000      0x10f ./Sources/main.o
- .debug_macro   0x00000000      0x614 ./Sources/main.o
- .debug_macro   0x00000000      0x181 ./Sources/main.o
+ .debug_macro   0x00000000      0x61c ./Sources/Events.o
+ .debug_macro   0x00000000      0x626 ./Sources/Events.o
+ .debug_macro   0x00000000      0x327 ./Sources/Events.o
+ .debug_macro   0x00000000      0x1e8 ./Sources/Events.o
+ .debug_macro   0x00000000      0x109 ./Sources/Events.o
+ .debug_macro   0x00000000      0x17e ./Sources/Events.o
+ .debug_macro   0x00000000      0x200 ./Sources/Events.o
+ .debug_macro   0x00000000      0x91e ./Sources/Events.o
+ .debug_macro   0x00000000      0x588 ./Sources/Events.o
+ .debug_macro   0x00000000       0x9e ./Sources/Events.o
+ .debug_macro   0x00000000      0x1f7 ./Sources/Events.o
+ .debug_macro   0x00000000      0x50f ./Sources/Events.o
+ .debug_macro   0x00000000      0x297 ./Sources/Events.o
+ .debug_macro   0x00000000      0x318 ./Sources/Events.o
+ .debug_macro   0x00000000      0x25a ./Sources/Events.o
+ .debug_macro   0x00000000      0x13d ./Sources/Events.o
+ .debug_macro   0x00000000      0x30b ./Sources/Events.o
+ .debug_macro   0x00000000       0xba ./Sources/Events.o
+ .debug_macro   0x00000000       0xe9 ./Sources/Events.o
+ .debug_macro   0x00000000      0x4e9 ./Sources/Events.o
+ .debug_macro   0x00000000      0x191 ./Sources/Events.o
+ .debug_macro   0x00000000       0xea ./Sources/Events.o
+ .debug_macro   0x00000000      0x348 ./Sources/Events.o
+ .debug_macro   0x00000000      0x7d6 ./Sources/Events.o
+ .debug_macro   0x00000000      0x179 ./Sources/Events.o
+ .debug_macro   0x00000000      0x645 ./Sources/Events.o
+ .debug_macro   0x00000000      0x8d8 ./Sources/Events.o
+ .debug_macro   0x00000000      0x11c ./Sources/Events.o
+ .debug_macro   0x00000000      0x648 ./Sources/Events.o
+ .debug_macro   0x00000000       0x81 ./Sources/Events.o
+ .debug_macro   0x00000000      0x7bf ./Sources/Events.o
+ .debug_macro   0x00000000      0x10f ./Sources/Events.o
+ .debug_macro   0x00000000      0x614 ./Sources/Events.o
+ .debug_macro   0x00000000      0x181 ./Sources/Events.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
@@ -651,6 +789,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e ./Project_Settings/Startup_Code/startup.o
  .debug_macro   0x00000000       0x2e ./Project_Settings/Startup_Code/startup.o
  .debug_macro   0x00000000       0x95 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000       0x3a ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000       0x52 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000       0x19 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000      0x16d ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000       0x10 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x00000000       0x1c ./Project_Settings/Startup_Code/startup.o
  .debug_macro   0x00000000      0x214 ./Project_Settings/Startup_Code/startup.o
  .group         0x00000000        0x8 ./Generated_Code/AS1.o
  .group         0x00000000        0x8 ./Generated_Code/AS1.o
@@ -732,7 +876,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 ./Generated_Code/AS2.o
  .debug_macro   0x00000000       0x16 ./Generated_Code/AS2.o
  .debug_macro   0x00000000      0x472 ./Generated_Code/AS2.o
- .debug_macro   0x00000000       0x5f ./Generated_Code/AS2.o
  .debug_macro   0x00000000       0x18 ./Generated_Code/AS2.o
  .debug_macro   0x00000000       0x5f ./Generated_Code/AS2.o
  .debug_macro   0x00000000       0x11 ./Generated_Code/AS2.o
@@ -1479,9 +1622,10 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../.
 LOAD ./Static_Code/System/CPU_Init.o
 LOAD ./Static_Code/System/Peripherals_Init.o
 LOAD ./Static_Code/System/Vectors.o
+LOAD ./Sources/Modelo/comunicacion.o
+LOAD ./Sources/Controlador/algoritmo.o
+LOAD ./Sources/Controlador/main.o
 LOAD ./Sources/Events.o
-LOAD ./Sources/UART.o
-LOAD ./Sources/main.o
 LOAD ./Project_Settings/Startup_Code/startup.o
 LOAD ./Generated_Code/AS1.o
 LOAD ./Generated_Code/AS2.o
@@ -1527,7 +1671,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x00000400                _cfm
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410     0x3970
+.text           0x00000410     0x3974
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410      0x370 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_addsubdf3.o)
@@ -1581,295 +1725,297 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
  .text.UnhandledInterrupt
                 0x00001630       0x18 ./Static_Code/System/Vectors.o
                 0x00001630                UnhandledInterrupt
- .text.Cpu_OnNMI
-                0x00001648        0xc ./Sources/Events.o
-                0x00001648                Cpu_OnNMI
- .text.TI1_OnInterrupt
-                0x00001654       0x30 ./Sources/Events.o
-                0x00001654                TI1_OnInterrupt
- .text.AS2_OnError
-                0x00001684        0xc ./Sources/Events.o
-                0x00001684                AS2_OnError
- .text.AS2_OnRxChar
-                0x00001690        0xc ./Sources/Events.o
-                0x00001690                AS2_OnRxChar
- .text.AS2_OnTxChar
-                0x0000169c        0xc ./Sources/Events.o
-                0x0000169c                AS2_OnTxChar
- .text.AS2_OnFullRxBuf
-                0x000016a8        0xc ./Sources/Events.o
-                0x000016a8                AS2_OnFullRxBuf
  .text.UART_Write_Numero_Int
-                0x000016b4       0xd8 ./Sources/UART.o
-                0x000016b4                UART_Write_Numero_Int
+                0x00001648       0xd8 ./Sources/Modelo/comunicacion.o
+                0x00001648                UART_Write_Numero_Int
  .text.enviarVelocidad
-                0x0000178c       0xcc ./Sources/UART.o
-                0x0000178c                enviarVelocidad
+                0x00001720       0xcc ./Sources/Modelo/comunicacion.o
+                0x00001720                enviarVelocidad
  .text.obtenerEncoder
-                0x00001858       0xcc ./Sources/main.o
+                0x000017ec       0xcc ./Sources/Modelo/comunicacion.o
+                0x000017ec                obtenerEncoder
  .text.configuracionMotor
-                0x00001924       0x78 ./Sources/main.o
- *fill*         0x0000199c        0x4 
- .text.calcularDatosEncoder2
-                0x000019a0      0x248 ./Sources/main.o
+                0x000018b8       0x78 ./Sources/Modelo/comunicacion.o
+                0x000018b8                configuracionMotor
  .text.resetearEncoders
-                0x00001be8       0x24 ./Sources/main.o
-                0x00001be8                resetearEncoders
+                0x00001930       0x24 ./Sources/Modelo/comunicacion.o
+                0x00001930                resetearEncoders
  .text.stopMotor
-                0x00001c0c       0x3c ./Sources/main.o
-                0x00001c0c                stopMotor
- .text.main     0x00001c48      0x2d0 ./Sources/main.o
-                0x00001c48                main
+                0x00001954       0x3c ./Sources/Modelo/comunicacion.o
+                0x00001954                stopMotor
+ .text.calcularDatosEncoder
+                0x00001990      0x248 ./Sources/Controlador/algoritmo.o
+                0x00001990                calcularDatosEncoder
+ .text.main     0x00001bd8      0x2d8 ./Sources/Controlador/main.o
+                0x00001bd8                main
+ .text.Cpu_OnNMI
+                0x00001eb0        0xc ./Sources/Events.o
+                0x00001eb0                Cpu_OnNMI
+ .text.TI1_OnInterrupt
+                0x00001ebc       0x30 ./Sources/Events.o
+                0x00001ebc                TI1_OnInterrupt
+ .text.AS2_OnError
+                0x00001eec        0xc ./Sources/Events.o
+                0x00001eec                AS2_OnError
+ .text.AS2_OnRxChar
+                0x00001ef8        0xc ./Sources/Events.o
+                0x00001ef8                AS2_OnRxChar
+ .text.AS2_OnTxChar
+                0x00001f04        0xc ./Sources/Events.o
+                0x00001f04                AS2_OnTxChar
+ .text.AS2_OnFullRxBuf
+                0x00001f10        0xc ./Sources/Events.o
+                0x00001f10                AS2_OnFullRxBuf
  .text.__flush_cache
-                0x00001f18       0x14 ./Project_Settings/Startup_Code/startup.o
-                0x00001f18                __flush_cache
+                0x00001f1c       0x14 ./Project_Settings/Startup_Code/startup.o
+                0x00001f1c                __flush_cache
  .text.__copy_rom_section
-                0x00001f2c       0xe4 ./Project_Settings/Startup_Code/startup.o
-                0x00001f2c                __copy_rom_section
+                0x00001f30       0xe4 ./Project_Settings/Startup_Code/startup.o
+                0x00001f30                __copy_rom_section
  .text.__copy_rom_sections_to_ram
-                0x00002010       0xf8 ./Project_Settings/Startup_Code/startup.o
-                0x00002010                __copy_rom_sections_to_ram
+                0x00002014       0xf8 ./Project_Settings/Startup_Code/startup.o
+                0x00002014                __copy_rom_sections_to_ram
  .text.zero_fill_bss
-                0x00002108       0xbc ./Project_Settings/Startup_Code/startup.o
+                0x0000210c       0xbc ./Project_Settings/Startup_Code/startup.o
  .text.__init_registers
-                0x000021c4       0x20 ./Project_Settings/Startup_Code/startup.o
-                0x000021c4                __init_registers
+                0x000021c8       0x20 ./Project_Settings/Startup_Code/startup.o
+                0x000021c8                __init_registers
  .text.__init_user
-                0x000021e4        0xc ./Project_Settings/Startup_Code/startup.o
-                0x000021e4                __init_user
+                0x000021e8        0xc ./Project_Settings/Startup_Code/startup.o
+                0x000021e8                __init_user
  .text.__thumb_startup
-                0x000021f0       0x50 ./Project_Settings/Startup_Code/startup.o
-                0x000021f0                __thumb_startup
- .text.HWEnDi   0x00002240       0x20 ./Generated_Code/AS1.o
+                0x000021f4       0x50 ./Project_Settings/Startup_Code/startup.o
+                0x000021f4                __thumb_startup
+ .text.HWEnDi   0x00002244       0x20 ./Generated_Code/AS1.o
  .text.AS1_RecvChar
-                0x00002260       0xa0 ./Generated_Code/AS1.o
-                0x00002260                AS1_RecvChar
+                0x00002264       0xa0 ./Generated_Code/AS1.o
+                0x00002264                AS1_RecvChar
  .text.AS1_SendChar
-                0x00002300       0x7c ./Generated_Code/AS1.o
-                0x00002300                AS1_SendChar
+                0x00002304       0x7c ./Generated_Code/AS1.o
+                0x00002304                AS1_SendChar
  .text.AS1_Init
-                0x0000237c       0x28 ./Generated_Code/AS1.o
-                0x0000237c                AS1_Init
+                0x00002380       0x28 ./Generated_Code/AS1.o
+                0x00002380                AS1_Init
  .text.ASerialLdd1_OnBreak
-                0x000023a4       0x2c ./Generated_Code/AS1.o
-                0x000023a4                ASerialLdd1_OnBreak
- .text.HWEnDi   0x000023d0       0x20 ./Generated_Code/AS2.o
+                0x000023a8       0x2c ./Generated_Code/AS1.o
+                0x000023a8                ASerialLdd1_OnBreak
+ .text.HWEnDi   0x000023d4       0x20 ./Generated_Code/AS2.o
  .text.AS2_RecvChar
-                0x000023f0      0x12c ./Generated_Code/AS2.o
-                0x000023f0                AS2_RecvChar
+                0x000023f4      0x12c ./Generated_Code/AS2.o
+                0x000023f4                AS2_RecvChar
  .text.AS2_SendChar
-                0x0000251c       0xd0 ./Generated_Code/AS2.o
-                0x0000251c                AS2_SendChar
+                0x00002520       0xd0 ./Generated_Code/AS2.o
+                0x00002520                AS2_SendChar
  .text.AS2_Init
-                0x000025ec       0x4c ./Generated_Code/AS2.o
-                0x000025ec                AS2_Init
+                0x000025f0       0x4c ./Generated_Code/AS2.o
+                0x000025f0                AS2_Init
  .text.ASerialLdd2_OnBlockReceived
-                0x00002638      0x100 ./Generated_Code/AS2.o
-                0x00002638                ASerialLdd2_OnBlockReceived
+                0x0000263c      0x100 ./Generated_Code/AS2.o
+                0x0000263c                ASerialLdd2_OnBlockReceived
  .text.ASerialLdd2_OnBlockSent
-                0x00002738       0x54 ./Generated_Code/AS2.o
-                0x00002738                ASerialLdd2_OnBlockSent
+                0x0000273c       0x54 ./Generated_Code/AS2.o
+                0x0000273c                ASerialLdd2_OnBlockSent
  .text.ASerialLdd2_OnError
-                0x0000278c       0xc8 ./Generated_Code/AS2.o
-                0x0000278c                ASerialLdd2_OnError
+                0x00002790       0xc8 ./Generated_Code/AS2.o
+                0x00002790                ASerialLdd2_OnError
  .text.ASerialLdd2_OnBreak
-                0x00002854       0x2c ./Generated_Code/AS2.o
-                0x00002854                ASerialLdd2_OnBreak
- .text.HWEnDi   0x00002880       0x20 ./Generated_Code/AS3.o
+                0x00002858       0x2c ./Generated_Code/AS2.o
+                0x00002858                ASerialLdd2_OnBreak
+ .text.HWEnDi   0x00002884       0x20 ./Generated_Code/AS3.o
  .text.AS3_SendChar
-                0x000028a0       0x7c ./Generated_Code/AS3.o
-                0x000028a0                AS3_SendChar
+                0x000028a4       0x7c ./Generated_Code/AS3.o
+                0x000028a4                AS3_SendChar
  .text.AS3_Init
-                0x0000291c       0x28 ./Generated_Code/AS3.o
-                0x0000291c                AS3_Init
+                0x00002920       0x28 ./Generated_Code/AS3.o
+                0x00002920                AS3_Init
  .text.ASerialLdd3_OnBreak
-                0x00002944       0x2c ./Generated_Code/AS3.o
-                0x00002944                ASerialLdd3_OnBreak
+                0x00002948       0x2c ./Generated_Code/AS3.o
+                0x00002948                ASerialLdd3_OnBreak
  .text.ASerialLdd1_Init
-                0x00002970      0x224 ./Generated_Code/ASerialLdd1.o
-                0x00002970                ASerialLdd1_Init
+                0x00002974      0x224 ./Generated_Code/ASerialLdd1.o
+                0x00002974                ASerialLdd1_Init
  .text.ASerialLdd1_ReceiveBlock
-                0x00002b94       0x48 ./Generated_Code/ASerialLdd1.o
-                0x00002b94                ASerialLdd1_ReceiveBlock
+                0x00002b98       0x48 ./Generated_Code/ASerialLdd1.o
+                0x00002b98                ASerialLdd1_ReceiveBlock
  .text.ASerialLdd1_SendBlock
-                0x00002bdc       0x58 ./Generated_Code/ASerialLdd1.o
-                0x00002bdc                ASerialLdd1_SendBlock
+                0x00002be0       0x58 ./Generated_Code/ASerialLdd1.o
+                0x00002be0                ASerialLdd1_SendBlock
  .text.ASerialLdd1_GetReceivedDataNum
-                0x00002c34       0x1c ./Generated_Code/ASerialLdd1.o
-                0x00002c34                ASerialLdd1_GetReceivedDataNum
+                0x00002c38       0x1c ./Generated_Code/ASerialLdd1.o
+                0x00002c38                ASerialLdd1_GetReceivedDataNum
  .text.InterruptRx
-                0x00002c50       0x54 ./Generated_Code/ASerialLdd1.o
+                0x00002c54       0x54 ./Generated_Code/ASerialLdd1.o
  .text.InterruptTx
-                0x00002ca4       0x64 ./Generated_Code/ASerialLdd1.o
+                0x00002ca8       0x64 ./Generated_Code/ASerialLdd1.o
  .text.ASerialLdd1_Main
-                0x00002d08       0xe0 ./Generated_Code/ASerialLdd1.o
-                0x00002d08                ASerialLdd1_Main
+                0x00002d0c       0xe0 ./Generated_Code/ASerialLdd1.o
+                0x00002d0c                ASerialLdd1_Main
  .text.ASerialLdd1_GetError
-                0x00002de8       0x2c ./Generated_Code/ASerialLdd1.o
-                0x00002de8                ASerialLdd1_GetError
+                0x00002dec       0x2c ./Generated_Code/ASerialLdd1.o
+                0x00002dec                ASerialLdd1_GetError
  .text.ASerialLdd2_Init
-                0x00002e14      0x2c0 ./Generated_Code/ASerialLdd2.o
-                0x00002e14                ASerialLdd2_Init
+                0x00002e18      0x2c0 ./Generated_Code/ASerialLdd2.o
+                0x00002e18                ASerialLdd2_Init
  .text.ASerialLdd2_ReceiveBlock
-                0x000030d4       0xb0 ./Generated_Code/ASerialLdd2.o
-                0x000030d4                ASerialLdd2_ReceiveBlock
+                0x000030d8       0xb0 ./Generated_Code/ASerialLdd2.o
+                0x000030d8                ASerialLdd2_ReceiveBlock
  .text.ASerialLdd2_SendBlock
-                0x00003184       0xf0 ./Generated_Code/ASerialLdd2.o
-                0x00003184                ASerialLdd2_SendBlock
+                0x00003188       0xf0 ./Generated_Code/ASerialLdd2.o
+                0x00003188                ASerialLdd2_SendBlock
  .text.InterruptRx
-                0x00003274       0x5c ./Generated_Code/ASerialLdd2.o
+                0x00003278       0x5c ./Generated_Code/ASerialLdd2.o
  .text.InterruptTx
-                0x000032d0       0x9c ./Generated_Code/ASerialLdd2.o
+                0x000032d4       0x9c ./Generated_Code/ASerialLdd2.o
  .text.ASerialLdd2_Interrupt
-                0x0000336c      0x100 ./Generated_Code/ASerialLdd2.o
-                0x0000336c                ASerialLdd2_Interrupt
+                0x00003370      0x100 ./Generated_Code/ASerialLdd2.o
+                0x00003370                ASerialLdd2_Interrupt
  .text.ASerialLdd2_GetError
-                0x0000346c       0x90 ./Generated_Code/ASerialLdd2.o
-                0x0000346c                ASerialLdd2_GetError
+                0x00003470       0x90 ./Generated_Code/ASerialLdd2.o
+                0x00003470                ASerialLdd2_GetError
  .text.ASerialLdd3_Init
-                0x000034fc      0x224 ./Generated_Code/ASerialLdd3.o
-                0x000034fc                ASerialLdd3_Init
+                0x00003500      0x224 ./Generated_Code/ASerialLdd3.o
+                0x00003500                ASerialLdd3_Init
  .text.ASerialLdd3_ReceiveBlock
-                0x00003720       0x48 ./Generated_Code/ASerialLdd3.o
-                0x00003720                ASerialLdd3_ReceiveBlock
+                0x00003724       0x48 ./Generated_Code/ASerialLdd3.o
+                0x00003724                ASerialLdd3_ReceiveBlock
  .text.ASerialLdd3_SendBlock
-                0x00003768       0x58 ./Generated_Code/ASerialLdd3.o
-                0x00003768                ASerialLdd3_SendBlock
+                0x0000376c       0x58 ./Generated_Code/ASerialLdd3.o
+                0x0000376c                ASerialLdd3_SendBlock
  .text.InterruptRx
-                0x000037c0       0x54 ./Generated_Code/ASerialLdd3.o
+                0x000037c4       0x54 ./Generated_Code/ASerialLdd3.o
  .text.InterruptTx
-                0x00003814       0x64 ./Generated_Code/ASerialLdd3.o
+                0x00003818       0x64 ./Generated_Code/ASerialLdd3.o
  .text.ASerialLdd3_Main
-                0x00003878       0xe0 ./Generated_Code/ASerialLdd3.o
-                0x00003878                ASerialLdd3_Main
+                0x0000387c       0xe0 ./Generated_Code/ASerialLdd3.o
+                0x0000387c                ASerialLdd3_Main
  .text.Components_Init
-                0x00003958       0x18 ./Generated_Code/Cpu.o
-                0x00003958                Components_Init
+                0x0000395c       0x18 ./Generated_Code/Cpu.o
+                0x0000395c                Components_Init
  .text.Cpu_INT_NMIInterrupt
-                0x00003970       0x1c ./Generated_Code/Cpu.o
-                0x00003970                Cpu_INT_NMIInterrupt
+                0x00003974       0x1c ./Generated_Code/Cpu.o
+                0x00003974                Cpu_INT_NMIInterrupt
  .text.LED_AZUL_NegVal
-                0x0000398c       0x20 ./Generated_Code/LED_AZUL.o
-                0x0000398c                LED_AZUL_NegVal
+                0x00003990       0x20 ./Generated_Code/LED_AZUL.o
+                0x00003990                LED_AZUL_NegVal
  .text.LED_ROJO_SetVal
-                0x000039ac       0x20 ./Generated_Code/LED_ROJO.o
-                0x000039ac                LED_ROJO_SetVal
+                0x000039b0       0x20 ./Generated_Code/LED_ROJO.o
+                0x000039b0                LED_ROJO_SetVal
  .text.LED_VERDE_SetVal
-                0x000039cc       0x20 ./Generated_Code/LED_VERDE.o
-                0x000039cc                LED_VERDE_SetVal
+                0x000039d0       0x20 ./Generated_Code/LED_VERDE.o
+                0x000039d0                LED_VERDE_SetVal
  .text.TimerIntLdd1_OnInterrupt
-                0x000039ec       0x14 ./Generated_Code/TI1.o
-                0x000039ec                TimerIntLdd1_OnInterrupt
+                0x000039f0       0x14 ./Generated_Code/TI1.o
+                0x000039f0                TimerIntLdd1_OnInterrupt
  .text.TU1_Init
-                0x00003a00      0x174 ./Generated_Code/TU1.o
-                0x00003a00                TU1_Init
+                0x00003a04      0x174 ./Generated_Code/TU1.o
+                0x00003a04                TU1_Init
  .text.TU1_Interrupt
-                0x00003b74       0x7c ./Generated_Code/TU1.o
-                0x00003b74                TU1_Interrupt
+                0x00003b78       0x7c ./Generated_Code/TU1.o
+                0x00003b78                TU1_Interrupt
  .text.TimerIntLdd1_Init
-                0x00003bf0       0x58 ./Generated_Code/TimerIntLdd1.o
-                0x00003bf0                TimerIntLdd1_Init
+                0x00003bf4       0x58 ./Generated_Code/TimerIntLdd1.o
+                0x00003bf4                TimerIntLdd1_Init
  .text.TU1_OnCounterRestart
-                0x00003c48       0x24 ./Generated_Code/TimerIntLdd1.o
-                0x00003c48                TU1_OnCounterRestart
+                0x00003c4c       0x24 ./Generated_Code/TimerIntLdd1.o
+                0x00003c4c                TU1_OnCounterRestart
  *(.rodata)
  *(.rodata*)
  .rodata.ClockGenModeMatrix
-                0x00003c6c       0x80 ./Static_Code/System/CPU_Init.o
+                0x00003c70       0x80 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockConfigDescriptors
-                0x00003cec       0x1c ./Static_Code/System/CPU_Init.o
+                0x00003cf0       0x1c ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEI
-                0x00003d08        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d0c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBI
-                0x00003d10        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d14        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPI
-                0x00003d18        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d1c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFEE
-                0x00003d20        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d24        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultFBE
-                0x00003d28        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d2c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultBLPE
-                0x00003d30        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d34        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPBE
-                0x00003d38        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d3c        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_DefaultPEE
-                0x00003d40        0x8 ./Static_Code/System/CPU_Init.o
+                0x00003d44        0x8 ./Static_Code/System/CPU_Init.o
  .rodata.CPU_ClockGenModeRegs
-                0x00003d48       0x20 ./Static_Code/System/CPU_Init.o
+                0x00003d4c       0x20 ./Static_Code/System/CPU_Init.o
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x00003d68        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+ .eh_frame      0x00003d6c        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
  *(.init)
- .init          0x00003d68        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
-                0x00003d68                _init
- .init          0x00003d6c        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
+ .init          0x00003d6c        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
+                0x00003d6c                _init
+ .init          0x00003d70        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
  *(.fini)
- .fini          0x00003d74        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
-                0x00003d74                _fini
- .fini          0x00003d78        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
-                0x00003d80                . = ALIGN (0x4)
-                0x00003d80                _etext = .
+ .fini          0x00003d78        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crti.o
+                0x00003d78                _fini
+ .fini          0x00003d7c        0x8 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
+                0x00003d84                . = ALIGN (0x4)
+                0x00003d84                _etext = .
 
-.vfp11_veneer   0x00003d80        0x0
+.vfp11_veneer   0x00003d84        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00003d80        0x0
+.v4_bx          0x00003d84        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00003d80        0x0
+.iplt           0x00003d84        0x0
  .iplt          0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
-.rel.dyn        0x00003d80        0x0
+.rel.dyn        0x00003d84        0x0
  .rel.iplt      0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00003d80        0x0
-                0x00003d80                __exidx_start = .
+.ARM            0x00003d84        0x0
+                0x00003d84                __exidx_start = .
  *(.ARM.exidx*)
-                0x00003d80                __exidx_end = .
+                0x00003d84                __exidx_end = .
 
-.ctors          0x00003d80        0x0
-                0x00003d80                __CTOR_LIST__ = .
+.ctors          0x00003d84        0x0
+                0x00003d84                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x00003d80                __CTOR_END__ = .
+                0x00003d84                __CTOR_END__ = .
 
-.dtors          0x00003d80        0x0
-                0x00003d80                __DTOR_LIST__ = .
+.dtors          0x00003d84        0x0
+                0x00003d84                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x00003d80                __DTOR_END__ = .
+                0x00003d84                __DTOR_END__ = .
 
-.preinit_array  0x00003d80        0x0
-                0x00003d80                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00003d84        0x0
+                0x00003d84                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00003d80                PROVIDE (__preinit_array_end, .)
+                0x00003d84                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00003d80        0x4
-                0x00003d80                PROVIDE (__init_array_start, .)
+.init_array     0x00003d84        0x4
+                0x00003d84                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x00003d80        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
-                0x00003d84                PROVIDE (__init_array_end, .)
+ .init_array    0x00003d84        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+                0x00003d88                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00003d84        0x4
-                0x00003d84                PROVIDE (__fini_array_start, .)
+.fini_array     0x00003d88        0x4
+                0x00003d88                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00003d84        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
-                0x00003d88                PROVIDE (__fini_array_end, .)
-                0x00003d88                ___ROM_AT = .
+ .fini_array    0x00003d88        0x4 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
+                0x00003d8c                PROVIDE (__fini_array_end, .)
+                0x00003d8c                ___ROM_AT = .
 
-.data           0x20000000        0x0 load address 0x00003d88
+.data           0x20000000        0x0 load address 0x00003d8c
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -1877,7 +2023,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _edata = .
                 0x00000000                ___data_size = (_edata - _sdata)
-                0x00003d88                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
+                0x00003d8c                ___m_data_1FFF0000_ROMStart = (___ROM_AT + SIZEOF (.data))
 
 .jcr            0x20000000        0x0
  .jcr           0x20000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
@@ -1893,7 +2039,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
  .igot.plt      0x00000000        0x0 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtbegin.o
 
 .m_data_1FFF0000
-                0x1fff0000        0x0 load address 0x00003d88
+                0x1fff0000        0x0 load address 0x00003d8c
                 0x1fff0000                . = ALIGN (0x4)
                 0x1fff0000                ___m_data_1FFF0000_RAMStart = .
  *(.m_data_1FFF0000)
@@ -1902,7 +2048,7 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
                 0x00000000                ___m_data_1FFF0000_ROMSize = (___m_data_1FFF0000_RAMEnd - ___m_data_1FFF0000_RAMStart)
                 0x1fff0000                . = ALIGN (0x4)
 
-.bss            0x20000000      0x130
+.bss            0x20000000      0x12c
                 0x20000000                __START_BSS = .
                 0x20000000                PROVIDE (__bss_start__, __START_BSS)
  *(.bss)
@@ -1964,52 +2110,50 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
  *(COMMON)
  COMMON         0x20000108        0x1 ./Static_Code/System/CPU_Init.o
                 0x20000108                SR_reg
- COMMON         0x20000109        0x1 ./Sources/Events.o
-                0x20000109                llamada
- *fill*         0x2000010a        0x2 
- COMMON         0x2000010c       0x15 ./Sources/main.o
-                0x2000010c                datos
-                0x20000110                encoderAnt
-                0x20000114                encoder
-                0x20000118                distEncoder
-                0x2000011c                velEncoder
-                0x20000120                datosEntrada
- *fill*         0x20000121        0x3 
- COMMON         0x20000124        0x4 ./Generated_Code/AS1.o
-                0x20000124                ASerialLdd1_DeviceDataPtr
- COMMON         0x20000128        0x4 ./Generated_Code/AS2.o
-                0x20000128                ASerialLdd2_DeviceDataPtr
- COMMON         0x2000012c        0x4 ./Generated_Code/AS3.o
-                0x2000012c                ASerialLdd3_DeviceDataPtr
-                0x20000130                . = ALIGN (0x4)
-                0x20000130                __END_BSS = .
-                0x20000130                PROVIDE (__bss_end__, __END_BSS)
-                0x00003d88                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
+ *fill*         0x20000109        0x3 
+ COMMON         0x2000010c       0x10 ./Sources/Controlador/algoritmo.o
+                0x2000010c                encoderAnt
+                0x20000110                encoder
+                0x20000114                distEncoder
+                0x20000118                velEncoder
+ COMMON         0x2000011c        0x1 ./Sources/Events.o
+                0x2000011c                llamada
+ *fill*         0x2000011d        0x3 
+ COMMON         0x20000120        0x4 ./Generated_Code/AS1.o
+                0x20000120                ASerialLdd1_DeviceDataPtr
+ COMMON         0x20000124        0x4 ./Generated_Code/AS2.o
+                0x20000124                ASerialLdd2_DeviceDataPtr
+ COMMON         0x20000128        0x4 ./Generated_Code/AS3.o
+                0x20000128                ASerialLdd3_DeviceDataPtr
+                0x2000012c                . = ALIGN (0x4)
+                0x2000012c                __END_BSS = .
+                0x2000012c                PROVIDE (__bss_end__, __END_BSS)
+                0x00003d8c                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFF0000))
 
-.romp           0x20000130       0x24 load address 0x00003d88
-                0x00003d88                __S_romp = _romp_at
-                0x20000130        0x4 LONG 0x3d88 ___ROM_AT
-                0x20000134        0x4 LONG 0x20000000 _sdata
-                0x20000138        0x4 LONG 0x0 ___data_size
-                0x2000013c        0x4 LONG 0x3d88 ___m_data_1FFF0000_ROMStart
-                0x20000140        0x4 LONG 0x1fff0000 ___m_data_1FFF0000_RAMStart
-                0x20000144        0x4 LONG 0x0 ___m_data_1FFF0000_ROMSize
+.romp           0x2000012c       0x24 load address 0x00003d8c
+                0x00003d8c                __S_romp = _romp_at
+                0x2000012c        0x4 LONG 0x3d8c ___ROM_AT
+                0x20000130        0x4 LONG 0x20000000 _sdata
+                0x20000134        0x4 LONG 0x0 ___data_size
+                0x20000138        0x4 LONG 0x3d8c ___m_data_1FFF0000_ROMStart
+                0x2000013c        0x4 LONG 0x1fff0000 ___m_data_1FFF0000_RAMStart
+                0x20000140        0x4 LONG 0x0 ___m_data_1FFF0000_ROMSize
+                0x20000144        0x4 LONG 0x0
                 0x20000148        0x4 LONG 0x0
                 0x2000014c        0x4 LONG 0x0
-                0x20000150        0x4 LONG 0x0
 
 ._user_heap_stack
-                0x20000154      0x400 load address 0x00003dac
-                0x20000154                . = ALIGN (0x4)
-                0x20000154                PROVIDE (end, .)
-                0x20000154                PROVIDE (_end, .)
-                0x20000154                __heap_addr = .
-                0x20000154                __HeapBase = .
-                0x20000154                . = (. + __heap_size)
-                0x20000154                __HeapLimit = .
-                0x20000554                . = (. + __stack_size)
- *fill*         0x20000154      0x400 
-                0x20000554                . = ALIGN (0x4)
+                0x20000150      0x400 load address 0x00003db0
+                0x20000150                . = ALIGN (0x4)
+                0x20000150                PROVIDE (end, .)
+                0x20000150                PROVIDE (_end, .)
+                0x20000150                __heap_addr = .
+                0x20000150                __HeapBase = .
+                0x20000150                . = (. + __heap_size)
+                0x20000150                __HeapLimit = .
+                0x20000550                . = (. + __stack_size)
+ *fill*         0x20000150      0x400 
+                0x20000550                . = ALIGN (0x4)
 
 .ARM.attributes
                 0x00000000       0x37
@@ -2023,51 +2167,53 @@ LOAD c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v
  .ARM.attributes
                 0x00000099       0x39 ./Static_Code/System/Vectors.o
  .ARM.attributes
-                0x000000d2       0x39 ./Sources/Events.o
+                0x000000d2       0x39 ./Sources/Modelo/comunicacion.o
  .ARM.attributes
-                0x0000010b       0x39 ./Sources/UART.o
+                0x0000010b       0x39 ./Sources/Controlador/algoritmo.o
  .ARM.attributes
-                0x00000144       0x39 ./Sources/main.o
+                0x00000144       0x39 ./Sources/Controlador/main.o
  .ARM.attributes
-                0x0000017d       0x39 ./Project_Settings/Startup_Code/startup.o
+                0x0000017d       0x39 ./Sources/Events.o
  .ARM.attributes
-                0x000001b6       0x39 ./Generated_Code/AS1.o
+                0x000001b6       0x39 ./Project_Settings/Startup_Code/startup.o
  .ARM.attributes
-                0x000001ef       0x39 ./Generated_Code/AS2.o
+                0x000001ef       0x39 ./Generated_Code/AS1.o
  .ARM.attributes
-                0x00000228       0x39 ./Generated_Code/AS3.o
+                0x00000228       0x39 ./Generated_Code/AS2.o
  .ARM.attributes
-                0x00000261       0x39 ./Generated_Code/ASerialLdd1.o
+                0x00000261       0x39 ./Generated_Code/AS3.o
  .ARM.attributes
-                0x0000029a       0x39 ./Generated_Code/ASerialLdd2.o
+                0x0000029a       0x39 ./Generated_Code/ASerialLdd1.o
  .ARM.attributes
-                0x000002d3       0x39 ./Generated_Code/ASerialLdd3.o
+                0x000002d3       0x39 ./Generated_Code/ASerialLdd2.o
  .ARM.attributes
-                0x0000030c       0x39 ./Generated_Code/Cpu.o
+                0x0000030c       0x39 ./Generated_Code/ASerialLdd3.o
  .ARM.attributes
-                0x00000345       0x39 ./Generated_Code/LED_AZUL.o
+                0x00000345       0x39 ./Generated_Code/Cpu.o
  .ARM.attributes
-                0x0000037e       0x39 ./Generated_Code/LED_ROJO.o
+                0x0000037e       0x39 ./Generated_Code/LED_AZUL.o
  .ARM.attributes
-                0x000003b7       0x39 ./Generated_Code/LED_VERDE.o
+                0x000003b7       0x39 ./Generated_Code/LED_ROJO.o
  .ARM.attributes
-                0x000003f0       0x39 ./Generated_Code/PE_LDD.o
+                0x000003f0       0x39 ./Generated_Code/LED_VERDE.o
  .ARM.attributes
-                0x00000429       0x39 ./Generated_Code/TI1.o
+                0x00000429       0x39 ./Generated_Code/PE_LDD.o
  .ARM.attributes
-                0x00000462       0x39 ./Generated_Code/TU1.o
+                0x00000462       0x39 ./Generated_Code/TI1.o
  .ARM.attributes
-                0x0000049b       0x39 ./Generated_Code/TimerIntLdd1.o
+                0x0000049b       0x39 ./Generated_Code/TU1.o
  .ARM.attributes
-                0x000004d4       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_addsubdf3.o)
+                0x000004d4       0x39 ./Generated_Code/TimerIntLdd1.o
  .ARM.attributes
-                0x000004fb       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_muldivdf3.o)
+                0x0000050d       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x00000522       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_fixdfsi.o)
+                0x00000534       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000549       0x39 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtend.o
+                0x0000055b       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000582       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
+                0x00000582       0x39 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtend.o
+ .ARM.attributes
+                0x000005bb       0x27 c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtn.o
 OUTPUT(ControlMotor.elf elf32-littlearm)
 
 .comment        0x00000000       0x2a
@@ -2075,9 +2221,10 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
                                  0x2b (size before relaxing)
  .comment       0x00000000       0x2b ./Static_Code/System/CPU_Init.o
  .comment       0x00000000       0x2b ./Static_Code/System/Vectors.o
+ .comment       0x00000000       0x2b ./Sources/Modelo/comunicacion.o
+ .comment       0x00000000       0x2b ./Sources/Controlador/algoritmo.o
+ .comment       0x00000000       0x2b ./Sources/Controlador/main.o
  .comment       0x00000000       0x2b ./Sources/Events.o
- .comment       0x00000000       0x2b ./Sources/UART.o
- .comment       0x00000000       0x2b ./Sources/main.o
  .comment       0x00000000       0x2b ./Project_Settings/Startup_Code/startup.o
  .comment       0x00000000       0x2b ./Generated_Code/AS1.o
  .comment       0x00000000       0x2b ./Generated_Code/AS2.o
@@ -2095,49 +2242,51 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .comment       0x00000000       0x2b ./Generated_Code/TimerIntLdd1.o
  .comment       0x00000000       0x2b c:/freescale/kds_2.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/m4/fp/v4-sp-d16/crtend.o
 
-.debug_info     0x00000000     0x5c24
+.debug_info     0x00000000     0x5ab6
  .debug_info    0x00000000      0xa5a ./Static_Code/System/CPU_Init.o
  .debug_info    0x00000a5a      0x816 ./Static_Code/System/Vectors.o
- .debug_info    0x00001270      0x118 ./Sources/Events.o
- .debug_info    0x00001388      0x12f ./Sources/UART.o
- .debug_info    0x000014b7      0x576 ./Sources/main.o
- .debug_info    0x00001a2d      0x498 ./Project_Settings/Startup_Code/startup.o
- .debug_info    0x00001ec5      0x216 ./Generated_Code/AS1.o
- .debug_info    0x000020db      0x3e1 ./Generated_Code/AS2.o
- .debug_info    0x000024bc      0x216 ./Generated_Code/AS3.o
- .debug_info    0x000026d2      0x87c ./Generated_Code/ASerialLdd1.o
- .debug_info    0x00002f4e      0x9bb ./Generated_Code/ASerialLdd2.o
- .debug_info    0x00003909      0x87c ./Generated_Code/ASerialLdd3.o
- .debug_info    0x00004185       0xa7 ./Generated_Code/Cpu.o
- .debug_info    0x0000422c      0x521 ./Generated_Code/LED_AZUL.o
- .debug_info    0x0000474d      0x521 ./Generated_Code/LED_ROJO.o
- .debug_info    0x00004c6e      0x521 ./Generated_Code/LED_VERDE.o
- .debug_info    0x0000518f      0x23b ./Generated_Code/PE_LDD.o
- .debug_info    0x000053ca       0xb2 ./Generated_Code/TI1.o
- .debug_info    0x0000547c      0x631 ./Generated_Code/TU1.o
- .debug_info    0x00005aad      0x177 ./Generated_Code/TimerIntLdd1.o
+ .debug_info    0x00001270      0x1c0 ./Sources/Modelo/comunicacion.o
+ .debug_info    0x00001430      0x184 ./Sources/Controlador/algoritmo.o
+ .debug_info    0x000015b4      0x1f3 ./Sources/Controlador/main.o
+ .debug_info    0x000017a7      0x118 ./Sources/Events.o
+ .debug_info    0x000018bf      0x498 ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x00001d57      0x216 ./Generated_Code/AS1.o
+ .debug_info    0x00001f6d      0x3e1 ./Generated_Code/AS2.o
+ .debug_info    0x0000234e      0x216 ./Generated_Code/AS3.o
+ .debug_info    0x00002564      0x87c ./Generated_Code/ASerialLdd1.o
+ .debug_info    0x00002de0      0x9bb ./Generated_Code/ASerialLdd2.o
+ .debug_info    0x0000379b      0x87c ./Generated_Code/ASerialLdd3.o
+ .debug_info    0x00004017       0xa7 ./Generated_Code/Cpu.o
+ .debug_info    0x000040be      0x521 ./Generated_Code/LED_AZUL.o
+ .debug_info    0x000045df      0x521 ./Generated_Code/LED_ROJO.o
+ .debug_info    0x00004b00      0x521 ./Generated_Code/LED_VERDE.o
+ .debug_info    0x00005021      0x23b ./Generated_Code/PE_LDD.o
+ .debug_info    0x0000525c       0xb2 ./Generated_Code/TI1.o
+ .debug_info    0x0000530e      0x631 ./Generated_Code/TU1.o
+ .debug_info    0x0000593f      0x177 ./Generated_Code/TimerIntLdd1.o
 
-.debug_abbrev   0x00000000     0x19a4
+.debug_abbrev   0x00000000     0x1902
  .debug_abbrev  0x00000000      0x1bd ./Static_Code/System/CPU_Init.o
  .debug_abbrev  0x000001bd       0xd6 ./Static_Code/System/Vectors.o
- .debug_abbrev  0x00000293       0x8c ./Sources/Events.o
- .debug_abbrev  0x0000031f       0xa7 ./Sources/UART.o
- .debug_abbrev  0x000003c6      0x211 ./Sources/main.o
- .debug_abbrev  0x000005d7      0x1a1 ./Project_Settings/Startup_Code/startup.o
- .debug_abbrev  0x00000778      0x131 ./Generated_Code/AS1.o
- .debug_abbrev  0x000008a9      0x1d6 ./Generated_Code/AS2.o
- .debug_abbrev  0x00000a7f      0x131 ./Generated_Code/AS3.o
- .debug_abbrev  0x00000bb0      0x1c3 ./Generated_Code/ASerialLdd1.o
- .debug_abbrev  0x00000d73      0x1db ./Generated_Code/ASerialLdd2.o
- .debug_abbrev  0x00000f4e      0x1c3 ./Generated_Code/ASerialLdd3.o
- .debug_abbrev  0x00001111       0x45 ./Generated_Code/Cpu.o
- .debug_abbrev  0x00001156      0x186 ./Generated_Code/LED_AZUL.o
- .debug_abbrev  0x000012dc      0x186 ./Generated_Code/LED_ROJO.o
- .debug_abbrev  0x00001462      0x186 ./Generated_Code/LED_VERDE.o
- .debug_abbrev  0x000015e8      0x10d ./Generated_Code/PE_LDD.o
- .debug_abbrev  0x000016f5       0x68 ./Generated_Code/TI1.o
- .debug_abbrev  0x0000175d      0x16a ./Generated_Code/TU1.o
- .debug_abbrev  0x000018c7       0xdd ./Generated_Code/TimerIntLdd1.o
+ .debug_abbrev  0x00000293       0xdb ./Sources/Modelo/comunicacion.o
+ .debug_abbrev  0x0000036e       0x9b ./Sources/Controlador/algoritmo.o
+ .debug_abbrev  0x00000409       0xa0 ./Sources/Controlador/main.o
+ .debug_abbrev  0x000004a9       0x8c ./Sources/Events.o
+ .debug_abbrev  0x00000535      0x1a1 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x000006d6      0x131 ./Generated_Code/AS1.o
+ .debug_abbrev  0x00000807      0x1d6 ./Generated_Code/AS2.o
+ .debug_abbrev  0x000009dd      0x131 ./Generated_Code/AS3.o
+ .debug_abbrev  0x00000b0e      0x1c3 ./Generated_Code/ASerialLdd1.o
+ .debug_abbrev  0x00000cd1      0x1db ./Generated_Code/ASerialLdd2.o
+ .debug_abbrev  0x00000eac      0x1c3 ./Generated_Code/ASerialLdd3.o
+ .debug_abbrev  0x0000106f       0x45 ./Generated_Code/Cpu.o
+ .debug_abbrev  0x000010b4      0x186 ./Generated_Code/LED_AZUL.o
+ .debug_abbrev  0x0000123a      0x186 ./Generated_Code/LED_ROJO.o
+ .debug_abbrev  0x000013c0      0x186 ./Generated_Code/LED_VERDE.o
+ .debug_abbrev  0x00001546      0x10d ./Generated_Code/PE_LDD.o
+ .debug_abbrev  0x00001653       0x68 ./Generated_Code/TI1.o
+ .debug_abbrev  0x000016bb      0x16a ./Generated_Code/TU1.o
+ .debug_abbrev  0x00001825       0xdd ./Generated_Code/TimerIntLdd1.o
 
 .debug_aranges  0x00000000      0x878
  .debug_aranges
@@ -2145,11 +2294,13 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .debug_aranges
                 0x00000040      0x340 ./Static_Code/System/Vectors.o
  .debug_aranges
-                0x00000380       0x48 ./Sources/Events.o
+                0x00000380       0x48 ./Sources/Modelo/comunicacion.o
  .debug_aranges
-                0x000003c8       0x28 ./Sources/UART.o
+                0x000003c8       0x20 ./Sources/Controlador/algoritmo.o
  .debug_aranges
-                0x000003f0       0x60 ./Sources/main.o
+                0x000003e8       0x20 ./Sources/Controlador/main.o
+ .debug_aranges
+                0x00000408       0x48 ./Sources/Events.o
  .debug_aranges
                 0x00000450       0x60 ./Project_Settings/Startup_Code/startup.o
  .debug_aranges
@@ -2181,29 +2332,30 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .debug_aranges
                 0x00000850       0x28 ./Generated_Code/TimerIntLdd1.o
 
-.debug_ranges   0x00000000      0x738
+.debug_ranges   0x00000000      0x728
  .debug_ranges  0x00000000       0x30 ./Static_Code/System/CPU_Init.o
  .debug_ranges  0x00000030      0x330 ./Static_Code/System/Vectors.o
- .debug_ranges  0x00000360       0x38 ./Sources/Events.o
- .debug_ranges  0x00000398       0x18 ./Sources/UART.o
- .debug_ranges  0x000003b0       0x50 ./Sources/main.o
- .debug_ranges  0x00000400       0x50 ./Project_Settings/Startup_Code/startup.o
- .debug_ranges  0x00000450       0x40 ./Generated_Code/AS1.o
- .debug_ranges  0x00000490       0x68 ./Generated_Code/AS2.o
- .debug_ranges  0x000004f8       0x40 ./Generated_Code/AS3.o
- .debug_ranges  0x00000538       0x50 ./Generated_Code/ASerialLdd1.o
- .debug_ranges  0x00000588       0x40 ./Generated_Code/ASerialLdd2.o
- .debug_ranges  0x000005c8       0x50 ./Generated_Code/ASerialLdd3.o
- .debug_ranges  0x00000618       0x18 ./Generated_Code/Cpu.o
- .debug_ranges  0x00000630       0x38 ./Generated_Code/LED_AZUL.o
- .debug_ranges  0x00000668       0x38 ./Generated_Code/LED_ROJO.o
- .debug_ranges  0x000006a0       0x38 ./Generated_Code/LED_VERDE.o
- .debug_ranges  0x000006d8       0x20 ./Generated_Code/PE_LDD.o
- .debug_ranges  0x000006f8       0x10 ./Generated_Code/TI1.o
- .debug_ranges  0x00000708       0x18 ./Generated_Code/TU1.o
- .debug_ranges  0x00000720       0x18 ./Generated_Code/TimerIntLdd1.o
+ .debug_ranges  0x00000360       0x38 ./Sources/Modelo/comunicacion.o
+ .debug_ranges  0x00000398       0x10 ./Sources/Controlador/algoritmo.o
+ .debug_ranges  0x000003a8       0x10 ./Sources/Controlador/main.o
+ .debug_ranges  0x000003b8       0x38 ./Sources/Events.o
+ .debug_ranges  0x000003f0       0x50 ./Project_Settings/Startup_Code/startup.o
+ .debug_ranges  0x00000440       0x40 ./Generated_Code/AS1.o
+ .debug_ranges  0x00000480       0x68 ./Generated_Code/AS2.o
+ .debug_ranges  0x000004e8       0x40 ./Generated_Code/AS3.o
+ .debug_ranges  0x00000528       0x50 ./Generated_Code/ASerialLdd1.o
+ .debug_ranges  0x00000578       0x40 ./Generated_Code/ASerialLdd2.o
+ .debug_ranges  0x000005b8       0x50 ./Generated_Code/ASerialLdd3.o
+ .debug_ranges  0x00000608       0x18 ./Generated_Code/Cpu.o
+ .debug_ranges  0x00000620       0x38 ./Generated_Code/LED_AZUL.o
+ .debug_ranges  0x00000658       0x38 ./Generated_Code/LED_ROJO.o
+ .debug_ranges  0x00000690       0x38 ./Generated_Code/LED_VERDE.o
+ .debug_ranges  0x000006c8       0x20 ./Generated_Code/PE_LDD.o
+ .debug_ranges  0x000006e8       0x10 ./Generated_Code/TI1.o
+ .debug_ranges  0x000006f8       0x18 ./Generated_Code/TU1.o
+ .debug_ranges  0x00000710       0x18 ./Generated_Code/TimerIntLdd1.o
 
-.debug_macro    0x00000000    0x2f6b3
+.debug_macro    0x00000000    0x2fbc0
  .debug_macro   0x00000000      0x1fc ./Static_Code/System/CPU_Init.o
  .debug_macro   0x000001fc      0x850 ./Static_Code/System/CPU_Init.o
  .debug_macro   0x00000a4c      0x214 ./Static_Code/System/CPU_Init.o
@@ -2232,161 +2384,167 @@ OUTPUT(ControlMotor.elf elf32-littlearm)
  .debug_macro   0x0001459f       0x11 ./Static_Code/System/CPU_Init.o
  .debug_macro   0x000145b0      0x29e ./Static_Code/System/CPU_Init.o
  .debug_macro   0x0001484e      0x1ea ./Static_Code/System/Vectors.o
- .debug_macro   0x00014a38      0x305 ./Sources/Events.o
- .debug_macro   0x00014d3d       0x5f ./Sources/Events.o
- .debug_macro   0x00014d9c      0x61c ./Sources/Events.o
- .debug_macro   0x000153b8      0x626 ./Sources/Events.o
- .debug_macro   0x000159de      0x327 ./Sources/Events.o
- .debug_macro   0x00015d05      0x1e8 ./Sources/Events.o
- .debug_macro   0x00015eed      0x109 ./Sources/Events.o
- .debug_macro   0x00015ff6      0x17e ./Sources/Events.o
- .debug_macro   0x00016174      0x200 ./Sources/Events.o
- .debug_macro   0x00016374      0x91e ./Sources/Events.o
- .debug_macro   0x00016c92      0x588 ./Sources/Events.o
- .debug_macro   0x0001721a       0x9e ./Sources/Events.o
- .debug_macro   0x000172b8      0x1f7 ./Sources/Events.o
- .debug_macro   0x000174af      0x50f ./Sources/Events.o
- .debug_macro   0x000179be      0x297 ./Sources/Events.o
- .debug_macro   0x00017c55      0x318 ./Sources/Events.o
- .debug_macro   0x00017f6d      0x25a ./Sources/Events.o
- .debug_macro   0x000181c7      0x13d ./Sources/Events.o
- .debug_macro   0x00018304      0x30b ./Sources/Events.o
- .debug_macro   0x0001860f       0xba ./Sources/Events.o
- .debug_macro   0x000186c9       0xe9 ./Sources/Events.o
- .debug_macro   0x000187b2      0x4e9 ./Sources/Events.o
- .debug_macro   0x00018c9b      0x191 ./Sources/Events.o
- .debug_macro   0x00018e2c       0xea ./Sources/Events.o
- .debug_macro   0x00018f16      0x348 ./Sources/Events.o
- .debug_macro   0x0001925e      0x7d6 ./Sources/Events.o
- .debug_macro   0x00019a34      0x179 ./Sources/Events.o
- .debug_macro   0x00019bad      0x645 ./Sources/Events.o
- .debug_macro   0x0001a1f2      0x8d8 ./Sources/Events.o
- .debug_macro   0x0001aaca      0x11c ./Sources/Events.o
- .debug_macro   0x0001abe6      0x648 ./Sources/Events.o
- .debug_macro   0x0001b22e       0x81 ./Sources/Events.o
- .debug_macro   0x0001b2af      0x7bf ./Sources/Events.o
- .debug_macro   0x0001ba6e      0x10f ./Sources/Events.o
- .debug_macro   0x0001bb7d      0x614 ./Sources/Events.o
- .debug_macro   0x0001c191      0x181 ./Sources/Events.o
- .debug_macro   0x0001c312       0xe7 ./Sources/UART.o
- .debug_macro   0x0001c3f9       0x5f ./Sources/UART.o
- .debug_macro   0x0001c458      0x305 ./Sources/main.o
- .debug_macro   0x0001c75d      0x119 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001c876       0x3a ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001c8b0       0x52 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001c902       0x19 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001c91b      0x16d ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001ca88       0x89 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001cb11       0x10 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001cb21       0x89 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001cbaa       0x1c ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001cbc6       0x10 ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0001cbd6    0x10f6e ./Project_Settings/Startup_Code/startup.o
- .debug_macro   0x0002db44      0x119 ./Generated_Code/AS1.o
- .debug_macro   0x0002dc5d      0x244 ./Generated_Code/AS2.o
- .debug_macro   0x0002dea1      0x119 ./Generated_Code/AS3.o
- .debug_macro   0x0002dfba       0x5f ./Generated_Code/AS3.o
- .debug_macro   0x0002e019       0xff ./Generated_Code/ASerialLdd1.o
- .debug_macro   0x0002e118       0x17 ./Generated_Code/ASerialLdd1.o
- .debug_macro   0x0002e12f      0x7b9 ./Generated_Code/ASerialLdd1.o
- .debug_macro   0x0002e8e8       0xff ./Generated_Code/ASerialLdd2.o
- .debug_macro   0x0002e9e7       0x1e ./Generated_Code/ASerialLdd2.o
- .debug_macro   0x0002ea05       0xff ./Generated_Code/ASerialLdd3.o
- .debug_macro   0x0002eb04       0x17 ./Generated_Code/ASerialLdd3.o
- .debug_macro   0x0002eb1b      0x1d9 ./Generated_Code/Cpu.o
- .debug_macro   0x0002ecf4       0xe6 ./Generated_Code/LED_AZUL.o
- .debug_macro   0x0002edda      0x12b ./Generated_Code/LED_AZUL.o
- .debug_macro   0x0002ef05       0x40 ./Generated_Code/LED_AZUL.o
- .debug_macro   0x0002ef45       0xe6 ./Generated_Code/LED_ROJO.o
- .debug_macro   0x0002f02b       0xe6 ./Generated_Code/LED_VERDE.o
- .debug_macro   0x0002f111       0x40 ./Generated_Code/LED_VERDE.o
- .debug_macro   0x0002f151      0x19d ./Generated_Code/PE_LDD.o
- .debug_macro   0x0002f2ee      0x1c5 ./Generated_Code/TI1.o
- .debug_macro   0x0002f4b3       0xfb ./Generated_Code/TU1.o
- .debug_macro   0x0002f5ae      0x105 ./Generated_Code/TimerIntLdd1.o
+ .debug_macro   0x00014a38      0x16c ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014ba4       0x5f ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014c03       0x10 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014c13      0x100 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014d13       0x3a ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014d4d       0x52 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014d9f       0x19 ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014db8      0x16d ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014f25       0x1c ./Sources/Modelo/comunicacion.o
+ .debug_macro   0x00014f41      0x380 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000152c1      0x61c ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000158dd      0x626 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00015f03      0x327 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001622a      0x1e8 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00016412      0x109 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001651b      0x17e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00016699      0x200 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00016899      0x91e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000171b7      0x588 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001773f       0x9e ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000177dd      0x1f7 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000179d4      0x50f ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00017ee3      0x297 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001817a      0x318 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00018492      0x25a ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000186ec      0x13d ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00018829      0x30b ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00018b34       0xba ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00018bee       0xe9 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00018cd7      0x4e9 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x000191c0      0x191 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00019351       0xea ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001943b      0x348 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00019783      0x7d6 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x00019f59      0x179 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001a0d2      0x645 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001a717      0x8d8 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001afef      0x11c ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001b10b      0x648 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001b753       0x81 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001b7d4      0x7bf ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001bf93      0x10f ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001c0a2      0x614 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001c6b6      0x181 ./Sources/Controlador/algoritmo.o
+ .debug_macro   0x0001c837      0x30d ./Sources/Controlador/main.o
+ .debug_macro   0x0001cb44      0x305 ./Sources/Events.o
+ .debug_macro   0x0001ce49      0x119 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001cf62       0x89 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001cfeb       0x89 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001d074       0x10 ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0001d084    0x10f6e ./Project_Settings/Startup_Code/startup.o
+ .debug_macro   0x0002dff2      0x119 ./Generated_Code/AS1.o
+ .debug_macro   0x0002e10b      0x244 ./Generated_Code/AS2.o
+ .debug_macro   0x0002e34f       0x5f ./Generated_Code/AS2.o
+ .debug_macro   0x0002e3ae      0x119 ./Generated_Code/AS3.o
+ .debug_macro   0x0002e4c7       0x5f ./Generated_Code/AS3.o
+ .debug_macro   0x0002e526       0xff ./Generated_Code/ASerialLdd1.o
+ .debug_macro   0x0002e625       0x17 ./Generated_Code/ASerialLdd1.o
+ .debug_macro   0x0002e63c      0x7b9 ./Generated_Code/ASerialLdd1.o
+ .debug_macro   0x0002edf5       0xff ./Generated_Code/ASerialLdd2.o
+ .debug_macro   0x0002eef4       0x1e ./Generated_Code/ASerialLdd2.o
+ .debug_macro   0x0002ef12       0xff ./Generated_Code/ASerialLdd3.o
+ .debug_macro   0x0002f011       0x17 ./Generated_Code/ASerialLdd3.o
+ .debug_macro   0x0002f028      0x1d9 ./Generated_Code/Cpu.o
+ .debug_macro   0x0002f201       0xe6 ./Generated_Code/LED_AZUL.o
+ .debug_macro   0x0002f2e7      0x12b ./Generated_Code/LED_AZUL.o
+ .debug_macro   0x0002f412       0x40 ./Generated_Code/LED_AZUL.o
+ .debug_macro   0x0002f452       0xe6 ./Generated_Code/LED_ROJO.o
+ .debug_macro   0x0002f538       0xe6 ./Generated_Code/LED_VERDE.o
+ .debug_macro   0x0002f61e       0x40 ./Generated_Code/LED_VERDE.o
+ .debug_macro   0x0002f65e      0x19d ./Generated_Code/PE_LDD.o
+ .debug_macro   0x0002f7fb      0x1c5 ./Generated_Code/TI1.o
+ .debug_macro   0x0002f9c0       0xfb ./Generated_Code/TU1.o
+ .debug_macro   0x0002fabb      0x105 ./Generated_Code/TimerIntLdd1.o
 
-.debug_line     0x00000000     0x61aa
+.debug_line     0x00000000     0x6a6f
  .debug_line    0x00000000      0x5c4 ./Static_Code/System/CPU_Init.o
  .debug_line    0x000005c4      0xb6a ./Static_Code/System/Vectors.o
- .debug_line    0x0000112e      0x64d ./Sources/Events.o
- .debug_line    0x0000177b      0x35b ./Sources/UART.o
- .debug_line    0x00001ad6      0x82c ./Sources/main.o
- .debug_line    0x00002302      0x3d3 ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x000026d5      0x385 ./Generated_Code/AS1.o
- .debug_line    0x00002a5a      0x669 ./Generated_Code/AS2.o
- .debug_line    0x000030c3      0x385 ./Generated_Code/AS3.o
- .debug_line    0x00003448      0x469 ./Generated_Code/ASerialLdd1.o
- .debug_line    0x000038b1      0x488 ./Generated_Code/ASerialLdd2.o
- .debug_line    0x00003d39      0x469 ./Generated_Code/ASerialLdd3.o
- .debug_line    0x000041a2      0x4c1 ./Generated_Code/Cpu.o
- .debug_line    0x00004663      0x3c2 ./Generated_Code/LED_AZUL.o
- .debug_line    0x00004a25      0x3c2 ./Generated_Code/LED_ROJO.o
- .debug_line    0x00004de7      0x3c4 ./Generated_Code/LED_VERDE.o
- .debug_line    0x000051ab      0x469 ./Generated_Code/PE_LDD.o
- .debug_line    0x00005614      0x465 ./Generated_Code/TI1.o
- .debug_line    0x00005a79      0x3a0 ./Generated_Code/TU1.o
- .debug_line    0x00005e19      0x391 ./Generated_Code/TimerIntLdd1.o
+ .debug_line    0x0000112e      0x50d ./Sources/Modelo/comunicacion.o
+ .debug_line    0x0000163b      0x79b ./Sources/Controlador/algoritmo.o
+ .debug_line    0x00001dd6      0x7a4 ./Sources/Controlador/main.o
+ .debug_line    0x0000257a      0x64d ./Sources/Events.o
+ .debug_line    0x00002bc7      0x3d3 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x00002f9a      0x385 ./Generated_Code/AS1.o
+ .debug_line    0x0000331f      0x669 ./Generated_Code/AS2.o
+ .debug_line    0x00003988      0x385 ./Generated_Code/AS3.o
+ .debug_line    0x00003d0d      0x469 ./Generated_Code/ASerialLdd1.o
+ .debug_line    0x00004176      0x488 ./Generated_Code/ASerialLdd2.o
+ .debug_line    0x000045fe      0x469 ./Generated_Code/ASerialLdd3.o
+ .debug_line    0x00004a67      0x4c1 ./Generated_Code/Cpu.o
+ .debug_line    0x00004f28      0x3c2 ./Generated_Code/LED_AZUL.o
+ .debug_line    0x000052ea      0x3c2 ./Generated_Code/LED_ROJO.o
+ .debug_line    0x000056ac      0x3c4 ./Generated_Code/LED_VERDE.o
+ .debug_line    0x00005a70      0x469 ./Generated_Code/PE_LDD.o
+ .debug_line    0x00005ed9      0x465 ./Generated_Code/TI1.o
+ .debug_line    0x0000633e      0x3a0 ./Generated_Code/TU1.o
+ .debug_line    0x000066de      0x391 ./Generated_Code/TimerIntLdd1.o
 
-.debug_str      0x00000000    0xe3120
+.debug_str      0x00000000    0xe30f7
  .debug_str     0x00000000    0x74b26 ./Static_Code/System/CPU_Init.o
                               0x74c90 (size before relaxing)
  .debug_str     0x00074b26      0x9c3 ./Static_Code/System/Vectors.o
                               0x750e4 (size before relaxing)
- .debug_str     0x000754e9    0x6b127 ./Sources/Events.o
+ .debug_str     0x000754e9     0x18fd ./Sources/Modelo/comunicacion.o
+                              0x6adda (size before relaxing)
+ .debug_str     0x00076de6    0x6b136 ./Sources/Controlador/algoritmo.o
+                              0xe0081 (size before relaxing)
+ .debug_str     0x000e1f1c       0x6e ./Sources/Controlador/main.o
+                              0xde865 (size before relaxing)
+ .debug_str     0x000e1f8a       0x64 ./Sources/Events.o
                               0xde7ed (size before relaxing)
- .debug_str     0x000e0610       0x58 ./Sources/UART.o
-                              0x69384 (size before relaxing)
- .debug_str     0x000e0668      0x1b8 ./Sources/main.o
-                              0xde99c (size before relaxing)
- .debug_str     0x000e0820     0x1998 ./Project_Settings/Startup_Code/startup.o
+ .debug_str     0x000e1fee      0x1a1 ./Project_Settings/Startup_Code/startup.o
                               0x62315 (size before relaxing)
- .debug_str     0x000e21b8      0x1b8 ./Generated_Code/AS1.o
+ .debug_str     0x000e218f      0x1b8 ./Generated_Code/AS1.o
                               0x694fe (size before relaxing)
- .debug_str     0x000e2370      0x191 ./Generated_Code/AS2.o
+ .debug_str     0x000e2347      0x191 ./Generated_Code/AS2.o
                               0x73a18 (size before relaxing)
- .debug_str     0x000e2501       0x91 ./Generated_Code/AS3.o
+ .debug_str     0x000e24d8       0x91 ./Generated_Code/AS3.o
                               0x694fe (size before relaxing)
- .debug_str     0x000e2592      0x2ab ./Generated_Code/ASerialLdd1.o
+ .debug_str     0x000e2569      0x2ab ./Generated_Code/ASerialLdd1.o
                               0x777b6 (size before relaxing)
- .debug_str     0x000e283d      0x1bf ./Generated_Code/ASerialLdd2.o
+ .debug_str     0x000e2814      0x1bf ./Generated_Code/ASerialLdd2.o
                               0x77899 (size before relaxing)
- .debug_str     0x000e29fc       0xf3 ./Generated_Code/ASerialLdd3.o
+ .debug_str     0x000e29d3       0xf3 ./Generated_Code/ASerialLdd3.o
                               0x777b6 (size before relaxing)
- .debug_str     0x000e2aef       0x28 ./Generated_Code/Cpu.o
+ .debug_str     0x000e2ac6       0x28 ./Generated_Code/Cpu.o
                               0x73741 (size before relaxing)
- .debug_str     0x000e2b17       0xea ./Generated_Code/LED_AZUL.o
+ .debug_str     0x000e2aee       0xea ./Generated_Code/LED_AZUL.o
                               0x6a232 (size before relaxing)
- .debug_str     0x000e2c01       0xa8 ./Generated_Code/LED_ROJO.o
+ .debug_str     0x000e2bd8       0xa8 ./Generated_Code/LED_ROJO.o
                               0x6a232 (size before relaxing)
- .debug_str     0x000e2ca9       0xb1 ./Generated_Code/LED_VERDE.o
+ .debug_str     0x000e2c80       0xb1 ./Generated_Code/LED_VERDE.o
                               0x6a246 (size before relaxing)
- .debug_str     0x000e2d5a      0x15f ./Generated_Code/PE_LDD.o
+ .debug_str     0x000e2d31      0x15f ./Generated_Code/PE_LDD.o
                               0x738c5 (size before relaxing)
- .debug_str     0x000e2eb9       0x31 ./Generated_Code/TI1.o
+ .debug_str     0x000e2e90       0x31 ./Generated_Code/TI1.o
                               0x7374f (size before relaxing)
- .debug_str     0x000e2eea      0x178 ./Generated_Code/TU1.o
+ .debug_str     0x000e2ec1      0x178 ./Generated_Code/TU1.o
                               0x7285a (size before relaxing)
- .debug_str     0x000e3062       0xbe ./Generated_Code/TimerIntLdd1.o
+ .debug_str     0x000e3039       0xbe ./Generated_Code/TimerIntLdd1.o
                               0x7266e (size before relaxing)
 
-.debug_frame    0x00000000     0x1a60
+.debug_frame    0x00000000     0x1a14
  .debug_frame   0x00000000       0x9c ./Static_Code/System/CPU_Init.o
  .debug_frame   0x0000009c      0xcb0 ./Static_Code/System/Vectors.o
- .debug_frame   0x00000d4c       0xa0 ./Sources/Events.o
- .debug_frame   0x00000dec       0x50 ./Sources/UART.o
- .debug_frame   0x00000e3c      0x124 ./Sources/main.o
- .debug_frame   0x00000f60      0x108 ./Project_Settings/Startup_Code/startup.o
- .debug_frame   0x00001068       0xdc ./Generated_Code/AS1.o
- .debug_frame   0x00001144      0x170 ./Generated_Code/AS2.o
- .debug_frame   0x000012b4       0xdc ./Generated_Code/AS3.o
- .debug_frame   0x00001390      0x11c ./Generated_Code/ASerialLdd1.o
- .debug_frame   0x000014ac       0xec ./Generated_Code/ASerialLdd2.o
- .debug_frame   0x00001598      0x11c ./Generated_Code/ASerialLdd3.o
- .debug_frame   0x000016b4       0x50 ./Generated_Code/Cpu.o
- .debug_frame   0x00001704       0xb8 ./Generated_Code/LED_AZUL.o
- .debug_frame   0x000017bc       0xb8 ./Generated_Code/LED_ROJO.o
- .debug_frame   0x00001874       0xb8 ./Generated_Code/LED_VERDE.o
- .debug_frame   0x0000192c       0x64 ./Generated_Code/PE_LDD.o
- .debug_frame   0x00001990       0x30 ./Generated_Code/TI1.o
- .debug_frame   0x000019c0       0x50 ./Generated_Code/TU1.o
- .debug_frame   0x00001a10       0x50 ./Generated_Code/TimerIntLdd1.o
+ .debug_frame   0x00000d4c       0xc4 ./Sources/Modelo/comunicacion.o
+ .debug_frame   0x00000e10       0x34 ./Sources/Controlador/algoritmo.o
+ .debug_frame   0x00000e44       0x30 ./Sources/Controlador/main.o
+ .debug_frame   0x00000e74       0xa0 ./Sources/Events.o
+ .debug_frame   0x00000f14      0x108 ./Project_Settings/Startup_Code/startup.o
+ .debug_frame   0x0000101c       0xdc ./Generated_Code/AS1.o
+ .debug_frame   0x000010f8      0x170 ./Generated_Code/AS2.o
+ .debug_frame   0x00001268       0xdc ./Generated_Code/AS3.o
+ .debug_frame   0x00001344      0x11c ./Generated_Code/ASerialLdd1.o
+ .debug_frame   0x00001460       0xec ./Generated_Code/ASerialLdd2.o
+ .debug_frame   0x0000154c      0x11c ./Generated_Code/ASerialLdd3.o
+ .debug_frame   0x00001668       0x50 ./Generated_Code/Cpu.o
+ .debug_frame   0x000016b8       0xb8 ./Generated_Code/LED_AZUL.o
+ .debug_frame   0x00001770       0xb8 ./Generated_Code/LED_ROJO.o
+ .debug_frame   0x00001828       0xb8 ./Generated_Code/LED_VERDE.o
+ .debug_frame   0x000018e0       0x64 ./Generated_Code/PE_LDD.o
+ .debug_frame   0x00001944       0x30 ./Generated_Code/TI1.o
+ .debug_frame   0x00001974       0x50 ./Generated_Code/TU1.o
+ .debug_frame   0x000019c4       0x50 ./Generated_Code/TimerIntLdd1.o
