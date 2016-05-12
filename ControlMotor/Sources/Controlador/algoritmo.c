@@ -1,10 +1,11 @@
 /**
- * Clase que controla la comunicacion tanto con los motores como con el modulo bluetooth.
- * @file Modelo/comunicacion.c
- * @author XXXXX
- * @date XX/05/2016
+ * Clase que se encarga de la implementación del algoritmo PID.
+ * @file Controlador/algoritmo.c
+ * @author Sandra Ajates Gonzalez
+ * @date Junio/2016
  * @version 1.0
  */
+
 #include "AS1.h"
 #include "AS2.h"
 /* Including needed modules to compile this module/procedure */
