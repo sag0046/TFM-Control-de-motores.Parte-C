@@ -75,7 +75,7 @@ void calcularDatosEncoder(char algoritmo, int *velCalculada, int *velCalculadaAn
 		*velEncoder = (((distEncoder) * 10)/ 360)*60; //cada 0.1seg
 
 		//Imprime de la velocidad del encoder para comparar con la gráfica.
-		UART_Write_Numero_Int(*velEncoder);
+		//UART_Write_Numero_Int(*velEncoder);
 
 		//Envia velocidad por Bluetooth
 		enviarVelocidad(*velEncoder);

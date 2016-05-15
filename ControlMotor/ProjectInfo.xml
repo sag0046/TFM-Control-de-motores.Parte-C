@@ -74,7 +74,6 @@
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Controlador\main.c</PathName>
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Events.c</PathName>
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Modelo\comunicacion.c</PathName>
-      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\UART.c</PathName>
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\main.c</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\CPU_Init.c</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd2\MK64FN1M0LQ12\system\Peripherals_Init.c</PathName>
@@ -106,7 +105,6 @@
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Controlador\algoritmo.h</PathName>
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Events.h</PathName>
       <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\Modelo\comunicacion.h</PathName>
-      <PathName>C:\Users\Sandra\GitHubKinetis\ControlMotor\ControlMotor\Sources\UART.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\iofiles\MK64F12.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>C:\Freescale\KDS_2.0.0\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\CAN_PDD.h</PathName>
