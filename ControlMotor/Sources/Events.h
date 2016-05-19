@@ -18,8 +18,8 @@
 ** @file Events.h
 ** @version 01.00
 ** @brief
-**         This is user's event module.
-**         Put your event handler code here.
+**         Modulo de eventos del usuario.
+**
 */         
 /*!
 **  @addtogroup Events_module Events module documentation

@@ -35,8 +35,8 @@
 #include "Modelo/comunicacion.h"
 #include "stdlib.h"
 
-float encoder;      // ponerla como externa
-float encoderAnt;   // con el valor del encoder de la anterior posicion del encoder
+float encoder;      // valor encoder
+float encoderAnt;   // valor del encoder en la anterior posicion
 float distEncoder;  //distancia recorrida del encoder
 int velEncoder;     //velocidad del encoder
 extern bool llamada;
