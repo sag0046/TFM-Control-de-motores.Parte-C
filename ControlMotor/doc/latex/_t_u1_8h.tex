@@ -1,0 +1,35 @@
+\hypertarget{_t_u1_8h}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+T\+U1.h File Reference}
+\label{_t_u1_8h}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+T\+U1.\+h@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+T\+U1.\+h}}
+
+
+This Timer\+Unit component provides a low level A\+PI for unified hardware access across various timer devices using the Prescaler-\/\+Counter-\/\+Compare-\/\+Capture timer structure.  
+
+
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+T\+M\+\_\+\+P\+D\+D.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___t_u1__module_ga791d7a56f94f745b0dbb9a0ff09ee0d4}{T\+U1\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x40038000U
+\item 
+\#define \hyperlink{group___t_u1__module_ga2532ba47f579738a2f954e79d2d99e9d}{T\+U1\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___t_u1__module_ga776fe3d89696e57b98cf36b71dbcc86c}{T\+U1\+\_\+\+On\+Counter\+Restart\+\_\+\+E\+V\+E\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ \hyperlink{group___t_u1__module_ga9bfbdf45fe9128c8d9e4245e3480d6da}{T\+U1\+\_\+\+Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the property \mbox{[}\char`\"{}\+Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}Enable\mbox{]} method). In this case the \mbox{[}Enable\mbox{]} method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init the \mbox{[}Deinit\mbox{]} must be called first. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Timer\+Unit component provides a low level A\+PI for unified hardware access across various timer devices using the Prescaler-\/\+Counter-\/\+Compare-\/\+Capture timer structure. 
+
+\begin{DoxyVersion}{Version}
+01.\+11 
+\end{DoxyVersion}

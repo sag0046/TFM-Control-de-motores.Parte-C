@@ -1,0 +1,74 @@
+\hypertarget{main_8c}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Controlador/main.c File Reference}
+\label{main_8c}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Controlador/main.\+c@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Controlador/main.\+c}}
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Events.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Pins1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+I1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Timer\+Int\+Ldd1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+U1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+R\+O\+J\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+A\+Z\+U\+L.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+V\+E\+R\+D\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+D\+D\+\_\+\+Includes.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Init\+\_\+\+Config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Controlador/algoritmo.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Modelo/comunicacion.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries encoder}\hypertarget{main_8c_a5afa36f687185e223fcac7d65f40ddf6}{}\label{main_8c_a5afa36f687185e223fcac7d65f40ddf6}
+
+\item 
+float {\bfseries encoder\+Ant}\hypertarget{main_8c_ae5efbc910606956125d95c6029ce331e}{}\label{main_8c_ae5efbc910606956125d95c6029ce331e}
+
+\item 
+float {\bfseries dist\+Encoder}\hypertarget{main_8c_afef47cc5e96b79f23999add097551ea2}{}\label{main_8c_afef47cc5e96b79f23999add097551ea2}
+
+\item 
+int {\bfseries vel\+Encoder}\hypertarget{main_8c_ae5ebc5c78a1aa6e573219365573fdd0c}{}\label{main_8c_ae5ebc5c78a1aa6e573219365573fdd0c}
+
+\item 
+int {\bfseries ti}
+\item 
+bool {\bfseries llamada}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa principal. S\+Inicio del programa.
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+X\+X/05/2016 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+Tarea principal. Se ejecuta continuamente recogiendo los datos recibidos por bluetooth para despues actuar segun el mensaje recibido. 

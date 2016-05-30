@@ -1,0 +1,114 @@
+\hypertarget{comunicacion_8c}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Modelo/comunicacion.c File Reference}
+\label{comunicacion_8c}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Modelo/comunicacion.\+c@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Modelo/comunicacion.\+c}}
+{\ttfamily \#include \char`\"{}A\+S1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Modelo/comunicacion.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{comunicacion_8c_aa1dc6f3707b14ba0268180248dbc6443}{U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int} (unsigned int velocidad)
+\begin{DoxyCompactList}\small\item\em Imprime encoder. \end{DoxyCompactList}\item 
+void \hyperlink{comunicacion_8c_ad6013096d0a344ebb3560524053cb9e6}{enviar\+Velocidad} (int velocidad\+Envio)
+\begin{DoxyCompactList}\small\item\em Envío velocidad Bluetooth. \end{DoxyCompactList}\item 
+float \hyperlink{comunicacion_8c_ac7078699659b7e0cbfc68f07462860dd}{obtener\+Encoder} ()
+\begin{DoxyCompactList}\small\item\em Obtener encoder. \end{DoxyCompactList}\item 
+void \hyperlink{comunicacion_8c_aba4b7ca34c7e3fb5d66081bd71a62783}{configuracion\+Motor} ()
+\begin{DoxyCompactList}\small\item\em Configura Motor. \end{DoxyCompactList}\item 
+void \hyperlink{comunicacion_8c_aaf32737958ee838d6838a3449ba90a65}{resetear\+Encoders} ()
+\begin{DoxyCompactList}\small\item\em Resetea los encoder. \end{DoxyCompactList}\item 
+void \hyperlink{comunicacion_8c_ac485965697295992f2599633a3f5126a}{stop\+Motor} ()
+\begin{DoxyCompactList}\small\item\em Parada encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase que controla la comunicacion tanto con los motores como con el modulo bluetooth.
+
+\begin{DoxyAuthor}{Author}
+X\+X\+X\+XX 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+X\+X/05/2016 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\index{comunicacion.\+c@{comunicacion.\+c}!configuracion\+Motor@{configuracion\+Motor}}
+\index{configuracion\+Motor@{configuracion\+Motor}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{configuracion\+Motor()}{configuracionMotor()}}]{\setlength{\rightskip}{0pt plus 5cm}void configuracion\+Motor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_aba4b7ca34c7e3fb5d66081bd71a62783}{}\label{comunicacion_8c_aba4b7ca34c7e3fb5d66081bd71a62783}
+
+
+Configura Motor. 
+
+Configuración del motor para el envío y recibir datos. \index{comunicacion.\+c@{comunicacion.\+c}!enviar\+Velocidad@{enviar\+Velocidad}}
+\index{enviar\+Velocidad@{enviar\+Velocidad}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{enviar\+Velocidad(int velocidad\+Envio)}{enviarVelocidad(int velocidadEnvio)}}]{\setlength{\rightskip}{0pt plus 5cm}void enviar\+Velocidad (
+\begin{DoxyParamCaption}
+\item[{int}]{velocidad\+Envio}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_ad6013096d0a344ebb3560524053cb9e6}{}\label{comunicacion_8c_ad6013096d0a344ebb3560524053cb9e6}
+
+
+Envío velocidad Bluetooth. 
+
+Envío de la velocidad por el puerto de Bluetooth. 
+\begin{DoxyParams}{Parameters}
+{\em velocidad} & Valor recibido del motor. \\
+\hline
+\end{DoxyParams}
+\index{comunicacion.\+c@{comunicacion.\+c}!obtener\+Encoder@{obtener\+Encoder}}
+\index{obtener\+Encoder@{obtener\+Encoder}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{obtener\+Encoder()}{obtenerEncoder()}}]{\setlength{\rightskip}{0pt plus 5cm}float obtener\+Encoder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_ac7078699659b7e0cbfc68f07462860dd}{}\label{comunicacion_8c_ac7078699659b7e0cbfc68f07462860dd}
+
+
+Obtener encoder. 
+
+Obtiene la velocidad del encoder. \index{comunicacion.\+c@{comunicacion.\+c}!resetear\+Encoders@{resetear\+Encoders}}
+\index{resetear\+Encoders@{resetear\+Encoders}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{resetear\+Encoders()}{resetearEncoders()}}]{\setlength{\rightskip}{0pt plus 5cm}void resetear\+Encoders (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_aaf32737958ee838d6838a3449ba90a65}{}\label{comunicacion_8c_aaf32737958ee838d6838a3449ba90a65}
+
+
+Resetea los encoder. 
+
+Manda a la controladora la orden de poner a 0 el encoder. \index{comunicacion.\+c@{comunicacion.\+c}!stop\+Motor@{stop\+Motor}}
+\index{stop\+Motor@{stop\+Motor}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{stop\+Motor()}{stopMotor()}}]{\setlength{\rightskip}{0pt plus 5cm}void stop\+Motor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_ac485965697295992f2599633a3f5126a}{}\label{comunicacion_8c_ac485965697295992f2599633a3f5126a}
+
+
+Parada encoder. 
+
+Manda a la controladora la orden parar el encoder. \index{comunicacion.\+c@{comunicacion.\+c}!U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int@{U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int}}
+\index{U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int@{U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int}!comunicacion.\+c@{comunicacion.\+c}}
+\subsubsection[{\texorpdfstring{U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int(unsigned int velocidad)}{UART_Write_Numero_Int(unsigned int velocidad)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T\+\_\+\+Write\+\_\+\+Numero\+\_\+\+Int (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{velocidad}
+\end{DoxyParamCaption}
+)}\hypertarget{comunicacion_8c_aa1dc6f3707b14ba0268180248dbc6443}{}\label{comunicacion_8c_aa1dc6f3707b14ba0268180248dbc6443}
+
+
+Imprime encoder. 
+
+Imprime en pantalla el valor recibido del encoder. 
+\begin{DoxyParams}{Parameters}
+{\em velocidad} & Valor recibido del motor. \\
+\hline
+\end{DoxyParams}

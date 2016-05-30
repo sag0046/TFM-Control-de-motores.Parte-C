@@ -1,0 +1,41 @@
+\hypertarget{_events_8c}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Events.c File Reference}
+\label{_events_8c}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Events.\+c@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/sources/\+Events.\+c}}
+
+
+This is user\textquotesingle{}s event module. Put your event handler code here.  
+
+
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Events.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Init\+\_\+\+Config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}P\+D\+D\+\_\+\+Includes.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___events__module_gabaee6afd9e7b4a0a57dc661945543d24}{Cpu\+\_\+\+On\+N\+MI} (void)
+\begin{DoxyCompactList}\small\item\em This event is called when the Non maskable interrupt had occurred. This event is automatically enabled when the \mbox{[}N\+MI interrupt\mbox{]} property is set to \textquotesingle{}Enabled\textquotesingle{}. \end{DoxyCompactList}\item 
+void {\bfseries T\+I1\+\_\+\+On\+Interrupt} (void)
+\item 
+void {\bfseries A\+S2\+\_\+\+On\+Error} (void)
+\item 
+void {\bfseries A\+S2\+\_\+\+On\+Rx\+Char} (void)
+\item 
+void {\bfseries A\+S2\+\_\+\+On\+Tx\+Char} (void)
+\item 
+void {\bfseries A\+S2\+\_\+\+On\+Full\+Rx\+Buf} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries ti} =0
+\item 
+bool {\bfseries llamada}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is user\textquotesingle{}s event module. Put your event handler code here. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

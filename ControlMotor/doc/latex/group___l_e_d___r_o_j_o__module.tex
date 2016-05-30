@@ -1,0 +1,192 @@
+\hypertarget{group___l_e_d___r_o_j_o__module}{}\section{L\+E\+D\+\_\+\+R\+O\+JO module documentation}
+\label{group___l_e_d___r_o_j_o__module}\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gadec68644cadcfc04aea84412377b3f30}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x400\+F\+F040U
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_ga643f7582d425fad56e8ca0fc94a94645}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_ga2acf59737ee845f26c9f2cb5f6fd97b7}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gadf6614c1a479bcee3d44b98bafdc16a7}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_ga634d1a0c4e3ba9512cefc212b42e26ee}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gaf5aa17885742bd00ce6d32388457b7d5}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gac52b0da514fa1a10b14164588b5d9deb}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gadb5357fe29bfc41b8ddc3303ea8c0570}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~P\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gab980668917d413e73e35cb21cbf4a046}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~P\+O\+R\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR
+\item 
+\#define \hyperlink{group___l_e_d___r_o_j_o__module_gab9f5d52fee663e6f3d572e2c7fe0576c}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}~0x00400000U
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ \hyperlink{group___l_e_d___r_o_j_o__module_ga6712b7fdbb355647170f0518b432acfa}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. \end{DoxyCompactList}\item 
+bool \hyperlink{group___l_e_d___r_o_j_o__module_ga7e64262a99bd83dd682023b414484671}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the input/output value. If the direction is \mbox{[}input\mbox{]} then the input value of the pin is read and returned. If the direction is \mbox{[}output\mbox{]} then the last written value is read and returned (see $<$\+Safe mode$>$=\char`\"{}\char`\"{}$>$ property for limitations). This method cannot be disabled if direction is \mbox{[}input\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{group___l_e_d___r_o_j_o__module_ga8374d173d4cb867183484e9a78fe2375}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr, bool Val)
+\begin{DoxyCompactList}\small\item\em The specified output value is set. If the direction is {\bfseries  input}, the component saves the value to a memory or a register and this value will be written to the pin after switching to the output mode (using {\ttfamily Set\+Dir(\+T\+R\+U\+E)}; see \href{BitIOProperties.html#SafeMode}{\tt Safe mode} property for limitations). If the direction is {\bfseries output}, it writes the value to the pin. (Method is available only if the direction = $<$u$>${\ttfamily output}$<$/u$>$ or $<$u$>${\ttfamily  input/output}$<$/u$>$). \end{DoxyCompactList}\item 
+void \hyperlink{group___l_e_d___r_o_j_o__module_ga81c28e19caf4918349ca019707a53b4d}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Clears (set to zero) the output value. It is equivalent to the \mbox{[}Put\+Val(\+F\+A\+L\+S\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\item 
+void \hyperlink{group___l_e_d___r_o_j_o__module_ga4f274068fd9574e502968a57fef5d564}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Sets (to one) the output value. It is equivalent to the \mbox{[}Put\+Val(\+T\+R\+U\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\item 
+void \hyperlink{group___l_e_d___r_o_j_o__module_gac3e38c550def5f3c42efa10f85d3b8c1}{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Negates (inverts) the output value. It is equivalent to the \mbox{[}Put\+Val(!\+Get\+Val())\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_ClrVal_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_ga634d1a0c4e3ba9512cefc212b42e26ee}{}\label{group___l_e_d___r_o_j_o__module_ga634d1a0c4e3ba9512cefc212b42e26ee}
+Clr\+Val method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_GetVal_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_ga2acf59737ee845f26c9f2cb5f6fd97b7}{}\label{group___l_e_d___r_o_j_o__module_ga2acf59737ee845f26c9f2cb5f6fd97b7}
+Get\+Val method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_Init_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_ga643f7582d425fad56e8ca0fc94a94645}{}\label{group___l_e_d___r_o_j_o__module_ga643f7582d425fad56e8ca0fc94a94645}
+Init method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}{LED_ROJO_MODULE_BASE_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~P\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}\hypertarget{group___l_e_d___r_o_j_o__module_gadb5357fe29bfc41b8ddc3303ea8c0570}{}\label{group___l_e_d___r_o_j_o__module_gadb5357fe29bfc41b8ddc3303ea8c0570}
+Name of macro used as the base address \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_NegVal_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_gac52b0da514fa1a10b14164588b5d9deb}{}\label{group___l_e_d___r_o_j_o__module_gac52b0da514fa1a10b14164588b5d9deb}
+Neg\+Val method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}{LED_ROJO_PORT_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK~0x00400000U}\hypertarget{group___l_e_d___r_o_j_o__module_gab9f5d52fee663e6f3d572e2c7fe0576c}{}\label{group___l_e_d___r_o_j_o__module_gab9f5d52fee663e6f3d572e2c7fe0576c}
+Mask of the allocated pin from the port \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}{LED_ROJO_PORTCONTROL_BASE_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~P\+O\+R\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}\hypertarget{group___l_e_d___r_o_j_o__module_gab980668917d413e73e35cb21cbf4a046}{}\label{group___l_e_d___r_o_j_o__module_gab980668917d413e73e35cb21cbf4a046}
+Name of macro used as the base address \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}{LED_ROJO_PRPH_BASE_ADDRESS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~0x400\+F\+F040U}\hypertarget{group___l_e_d___r_o_j_o__module_gadec68644cadcfc04aea84412377b3f30}{}\label{group___l_e_d___r_o_j_o__module_gadec68644cadcfc04aea84412377b3f30}
+Peripheral base address of a device allocated by the component. This constant can be used directly in P\+DD macros. \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_PutVal_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_gadf6614c1a479bcee3d44b98bafdc16a7}{}\label{group___l_e_d___r_o_j_o__module_gadf6614c1a479bcee3d44b98bafdc16a7}
+Put\+Val method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) \index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}{LED_ROJO_SetVal_METHOD_ENABLED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}\hypertarget{group___l_e_d___r_o_j_o__module_gaf5aa17885742bd00ce6d32388457b7d5}{}\label{group___l_e_d___r_o_j_o__module_gaf5aa17885742bd00ce6d32388457b7d5}
+Set\+Val method of the component L\+E\+D\+\_\+\+R\+O\+JO is enabled (generated) 
+
+\subsection{Function Documentation}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val(\+L\+D\+D\+\_\+\+T\+Device\+Data $\ast$\+Device\+Data\+Ptr)}{LED_ROJO_ClrVal(LDD_TDeviceData *DeviceDataPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Clr\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$}]{Device\+Data\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_ga81c28e19caf4918349ca019707a53b4d}{}\label{group___l_e_d___r_o_j_o__module_ga81c28e19caf4918349ca019707a53b4d}
+
+
+Clears (set to zero) the output value. It is equivalent to the \mbox{[}Put\+Val(\+F\+A\+L\+S\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Pointer to device data structure returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val(\+L\+D\+D\+\_\+\+T\+Device\+Data $\ast$\+Device\+Data\+Ptr)}{LED_ROJO_GetVal(LDD_TDeviceData *DeviceDataPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}bool L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Get\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$}]{Device\+Data\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_ga7e64262a99bd83dd682023b414484671}{}\label{group___l_e_d___r_o_j_o__module_ga7e64262a99bd83dd682023b414484671}
+
+
+Returns the input/output value. If the direction is \mbox{[}input\mbox{]} then the input value of the pin is read and returned. If the direction is \mbox{[}output\mbox{]} then the last written value is read and returned (see $<$\+Safe mode$>$=\char`\"{}\char`\"{}$>$ property for limitations). This method cannot be disabled if direction is \mbox{[}input\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Input or output value. Possible values\+: $<$false$>$ -\/ logical \char`\"{}0\char`\"{} (Low level) $<$true$>$ -\/ logical \char`\"{}1\char`\"{} (High level) 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init(\+L\+D\+D\+\_\+\+T\+User\+Data $\ast$\+User\+Data\+Ptr)}{LED_ROJO_Init(LDD_TUserData *UserDataPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+User\+Data} $\ast$}]{User\+Data\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_ga6712b7fdbb355647170f0518b432acfa}{}\label{group___l_e_d___r_o_j_o__module_ga6712b7fdbb355647170f0518b432acfa}
+
+
+Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer will be passed as an event or callback parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Pointer to the dynamically allocated private structure or N\+U\+LL if there was an error. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val(\+L\+D\+D\+\_\+\+T\+Device\+Data $\ast$\+Device\+Data\+Ptr)}{LED_ROJO_NegVal(LDD_TDeviceData *DeviceDataPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Neg\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$}]{Device\+Data\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_gac3e38c550def5f3c42efa10f85d3b8c1}{}\label{group___l_e_d___r_o_j_o__module_gac3e38c550def5f3c42efa10f85d3b8c1}
+
+
+Negates (inverts) the output value. It is equivalent to the \mbox{[}Put\+Val(!\+Get\+Val())\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Pointer to device data structure returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val(\+L\+D\+D\+\_\+\+T\+Device\+Data $\ast$\+Device\+Data\+Ptr, bool Val)}{LED_ROJO_PutVal(LDD_TDeviceData *DeviceDataPtr, bool Val)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Put\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$}]{Device\+Data\+Ptr, }
+\item[{bool}]{Val}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_ga8374d173d4cb867183484e9a78fe2375}{}\label{group___l_e_d___r_o_j_o__module_ga8374d173d4cb867183484e9a78fe2375}
+
+
+The specified output value is set. If the direction is {\bfseries  input}, the component saves the value to a memory or a register and this value will be written to the pin after switching to the output mode (using {\ttfamily Set\+Dir(\+T\+R\+U\+E)}; see \href{BitIOProperties.html#SafeMode}{\tt Safe mode} property for limitations). If the direction is {\bfseries output}, it writes the value to the pin. (Method is available only if the direction = $<$u$>${\ttfamily output}$<$/u$>$ or $<$u$>${\ttfamily  input/output}$<$/u$>$). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by $<$\+Init$>$ method. \\
+\hline
+{\em Val} & -\/ Output value. Possible values\+: $<$false$>$ -\/ logical \char`\"{}0\char`\"{} (Low level) $<$true$>$ -\/ logical \char`\"{}1\char`\"{} (High level) \\
+\hline
+\end{DoxyParams}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}!L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val}}
+\index{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val@{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val}!L\+E\+D\+\_\+\+R\+O\+J\+O module documentation@{L\+E\+D\+\_\+\+R\+O\+J\+O module documentation}}
+\subsubsection[{\texorpdfstring{L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val(\+L\+D\+D\+\_\+\+T\+Device\+Data $\ast$\+Device\+Data\+Ptr)}{LED_ROJO_SetVal(LDD_TDeviceData *DeviceDataPtr)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+E\+D\+\_\+\+R\+O\+J\+O\+\_\+\+Set\+Val (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$}]{Device\+Data\+Ptr}
+\end{DoxyParamCaption}
+)}\hypertarget{group___l_e_d___r_o_j_o__module_ga4f274068fd9574e502968a57fef5d564}{}\label{group___l_e_d___r_o_j_o__module_ga4f274068fd9574e502968a57fef5d564}
+
+
+Sets (to one) the output value. It is equivalent to the \mbox{[}Put\+Val(\+T\+R\+U\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Pointer to device data structure returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}

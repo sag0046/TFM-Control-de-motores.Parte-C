@@ -1,0 +1,520 @@
+\hypertarget{group___c_p_u___config__module}{}\section{C\+P\+U\+\_\+\+Config module documentation}
+\label{group___c_p_u___config__module}\index{C\+P\+U\+\_\+\+Config module documentation@{C\+P\+U\+\_\+\+Config module documentation}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_t_cpu_clock_configuration}{T\+Cpu\+Clock\+Configuration}
+\item 
+struct \hyperlink{struct_c_p_u___t_clock_gen_regs}{C\+P\+U\+\_\+\+T\+Clock\+Gen\+Regs}
+\item 
+struct \hyperlink{struct_c_p_u___t_clock_sys_regs}{C\+P\+U\+\_\+\+T\+Clock\+Sys\+Regs}
+\item 
+struct \hyperlink{struct_c_p_u___t_clock_config_descriptor}{C\+P\+U\+\_\+\+T\+Clock\+Config\+Descriptor}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+E\+N\+T\+R\+Y\+P\+O\+I\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+ON}~\+\_\+\+\_\+init\+\_\+hardware\hypertarget{group___c_p_u___config__module_ga8e901544755f3fcb73aea2a77045e6c4}{}\label{group___c_p_u___config__module_ga8e901544755f3fcb73aea2a77045e6c4}
+
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+E\+N\+T\+R\+Y\+P\+O\+I\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE}~void\hypertarget{group___c_p_u___config__module_gacd482a10716a72bef89a6d74c9b7df39}{}\label{group___c_p_u___config__module_gacd482a10716a72bef89a6d74c9b7df39}
+
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+E\+N\+T\+R\+Y\+P\+O\+I\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+R\+E\+T\+U\+RN}\hypertarget{group___c_p_u___config__module_ga20a3a8a52940662decea23945081d5f5}{}\label{group___c_p_u___config__module_ga20a3a8a52940662decea23945081d5f5}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+E\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}~0x00U\hypertarget{group___c_p_u___config__module_ga5810027797727f8d640da76f1fe9d6ec}{}\label{group___c_p_u___config__module_ga5810027797727f8d640da76f1fe9d6ec}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+G\+E\+T\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}~0x00U\hypertarget{group___c_p_u___config__module_gaf178d67eea13c0cb571d1c931fd0a1c3}{}\label{group___c_p_u___config__module_gaf178d67eea13c0cb571d1c931fd0a1c3}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+E\+T\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+DE}~0x00U\hypertarget{group___c_p_u___config__module_gaad94c951a7d8b11bce43d83d4a5e605c}{}\label{group___c_p_u___config__module_gaad94c951a7d8b11bce43d83d4a5e605c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+I\+NT}~0x00U\hypertarget{group___c_p_u___config__module_gaaf336a9def5e6d5762d6b9e65ab7b76a}{}\label{group___c_p_u___config__module_gaaf336a9def5e6d5762d6b9e65ab7b76a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+NT}~0x00U\hypertarget{group___c_p_u___config__module_ga1ff52c29167dbe65c260660b0f5b8db3}{}\label{group___c_p_u___config__module_ga1ff52c29167dbe65c260660b0f5b8db3}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+A\+U\+T\+O\+\_\+\+T\+R\+IM}~0x00U\hypertarget{group___c_p_u___config__module_gabb697c970c320ed1d28dcce488d8bc11}{}\label{group___c_p_u___config__module_gabb697c970c320ed1d28dcce488d8bc11}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+V\+L\+P\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+LE}~0x00U\hypertarget{group___c_p_u___config__module_ga69d3cc4c0f84e5ade4ab76439744c8c6}{}\label{group___c_p_u___config__module_ga69d3cc4c0f84e5ade4ab76439744c8c6}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+V\+L\+P\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+LE}~0x00U\hypertarget{group___c_p_u___config__module_gacab232855573ffda96b3d8c7306e8b8c}{}\label{group___c_p_u___config__module_gacab232855573ffda96b3d8c7306e8b8c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+ET}~0x00U\hypertarget{group___c_p_u___config__module_gabe83076dd8a87a50123b381e628372b0}{}\label{group___c_p_u___config__module_gabe83076dd8a87a50123b381e628372b0}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+F\+A\+M\+I\+L\+Y\+\_\+\+Kinetis}~/$\ast$ Specification of the core type of the selected processor $\ast$/\hypertarget{group___c_p_u___config__module_ga5bf3022570d9bb7a0d666f2dd9db6a34}{}\label{group___c_p_u___config__module_ga5bf3022570d9bb7a0d666f2dd9db6a34}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+R\+I\+V\+A\+T\+I\+V\+E\+\_\+\+M\+K64\+F\+N1\+M0\+L\+Q12}~/$\ast$ Name of the selected processor derivative $\ast$/\hypertarget{group___c_p_u___config__module_ga2792070e0eb872f825d274bbd20c7548}{}\label{group___c_p_u___config__module_ga2792070e0eb872f825d274bbd20c7548}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+P\+A\+R\+T\+N\+U\+M\+\_\+\+M\+K64\+F\+N1\+M0\+V\+L\+Q12}~/$\ast$ Part number of the selected processor $\ast$/\hypertarget{group___c_p_u___config__module_ga8f55bdaa1e9aa37b9fcc4a3c13728611}{}\label{group___c_p_u___config__module_ga8f55bdaa1e9aa37b9fcc4a3c13728611}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}~/$\ast$ The selected processor uses little endian $\ast$/\hypertarget{group___c_p_u___config__module_gab62ca27d0a6a531f35842a6e3a94b454}{}\label{group___c_p_u___config__module_gab62ca27d0a6a531f35842a6e3a94b454}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+B\+U\+S\+\_\+\+C\+L\+K\+\_\+\+HZ}~20971520\+U /$\ast$ Initial value of the bus clock frequency in Hz $\ast$/\hypertarget{group___c_p_u___config__module_ga532954dc988486bfe48200c796380120}{}\label{group___c_p_u___config__module_ga532954dc988486bfe48200c796380120}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+K\+\_\+\+HZ}~20971520\+U /$\ast$ Initial value of the core/system clock frequency in Hz.  $\ast$/\hypertarget{group___c_p_u___config__module_ga9dee0abd722c849e54c662ab11a1d2cf}{}\label{group___c_p_u___config__module_ga9dee0abd722c849e54c662ab11a1d2cf}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+I\+N\+T\+\_\+\+S\+L\+O\+W\+\_\+\+C\+L\+K\+\_\+\+HZ}~32768\+U /$\ast$ Value of the slow internal oscillator clock frequency in Hz  $\ast$/\hypertarget{group___c_p_u___config__module_ga925e4835a9fdb52f03bd354d62d6ba0a}{}\label{group___c_p_u___config__module_ga925e4835a9fdb52f03bd354d62d6ba0a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+I\+N\+T\+\_\+\+F\+A\+S\+T\+\_\+\+C\+L\+K\+\_\+\+HZ}~4000000\+U /$\ast$ Value of the fast internal oscillator clock frequency in Hz  $\ast$/\hypertarget{group___c_p_u___config__module_ga741ad9275688de8051f4bebd98a682bc}{}\label{group___c_p_u___config__module_ga741ad9275688de8051f4bebd98a682bc}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+U\+M\+B\+ER}~0x01\+U /$\ast$ Specifies number of defined clock configurations. $\ast$/\hypertarget{group___c_p_u___config__module_ga37d43e31f65dd620040aec363e95b5a8}{}\label{group___c_p_u___config__module_ga37d43e31f65dd620040aec363e95b5a8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+B\+U\+S\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G0}~20971520\+U /$\ast$ Value of the bus clock frequency in the clock configuration 0 in Hz. $\ast$/\hypertarget{group___c_p_u___config__module_ga39018ca5854bea36700d3b30f6c08195}{}\label{group___c_p_u___config__module_ga39018ca5854bea36700d3b30f6c08195}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G0}~20971520\+U /$\ast$ Value of the core/system clock frequency in the clock configuration 0 in Hz. $\ast$/\hypertarget{group___c_p_u___config__module_ga64b9007ea0c78e588ed565373bcec805}{}\label{group___c_p_u___config__module_ga64b9007ea0c78e588ed565373bcec805}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ Clock configuration 0 identifier $\ast$/\hypertarget{group___c_p_u___config__module_ga4d7ade6a1c335a7e5233938aa9197157}{}\label{group___c_p_u___config__module_ga4d7ade6a1c335a7e5233938aa9197157}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+O\+R\+E\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~20971520\+U\+L /$\ast$ Core clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga6fe0b841d40421ee48af4a4e01e48ddf}{}\label{group___c_p_u___config__module_ga6fe0b841d40421ee48af4a4e01e48ddf}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+B\+U\+S\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~20971520\+U\+L /$\ast$ Bus clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_gaf060a047649b9537eb77354ab7917a8b}{}\label{group___c_p_u___config__module_gaf060a047649b9537eb77354ab7917a8b}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+F\+L\+E\+X\+B\+U\+S\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~10485760\+U\+L /$\ast$ Flexbus clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga706c0d4dd14c93181b7a99badddc9a51}{}\label{group___c_p_u___config__module_ga706c0d4dd14c93181b7a99badddc9a51}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~10485760\+U\+L /$\ast$ F\+L\+A\+S\+H clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga09c9820f38d931a0400b832d2582c6f7}{}\label{group___c_p_u___config__module_ga09c9820f38d931a0400b832d2582c6f7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+U\+S\+B\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0\+U\+L /$\ast$ U\+S\+B clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga7bf843fdf59af5fcaf48bea898884a3e}{}\label{group___c_p_u___config__module_ga7bf843fdf59af5fcaf48bea898884a3e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+P\+L\+L\+\_\+\+F\+L\+L\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~20971520\+U\+L /$\ast$ P\+L\+L/\+F\+L\+L clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_gad2aaa2918b640ae3833fc84e8f983c3c}{}\label{group___c_p_u___config__module_gad2aaa2918b640ae3833fc84e8f983c3c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+I\+R\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~32768\+U\+L /$\ast$ M\+C\+G internal reference clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga860e7441eac7d5e35385bcd62b019d9d}{}\label{group___c_p_u___config__module_ga860e7441eac7d5e35385bcd62b019d9d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+O\+S\+C\+E\+R\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0\+U\+L /$\ast$ System O\+S\+C external reference clock frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga2960ebfe6475f475999ea8f1d5448483}{}\label{group___c_p_u___config__module_ga2960ebfe6475f475999ea8f1d5448483}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+E\+R\+C\+L\+K32\+K\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~1000\+U\+L /$\ast$ External reference clock 32k frequency in clock configuration 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga092702a75fd1041eb311850abb022240}{}\label{group___c_p_u___config__module_ga092702a75fd1041eb311850abb022240}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+F\+F\+\_\+\+C\+L\+K\+\_\+\+H\+Z\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~32768\+U\+L /$\ast$ M\+C\+G fixed frequency clock $\ast$/\hypertarget{group___c_p_u___config__module_gafd8ec2ac4ea47574f95d0e5a6f80807e}{}\label{group___c_p_u___config__module_gafd8ec2ac4ea47574f95d0e5a6f80807e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+L\+O\+W\+\_\+\+M\+A\+SK}~0x10\+U     /$\ast$ Mode uses slow internal reference clock $\ast$/\hypertarget{group___c_p_u___config__module_ga73c89eb4c38748965ce261aefe20ff40}{}\label{group___c_p_u___config__module_ga73c89eb4c38748965ce261aefe20ff40}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+A\+S\+T\+\_\+\+M\+A\+SK}~0x20\+U     /$\ast$ Mode uses fast internal reference clock $\ast$/\hypertarget{group___c_p_u___config__module_ga19352094544c5c927b80a6922a09bfe8}{}\label{group___c_p_u___config__module_ga19352094544c5c927b80a6922a09bfe8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+C\+L\+O\+C\+K\+\_\+\+M\+A\+SK}~0x40\+U     /$\ast$ Mode uses external reference clock from external clock input $\ast$/\hypertarget{group___c_p_u___config__module_gaea614d51f93bbbf4e9b841ec5ac08a94}{}\label{group___c_p_u___config__module_gaea614d51f93bbbf4e9b841ec5ac08a94}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+C\+R\+Y\+S\+T\+A\+L\+\_\+\+M\+A\+SK}~0x80\+U     /$\ast$ Mode uses external reference clock from crystal/resonator reference connection $\ast$/\hypertarget{group___c_p_u___config__module_ga75a71480ebfa4d135730c096ad9094f8}{}\label{group___c_p_u___config__module_ga75a71480ebfa4d135730c096ad9094f8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+R\+T\+C\+\_\+\+O\+S\+C\+\_\+\+M\+A\+SK}~0x0100\+U   /$\ast$ Mode uses R\+T\+C oscillator clock $\ast$/\hypertarget{group___c_p_u___config__module_ga82532a9c7aa992ee9af088093ce08a13}{}\label{group___c_p_u___config__module_ga82532a9c7aa992ee9af088093ce08a13}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+L\+L\+\_\+\+M\+A\+SK}~0x0200\+U   /$\ast$ P\+L\+L module is enabled in other than P\+E\+E and P\+B\+E mode $\ast$/\hypertarget{group___c_p_u___config__module_ga868ba7d131389fdf1bd06a20a97f99d6}{}\label{group___c_p_u___config__module_ga868ba7d131389fdf1bd06a20a97f99d6}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+I\+R\+C48\+M\+\_\+\+M\+A\+SK}~0x0400\+U   /$\ast$ Mode uses internal reference clock 48\+M\+Hz $\ast$/\hypertarget{group___c_p_u___config__module_ga9080b2769aa853e62ccd6cb9403665bf}{}\label{group___c_p_u___config__module_ga9080b2769aa853e62ccd6cb9403665bf}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+F\+EI}~0x00\+U     /$\ast$ F\+E\+I mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_gaa1c54a34a3a0633690b64f60cadb7549}{}\label{group___c_p_u___config__module_gaa1c54a34a3a0633690b64f60cadb7549}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+F\+BI}~0x01\+U     /$\ast$ F\+B\+I mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_ga59f26013c4e3a47b6f36fafbe0600be1}{}\label{group___c_p_u___config__module_ga59f26013c4e3a47b6f36fafbe0600be1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+B\+L\+PI}~0x02\+U     /$\ast$ B\+L\+P\+I mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_gab135ea0336f6f3a4ad3c92b55c18225e}{}\label{group___c_p_u___config__module_gab135ea0336f6f3a4ad3c92b55c18225e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+F\+EE}~0x03\+U     /$\ast$ F\+E\+E mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_ga642cd68e79b7e750315f1d6e5bb34348}{}\label{group___c_p_u___config__module_ga642cd68e79b7e750315f1d6e5bb34348}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+F\+BE}~0x04\+U     /$\ast$ F\+B\+E mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_ga4991845ddf66edec794226792f11a42d}{}\label{group___c_p_u___config__module_ga4991845ddf66edec794226792f11a42d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+B\+L\+PE}~0x05\+U     /$\ast$ B\+L\+P\+E mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_ga6f9bf3500498a480cec52cb52a3fabe1}{}\label{group___c_p_u___config__module_ga6f9bf3500498a480cec52cb52a3fabe1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+P\+BE}~0x06\+U     /$\ast$ P\+B\+E mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_ga9ac51baf003f6eecf6c5a6309922a33c}{}\label{group___c_p_u___config__module_ga9ac51baf003f6eecf6c5a6309922a33c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+P\+EE}~0x07\+U     /$\ast$ P\+E\+E mode I\+D $\ast$/\hypertarget{group___c_p_u___config__module_gaae96c17ee5fde25aa26cebfff0f8b055}{}\label{group___c_p_u___config__module_gaae96c17ee5fde25aa26cebfff0f8b055}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+ES}~0x08\+U     /$\ast$ Number of available M\+C\+G modes $\ast$/\hypertarget{group___c_p_u___config__module_ga72e3a814e09412ada1a89c322086fb75}{}\label{group___c_p_u___config__module_ga72e3a814e09412ada1a89c322086fb75}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+A\+SK}~0x0\+F\+U     /$\ast$ Mask of bits where M\+C\+G mode I\+D is encoded $\ast$/\hypertarget{group___c_p_u___config__module_gad9575d3cdabd764bf84fe505fc633dd3}{}\label{group___c_p_u___config__module_gad9575d3cdabd764bf84fe505fc633dd3}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+V\+L\+P\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+A\+SK}~0x01\+U     /$\ast$ Very low power mode enabled $\ast$/\hypertarget{group___c_p_u___config__module_ga26b49e174d8cdb2559786ca493be301a}{}\label{group___c_p_u___config__module_ga26b49e174d8cdb2559786ca493be301a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+V\+L\+P\+\_\+\+A\+U\+T\+O\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+M\+A\+SK}~0x02\+U     /$\ast$ Very low power mode entered automatically from Set\+Clock\+Configuration method $\ast$/\hypertarget{group___c_p_u___config__module_ga11e646d5670697333e9cc490e665173c}{}\label{group___c_p_u___config__module_ga11e646d5670697333e9cc490e665173c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+V\+L\+P\+\_\+\+W\+A\+K\+E\+U\+P\+\_\+\+M\+A\+SK}~0x04\+U     /$\ast$ Very low power mode exited after any interrupt $\ast$/\hypertarget{group___c_p_u___config__module_ga9ed1d94ec78831922f508ae8aae918a1}{}\label{group___c_p_u___config__module_ga9ed1d94ec78831922f508ae8aae918a1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~(C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+M\+O\+D\+E\+\_\+\+F\+EI $\vert$ C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+L\+O\+W\+\_\+\+M\+A\+SK) /$\ast$ Clock generator mode $\ast$/\hypertarget{group___c_p_u___config__module_ga78e7582637ba844b40035839ca341e8b}{}\label{group___c_p_u___config__module_ga78e7582637ba844b40035839ca341e8b}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+P\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0\+U /$\ast$ R\+U\+N power mode $\ast$/\hypertarget{group___c_p_u___config__module_gacaa8315c49950c18899f30af1d4a5074}{}\label{group___c_p_u___config__module_gacaa8315c49950c18899f30af1d4a5074}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+C1\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x06\+U /$\ast$ M\+C\+G\+\_\+\+C1 $\ast$/\hypertarget{group___c_p_u___config__module_gae4463a8e0dc471348c280957ebca2d9d}{}\label{group___c_p_u___config__module_gae4463a8e0dc471348c280957ebca2d9d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+C2\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ M\+C\+G\+\_\+\+C2 $\ast$/\hypertarget{group___c_p_u___config__module_gacb3dfde4c8fb508d484121f8b136c90c}{}\label{group___c_p_u___config__module_gacb3dfde4c8fb508d484121f8b136c90c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+C4\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ M\+C\+G\+\_\+\+C4 $\ast$/\hypertarget{group___c_p_u___config__module_ga59edb0de8ef684449a107baa09fedf58}{}\label{group___c_p_u___config__module_ga59edb0de8ef684449a107baa09fedf58}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+C5\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ M\+C\+G\+\_\+\+C5 $\ast$/\hypertarget{group___c_p_u___config__module_ga8a428c4cc6b184881cb5cc2ad30a107c}{}\label{group___c_p_u___config__module_ga8a428c4cc6b184881cb5cc2ad30a107c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+C6\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ M\+C\+G\+\_\+\+C6 $\ast$/\hypertarget{group___c_p_u___config__module_gae73de55033621d3e4d69431ecbc3b648}{}\label{group___c_p_u___config__module_gae73de55033621d3e4d69431ecbc3b648}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+M\+C\+G\+\_\+\+S\+C\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U /$\ast$ M\+C\+G\+\_\+\+S\+C $\ast$/\hypertarget{group___c_p_u___config__module_ga5014f663836b8b4dcaa46c53d507de91}{}\label{group___c_p_u___config__module_ga5014f663836b8b4dcaa46c53d507de91}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+O\+S\+C\+\_\+\+C\+R\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x80\+U /$\ast$ O\+S\+C\+\_\+\+C\+R $\ast$/\hypertarget{group___c_p_u___config__module_ga0aca53a3492dcacda35c0e9b54d3019a}{}\label{group___c_p_u___config__module_ga0aca53a3492dcacda35c0e9b54d3019a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+I\+M\+\_\+\+S\+O\+P\+T1\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x000\+C0000\+U\+L /$\ast$ S\+I\+M\+\_\+\+S\+O\+P\+T1 $\ast$/\hypertarget{group___c_p_u___config__module_gacd8a41cef8e442cdb5cd0e65c7b3dd0d}{}\label{group___c_p_u___config__module_gacd8a41cef8e442cdb5cd0e65c7b3dd0d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00\+U\+L /$\ast$ S\+I\+M\+\_\+\+S\+O\+P\+T2 $\ast$/\hypertarget{group___c_p_u___config__module_ga5a7d949293fd3c63ec5cf77f6cda8d6e}{}\label{group___c_p_u___config__module_ga5a7d949293fd3c63ec5cf77f6cda8d6e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0}~0x00110000\+U\+L /$\ast$ S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1 $\ast$/\hypertarget{group___c_p_u___config__module_gab35172f2601c09ecf7475e93b5b128d7}{}\label{group___c_p_u___config__module_gab35172f2601c09ecf7475e93b5b128d7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+C1}~0x04\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga587649f4ea0ebff77b1c35ea281db3b0}{}\label{group___c_p_u___config__module_ga587649f4ea0ebff77b1c35ea281db3b0}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+C2}~0x80\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga9f864515403a9a3d6d3774fec08df630}{}\label{group___c_p_u___config__module_ga9f864515403a9a3d6d3774fec08df630}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga6abfcdc29e7824555ebdb41f76f8ad5c}{}\label{group___c_p_u___config__module_ga6abfcdc29e7824555ebdb41f76f8ad5c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga14dd42e45f917f8f23feac6322ee6747}{}\label{group___c_p_u___config__module_ga14dd42e45f917f8f23feac6322ee6747}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga0b50361c40c593e383a225a572827bb7}{}\label{group___c_p_u___config__module_ga0b50361c40c593e383a225a572827bb7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga4bd03eea984190a172d288efd0845b83}{}\label{group___c_p_u___config__module_ga4bd03eea984190a172d288efd0845b83}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+I\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in F\+E\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga02b3e7f32e8d99ef1f99ecb7ac6849a8}{}\label{group___c_p_u___config__module_ga02b3e7f32e8d99ef1f99ecb7ac6849a8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+C1}~0x44\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga0861cc314726c10bfe8b8dd6d6685a91}{}\label{group___c_p_u___config__module_ga0861cc314726c10bfe8b8dd6d6685a91}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+C2}~0x80\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga29a34f0e28c74ce8d3261d6dbafdd3a6}{}\label{group___c_p_u___config__module_ga29a34f0e28c74ce8d3261d6dbafdd3a6}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga38b848fb5e30a1da9818856dd5e5f75e}{}\label{group___c_p_u___config__module_ga38b848fb5e30a1da9818856dd5e5f75e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_gaae4b0db8b80c2f32d50eab7d3b86f5df}{}\label{group___c_p_u___config__module_gaae4b0db8b80c2f32d50eab7d3b86f5df}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga4c8d65a134cad74a1f1aed9ca36b7c57}{}\label{group___c_p_u___config__module_ga4c8d65a134cad74a1f1aed9ca36b7c57}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga9f2bbf04cd1f43bbb7cdd2ca3bbea738}{}\label{group___c_p_u___config__module_ga9f2bbf04cd1f43bbb7cdd2ca3bbea738}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+I\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in F\+B\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga13b1545866474e30f6d8952a169d02bb}{}\label{group___c_p_u___config__module_ga13b1545866474e30f6d8952a169d02bb}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+C1}~0x44\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga76656e58a85a15581fb470114b5bd8f1}{}\label{group___c_p_u___config__module_ga76656e58a85a15581fb470114b5bd8f1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+C2}~0x82\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga82ccf741ab9415525ab8488ed818945e}{}\label{group___c_p_u___config__module_ga82ccf741ab9415525ab8488ed818945e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga7445465a5a7368c154a589c5d6e0f580}{}\label{group___c_p_u___config__module_ga7445465a5a7368c154a589c5d6e0f580}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga82275c9d74a7d38023127119582bf261}{}\label{group___c_p_u___config__module_ga82275c9d74a7d38023127119582bf261}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga0b36c9f1c3a9510d14a0a254ddd79fbc}{}\label{group___c_p_u___config__module_ga0b36c9f1c3a9510d14a0a254ddd79fbc}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_gabe248bc00afc874d2134655d91d2d0c4}{}\label{group___c_p_u___config__module_gabe248bc00afc874d2134655d91d2d0c4}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+I\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in B\+L\+P\+I default state $\ast$/\hypertarget{group___c_p_u___config__module_ga8ab2b3a92ce251203b756669f7568e71}{}\label{group___c_p_u___config__module_ga8ab2b3a92ce251203b756669f7568e71}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C1}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga976c7505fe1cfe2faf76f513bb6f19e1}{}\label{group___c_p_u___config__module_ga976c7505fe1cfe2faf76f513bb6f19e1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C2}~0x84\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga6916584d6a3c94d28a86d94a35ceb462}{}\label{group___c_p_u___config__module_ga6916584d6a3c94d28a86d94a35ceb462}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga262bdd25adc65dc1631824b715eb5c38}{}\label{group___c_p_u___config__module_ga262bdd25adc65dc1631824b715eb5c38}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gab2aec123a6b79575ebfc18718fcb4026}{}\label{group___c_p_u___config__module_gab2aec123a6b79575ebfc18718fcb4026}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga9ba2dcfe18276b71173ca90a0f0c054c}{}\label{group___c_p_u___config__module_ga9ba2dcfe18276b71173ca90a0f0c054c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga000adc876d92b9b62383586464de1c74}{}\label{group___c_p_u___config__module_ga000adc876d92b9b62383586464de1c74}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+E\+E\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in F\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga5bcde41682d94cba022b1375e8f92df8}{}\label{group___c_p_u___config__module_ga5bcde41682d94cba022b1375e8f92df8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C1}~0x80\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga03d7d75cdb865db60bd3b03d97d7044a}{}\label{group___c_p_u___config__module_ga03d7d75cdb865db60bd3b03d97d7044a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C2}~0x84\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gab624039d938416d30e20662c658229a2}{}\label{group___c_p_u___config__module_gab624039d938416d30e20662c658229a2}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga35333d147eda6ec032584193cc4a3d7a}{}\label{group___c_p_u___config__module_ga35333d147eda6ec032584193cc4a3d7a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gaf7287b4a771483798065109b9a33e0db}{}\label{group___c_p_u___config__module_gaf7287b4a771483798065109b9a33e0db}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gab392e6abd7fae6ebb9893785db27f8a0}{}\label{group___c_p_u___config__module_gab392e6abd7fae6ebb9893785db27f8a0}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gaa444f6e47a332995d64c97188e52b07b}{}\label{group___c_p_u___config__module_gaa444f6e47a332995d64c97188e52b07b}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+B\+E\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in F\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga7d54d023da7033c2d78ac1d5c8ebadf9}{}\label{group___c_p_u___config__module_ga7d54d023da7033c2d78ac1d5c8ebadf9}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+C1}~0x40\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga09f6add14a55c859ecc35da94eafed66}{}\label{group___c_p_u___config__module_ga09f6add14a55c859ecc35da94eafed66}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+C2}~0x86\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga21becd33faf0e1132c02281272b40dfe}{}\label{group___c_p_u___config__module_ga21becd33faf0e1132c02281272b40dfe}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga2be41c6fd1815cf784af66b6a470d38d}{}\label{group___c_p_u___config__module_ga2be41c6fd1815cf784af66b6a470d38d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gacd053664d2ad62ff4a5c4ab55c8fb8fa}{}\label{group___c_p_u___config__module_gacd053664d2ad62ff4a5c4ab55c8fb8fa}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+C6}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gaa014e046487b6c4caa23ac001efdf1d1}{}\label{group___c_p_u___config__module_gaa014e046487b6c4caa23ac001efdf1d1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga053960355ed737b8e324b4e9e95482bc}{}\label{group___c_p_u___config__module_ga053960355ed737b8e324b4e9e95482bc}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+L\+P\+E\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in B\+L\+P\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga28e19a519db0a033322b83ffea7f346b}{}\label{group___c_p_u___config__module_ga28e19a519db0a033322b83ffea7f346b}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C1}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga8a7d45bff9260a53b842618bda963fb2}{}\label{group___c_p_u___config__module_ga8a7d45bff9260a53b842618bda963fb2}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C2}~0x84\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gaaac2a1f703301b8a4f424d96733d5733}{}\label{group___c_p_u___config__module_gaaac2a1f703301b8a4f424d96733d5733}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga4d82c2f5e224e1180ee406fc78c84ab6}{}\label{group___c_p_u___config__module_ga4d82c2f5e224e1180ee406fc78c84ab6}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga0ce870fc3ca55e1b0fd770575d50e354}{}\label{group___c_p_u___config__module_ga0ce870fc3ca55e1b0fd770575d50e354}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+C6}~0x40\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga045e3ea3ef0eb2d05eee0d21eff585f8}{}\label{group___c_p_u___config__module_ga045e3ea3ef0eb2d05eee0d21eff585f8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gaa3572d1fcb3d287ae6cd3d637b3c5d52}{}\label{group___c_p_u___config__module_gaa3572d1fcb3d287ae6cd3d637b3c5d52}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in P\+E\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gab4139225e48048e2820068c68224d1c7}{}\label{group___c_p_u___config__module_gab4139225e48048e2820068c68224d1c7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C1}~0x80\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga2663465bc3182a2c661e00823f24c04d}{}\label{group___c_p_u___config__module_ga2663465bc3182a2c661e00823f24c04d}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C2}~0x84\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga5fb0054f5508f0f59f2bce420d6790e6}{}\label{group___c_p_u___config__module_ga5fb0054f5508f0f59f2bce420d6790e6}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C4}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga54e2abc5ed9886175b5712b224c4502a}{}\label{group___c_p_u___config__module_ga54e2abc5ed9886175b5712b224c4502a}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C5}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C5 value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga5a3e4d769912d219767354e72b8075d1}{}\label{group___c_p_u___config__module_ga5a3e4d769912d219767354e72b8075d1}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+C6}~0x40\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_gae146c8a6847163cf6bda5771c627f4ae}{}\label{group___c_p_u___config__module_gae146c8a6847163cf6bda5771c627f4ae}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+M\+C\+G\+\_\+\+SC}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga84346210f916f17218d2981a3e7bfa79}{}\label{group___c_p_u___config__module_ga84346210f916f17218d2981a3e7bfa79}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+B\+E\+\_\+\+O\+S\+C\+\_\+\+CR}~0x00\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value in P\+B\+E default state $\ast$/\hypertarget{group___c_p_u___config__module_ga7755fc574a68d218a2486004733d5573}{}\label{group___c_p_u___config__module_ga7755fc574a68d218a2486004733d5573}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+W\+A\+I\+T\+\_\+\+S\+L\+E\+E\+P\+\_\+\+O\+N\+\_\+\+E\+X\+IT}~0x00\+U     /$\ast$ A\+R\+M sleep-\/on-\/exit is disabled in W\+A\+I\+T operation mode (when the lowest priority I\+S\+R is exited then processor state unstacking is done before system goes back to low-\/power mode) $\ast$/\hypertarget{group___c_p_u___config__module_ga88018645e4d9a3b5b7c6250ea1c04cb3}{}\label{group___c_p_u___config__module_ga88018645e4d9a3b5b7c6250ea1c04cb3}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+L\+E\+E\+P\+\_\+\+S\+L\+E\+E\+P\+\_\+\+O\+N\+\_\+\+E\+X\+IT}~0x00\+U     /$\ast$ A\+R\+M sleep-\/on-\/exit is disabled in S\+T\+O\+P operation mode (when the lowest priority I\+S\+R is exited unstacking is done before system goes back to low-\/power mode) $\ast$/\hypertarget{group___c_p_u___config__module_gaff3b98438606a9fc891f7f3c997c9f0c}{}\label{group___c_p_u___config__module_gaff3b98438606a9fc891f7f3c997c9f0c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+V\+L\+L\+S0}~0x01\+U     /$\ast$ Very-\/\+Low-\/\+Leakage Stop 0 $\ast$/\hypertarget{group___c_p_u___config__module_ga0986c2a288974bf66875fd64f50d09cd}{}\label{group___c_p_u___config__module_ga0986c2a288974bf66875fd64f50d09cd}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+V\+L\+L\+S1}~0x02\+U     /$\ast$ Very-\/\+Low-\/\+Leakage Stop 1 $\ast$/\hypertarget{group___c_p_u___config__module_ga4d263214bdc1c558379e508dafe40409}{}\label{group___c_p_u___config__module_ga4d263214bdc1c558379e508dafe40409}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+V\+L\+L\+S3}~0x03\+U     /$\ast$ Very-\/\+Low-\/\+Leakage Stop 3 $\ast$/\hypertarget{group___c_p_u___config__module_gaef63c101290b27c091db84ad920a6512}{}\label{group___c_p_u___config__module_gaef63c101290b27c091db84ad920a6512}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+V\+L\+L\+S2}~0x04\+U     /$\ast$ Very-\/\+Low-\/\+Leakage Stop 2 $\ast$/\hypertarget{group___c_p_u___config__module_ga6b0f8a6f777077cbebe6e6d17b37dc97}{}\label{group___c_p_u___config__module_ga6b0f8a6f777077cbebe6e6d17b37dc97}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+T\+O\+P\+\_\+\+L\+LS}~0x05\+U     /$\ast$ Low-\/\+Leakage Stop $\ast$/\hypertarget{group___c_p_u___config__module_gaf349a39a8fe0192778a5739efd2bd1f8}{}\label{group___c_p_u___config__module_gaf349a39a8fe0192778a5739efd2bd1f8}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+A\+F\+T\+E\+R\+\_\+\+R\+E\+S\+E\+T\+\_\+\+V\+A\+L\+U\+ES}~0x00\+U     /$\ast$ After reset values optimization is disabled $\ast$/\hypertarget{group___c_p_u___config__module_ga5cfea4bca610541f33310e1837a7fe26}{}\label{group___c_p_u___config__module_ga5cfea4bca610541f33310e1837a7fe26}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+W\+D\+OG}~0x01\+U     /$\ast$ Watchdog disabled $\ast$/\hypertarget{group___c_p_u___config__module_ga230d8d41c5d365878a93129b8595c199}{}\label{group___c_p_u___config__module_ga230d8d41c5d365878a93129b8595c199}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+W\+D\+O\+G\+\_\+\+K\+E\+Y\+\_\+1}~0x\+C520\+U   /$\ast$ Watchdog unlock key 1 $\ast$/\hypertarget{group___c_p_u___config__module_ga607477ca43e4216bd68a73e198cca5d9}{}\label{group___c_p_u___config__module_ga607477ca43e4216bd68a73e198cca5d9}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+W\+D\+O\+G\+\_\+\+K\+E\+Y\+\_\+2}~0x\+D928\+U   /$\ast$ Watchdog unlock key 2 $\ast$/\hypertarget{group___c_p_u___config__module_ga98be254617b09425be513de2556c5146}{}\label{group___c_p_u___config__module_ga98be254617b09425be513de2556c5146}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+R\+T\+C\+O\+SC}~0x00\+U     /$\ast$ R\+T\+C oscillator not initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga9d43be23473dd050ab2ebed669c2def1}{}\label{group___c_p_u___config__module_ga9d43be23473dd050ab2ebed669c2def1}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+W\+D\+O\+G\+\_\+\+S\+T\+C\+T\+R\+L\+H\+\_\+\+V\+A\+L\+UE}~0x01\+D2\+U   /$\ast$ W\+D\+O\+G\+\_\+\+S\+T\+C\+T\+R\+L\+H value $\ast$/\hypertarget{group___c_p_u___config__module_gaa142ef93cc89cfa2159e3210c590d5e3}{}\label{group___c_p_u___config__module_gaa142ef93cc89cfa2159e3210c590d5e3}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+C1\+\_\+\+V\+A\+L\+UE}~0x06\+U     /$\ast$ M\+C\+G\+\_\+\+C1 value $\ast$/\hypertarget{group___c_p_u___config__module_ga423f07544f083324804fb31fd3ab9009}{}\label{group___c_p_u___config__module_ga423f07544f083324804fb31fd3ab9009}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+C2\+\_\+\+V\+A\+L\+UE}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C2 value $\ast$/\hypertarget{group___c_p_u___config__module_ga0616fd220457f605cee44a8bff67701f}{}\label{group___c_p_u___config__module_ga0616fd220457f605cee44a8bff67701f}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+C3\+\_\+\+V\+A\+L\+UE}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C3 value $\ast$/\hypertarget{group___c_p_u___config__module_ga37eed483ebd6dc5a36f80324791147b1}{}\label{group___c_p_u___config__module_ga37eed483ebd6dc5a36f80324791147b1}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+C4\+\_\+\+V\+A\+L\+UE}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C4 value $\ast$/\hypertarget{group___c_p_u___config__module_gaf596abb9774c22cc6e3434dd8975dcaa}{}\label{group___c_p_u___config__module_gaf596abb9774c22cc6e3434dd8975dcaa}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+C6\+\_\+\+V\+A\+L\+UE}~0x00\+U     /$\ast$ M\+C\+G\+\_\+\+C6 value $\ast$/\hypertarget{group___c_p_u___config__module_ga370fd866412d58e31b4549c77c7d02cd}{}\label{group___c_p_u___config__module_ga370fd866412d58e31b4549c77c7d02cd}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+M\+C\+G\+\_\+\+S\+C\+\_\+\+V\+A\+L\+UE}~0x02\+U     /$\ast$ M\+C\+G\+\_\+\+S\+C value $\ast$/\hypertarget{group___c_p_u___config__module_ga4760fb0aeb1120b796718c3fa53437b2}{}\label{group___c_p_u___config__module_ga4760fb0aeb1120b796718c3fa53437b2}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+O\+S\+C\+\_\+\+C\+R\+\_\+\+V\+A\+L\+UE}~0x80\+U     /$\ast$ O\+S\+C\+\_\+\+C\+R value $\ast$/\hypertarget{group___c_p_u___config__module_ga6c537c467895773b1298aed8d2ef59f9}{}\label{group___c_p_u___config__module_ga6c537c467895773b1298aed8d2ef59f9}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+S\+I\+M\+\_\+\+S\+O\+P\+T1\+\_\+\+V\+A\+L\+UE}~0x000\+C0000\+U\+L /$\ast$ S\+I\+M\+\_\+\+S\+O\+P\+T1 value $\ast$/\hypertarget{group___c_p_u___config__module_ga49ec10b290d9f6fa487837141d2d9550}{}\label{group___c_p_u___config__module_ga49ec10b290d9f6fa487837141d2d9550}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+S\+I\+M\+\_\+\+S\+O\+P\+T2\+\_\+\+V\+A\+L\+UE}~0x00\+U\+L    /$\ast$ S\+I\+M\+\_\+\+S\+O\+P\+T2 value $\ast$/\hypertarget{group___c_p_u___config__module_gaca7fc6e2f7d65c322135e7de5e2afd5f}{}\label{group___c_p_u___config__module_gaca7fc6e2f7d65c322135e7de5e2afd5f}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1\+\_\+\+V\+A\+L\+UE}~0x00110000\+U\+L /$\ast$ S\+I\+M\+\_\+\+C\+L\+K\+D\+I\+V1 value $\ast$/\hypertarget{group___c_p_u___config__module_ga45a0c8306c30f6aa1c768b782d72658e}{}\label{group___c_p_u___config__module_ga45a0c8306c30f6aa1c768b782d72658e}
+
+\item 
+\#define {\bfseries S\+T\+A\+R\+T\+U\+P\+\_\+\+S\+I\+M\+\_\+\+S\+C\+G\+C5\+\_\+\+V\+A\+L\+UE}~0x00040182\+U\+L /$\ast$ S\+I\+M\+\_\+\+S\+C\+G\+C5 value $\ast$/\hypertarget{group___c_p_u___config__module_ga26e1feaac1bb60afd4098e35174de62e}{}\label{group___c_p_u___config__module_ga26e1feaac1bb60afd4098e35174de62e}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+N\+M\+I\+\_\+\+P\+IN}~0x01\+U     /$\ast$ N\+M\+I pin initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga81bd1cc3f10cc4f0892d9adf9392e450}{}\label{group___c_p_u___config__module_ga81bd1cc3f10cc4f0892d9adf9392e450}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+J\+T\+A\+G\+\_\+\+T\+D\+I\+\_\+\+P\+IN}~0x01\+U     /$\ast$ J\+T\+A\+G T\+D\+I pin initialized $\ast$/\hypertarget{group___c_p_u___config__module_gaa60b83e67c340ef4871db75e54809b74}{}\label{group___c_p_u___config__module_gaa60b83e67c340ef4871db75e54809b74}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+J\+T\+A\+G\+\_\+\+T\+D\+O\+\_\+\+P\+IN}~0x01\+U     /$\ast$ J\+T\+A\+G T\+D\+O pin initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga962b1ce7e7ef74f6336cef673915f776}{}\label{group___c_p_u___config__module_ga962b1ce7e7ef74f6336cef673915f776}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+J\+T\+A\+G\+\_\+\+T\+C\+K\+\_\+\+P\+IN}~0x01\+U     /$\ast$ J\+T\+A\+G T\+C\+K pin initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga10053a74191b250bf9a0ef22b9a87926}{}\label{group___c_p_u___config__module_ga10053a74191b250bf9a0ef22b9a87926}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+J\+T\+A\+G\+\_\+\+T\+M\+S\+\_\+\+P\+IN}~0x01\+U     /$\ast$ J\+T\+A\+G T\+M\+S pin initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga912a9e32c6bc39adda73d555e3cd82b7}{}\label{group___c_p_u___config__module_ga912a9e32c6bc39adda73d555e3cd82b7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+J\+T\+A\+G\+\_\+\+T\+R\+S\+T\+\_\+\+P\+IN}~0x00\+U     /$\ast$ J\+T\+A\+G n\+T\+R\+S\+T pin not initialized $\ast$/\hypertarget{group___c_p_u___config__module_ga45eb967e938c00389fe42d6ca9c17ce7}{}\label{group___c_p_u___config__module_ga45eb967e938c00389fe42d6ca9c17ce7}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+A\+L\+L\+O\+W\+\_\+\+V\+LP}~0x00\+U     /$\ast$ V\+L\+P\+R V\+L\+P\+W and V\+L\+P\+S are not allowed $\ast$/\hypertarget{group___c_p_u___config__module_ga5e95e45c331e4e0028c448900b88ffde}{}\label{group___c_p_u___config__module_ga5e95e45c331e4e0028c448900b88ffde}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+A\+L\+L\+O\+W\+\_\+\+L\+LS}~0x00\+U     /$\ast$ L\+L\+S isn\textquotesingle{}t allowed $\ast$/\hypertarget{group___c_p_u___config__module_gae3ea434795a7aafaa41466266fb7ccdb}{}\label{group___c_p_u___config__module_gae3ea434795a7aafaa41466266fb7ccdb}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+A\+L\+L\+O\+W\+\_\+\+V\+L\+LS}~0x00\+U     /$\ast$ No V\+L\+L\+Sx mode is allowed $\ast$/\hypertarget{group___c_p_u___config__module_ga2d39deaf74942754f145cdbaccc7c8d4}{}\label{group___c_p_u___config__module_ga2d39deaf74942754f145cdbaccc7c8d4}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+F\+L\+A\+S\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+I\+E\+LD}\hypertarget{group___c_p_u___config__module_ga32af3a7804d5da1b44adca4851b7b1b5}{}\label{group___c_p_u___config__module_ga32af3a7804d5da1b44adca4851b7b1b5}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+N\+IT}~0x00\+U     /$\ast$ Common\+\_\+\+Init() method is not called in P\+E\+\_\+low\+\_\+level\+\_\+init() $\ast$/\hypertarget{group___c_p_u___config__module_gaff4ff10573834f8245f591e31e16f05c}{}\label{group___c_p_u___config__module_gaff4ff10573834f8245f591e31e16f05c}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+P\+E\+R\+I\+P\+H\+E\+R\+A\+L\+S\+\_\+\+I\+N\+IT}~0x00\+U     /$\ast$ Peripherals\+\_\+\+Init() method is not called in P\+E\+\_\+low\+\_\+level\+\_\+init() $\ast$/\hypertarget{group___c_p_u___config__module_ga3b8c325b04ca50d0f8e0652527dc0d13}{}\label{group___c_p_u___config__module_ga3b8c325b04ca50d0f8e0652527dc0d13}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+S\+\_\+\+I\+N\+IT}~0x01\+U     /$\ast$ Call Components\+\_\+\+Init() method in P\+E\+\_\+low\+\_\+level\+\_\+init() $\ast$/\hypertarget{group___c_p_u___config__module_ga9ac1ad29d88b073b9ab6fd9bd04c2491}{}\label{group___c_p_u___config__module_ga9ac1ad29d88b073b9ab6fd9bd04c2491}
+
+\item 
+\#define {\bfseries C\+P\+U\+\_\+\+I\+N\+T\+\_\+\+P\+R\+I\+O\+R\+I\+TY}~0x\+F0\+U     /$\ast$ Priority level constant of enabled interrupts initialized in P\+E\+\_\+low\+\_\+level\+\_\+init() $\ast$/\hypertarget{group___c_p_u___config__module_ga54aad002152c75f04ffaaf2fe1b43189}{}\label{group___c_p_u___config__module_ga54aad002152c75f04ffaaf2fe1b43189}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint16\+\_\+t {\bfseries C\+P\+U\+\_\+\+T\+Clock\+Gen\+Mode}\hypertarget{group___c_p_u___config__module_gabae494b1360a0460899ab57917025afe}{}\label{group___c_p_u___config__module_gabae494b1360a0460899ab57917025afe}
+
+\item 
+typedef uint8\+\_\+t {\bfseries C\+P\+U\+\_\+\+T\+Clock\+Power\+Mode}\hypertarget{group___c_p_u___config__module_ga7edff48801fa84900fc11f515f240a09}{}\label{group___c_p_u___config__module_ga7edff48801fa84900fc11f515f240a09}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{struct_t_cpu_clock_configuration}{T\+Cpu\+Clock\+Configuration} \hyperlink{group___c_p_u___config__module_gab69281f0e90d16198a5595ed7f471441}{P\+E\+\_\+\+Cpu\+Clock\+Configurations} \mbox{[}C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+U\+M\+B\+ER\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Variable Documentation}
+\index{C\+P\+U\+\_\+\+Config module documentation@{C\+P\+U\+\_\+\+Config module documentation}!P\+E\+\_\+\+Cpu\+Clock\+Configurations@{P\+E\+\_\+\+Cpu\+Clock\+Configurations}}
+\index{P\+E\+\_\+\+Cpu\+Clock\+Configurations@{P\+E\+\_\+\+Cpu\+Clock\+Configurations}!C\+P\+U\+\_\+\+Config module documentation@{C\+P\+U\+\_\+\+Config module documentation}}
+\subsubsection[{\texorpdfstring{P\+E\+\_\+\+Cpu\+Clock\+Configurations}{PE_CpuClockConfigurations}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf T\+Cpu\+Clock\+Configuration} P\+E\+\_\+\+Cpu\+Clock\+Configurations\mbox{[}C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+U\+M\+B\+ER\mbox{]}}\hypertarget{group___c_p_u___config__module_gab69281f0e90d16198a5595ed7f471441}{}\label{group___c_p_u___config__module_gab69281f0e90d16198a5595ed7f471441}
+The array of clock configurations (frequencies) configured in configured clock configurations of the C\+PU component. 

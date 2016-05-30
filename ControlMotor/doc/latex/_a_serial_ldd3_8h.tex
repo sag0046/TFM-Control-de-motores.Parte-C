@@ -1,0 +1,73 @@
+\hypertarget{_a_serial_ldd3_8h}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+Serial\+Ldd3.h File Reference}
+\label{_a_serial_ldd3_8h}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+Serial\+Ldd3.\+h@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+Serial\+Ldd3.\+h}}
+
+
+This component \char`\"{}\+Serial\+\_\+\+L\+D\+D\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial communication channel.  
+
+
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_serial_ldd3___t_device_data}{A\+Serial\+Ldd3\+\_\+\+T\+Device\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga22374f43379b97c6a7d83757b8c8f25f}{A\+Serial\+Ldd3\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x4006\+A000U
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga3aa8317db38a33cad1c0e7275f460ee0}{A\+Serial\+Ldd3\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga3e19837b279c3ca5ea2a9a98b423932f}{A\+Serial\+Ldd3\+\_\+\+Send\+Block\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_gac276abf5bc63fe75e11a219ae63bb292}{A\+Serial\+Ldd3\+\_\+\+Receive\+Block\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_gafb6cf9f361b39c802d77ff54ea4019a8}{A\+Serial\+Ldd3\+\_\+\+Get\+Error\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga957baaf20d2d6e9ec6368fc5128af665}{A\+Serial\+Ldd3\+\_\+\+Get\+Sent\+Data\+Num\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga4e4293c3d175cc00d20fe04d18523657}{A\+Serial\+Ldd3\+\_\+\+Get\+Received\+Data\+Num\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga1538bbc5595927a3673e9c0c12f6540d}{A\+Serial\+Ldd3\+\_\+\+Main\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_gaa4ad1da3ff89abe4fe7c6b59a971ceb8}{A\+Serial\+Ldd3\+\_\+\+On\+Break\+\_\+\+E\+V\+E\+N\+T\+\_\+\+E\+N\+A\+B\+L\+ED}
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_gab05896dbf11eed7f4078978e7287669d}{E\+N\+A\+B\+L\+E\+D\+\_\+\+T\+X\+\_\+\+I\+NT}~0x01U
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga617e6f524bf659f58012c8f0248004e5}{B\+R\+E\+A\+K\+\_\+\+D\+E\+T\+E\+C\+T\+ED}~0x02U
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_ga1f79d891cf81d9f65cccd3a0ab84b1ee}{T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}~0x04U
+\item 
+\#define \hyperlink{group___a_serial_ldd3__module_gac0fc7ebba74ca47c17389980225ddf48}{E\+N\+A\+B\+L\+E\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+TE}~0x10U
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_a_serial_ldd3___t_device_data}{A\+Serial\+Ldd3\+\_\+\+T\+Device\+Data} $\ast$ \hyperlink{group___a_serial_ldd3__module_gac731e0d4eaeba8a8d2edc8b2c578b3f7}{A\+Serial\+Ldd3\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ \hyperlink{group___a_serial_ldd3__module_gaf10d297c3b0e8a880d6f9104b2dc1b4d}{A\+Serial\+Ldd3\+\_\+\+Init} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error} \hyperlink{group___a_serial_ldd3__module_ga3704f50ad90a9538f51e489a9ad13450}{A\+Serial\+Ldd3\+\_\+\+Receive\+Block} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr, \hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{L\+D\+D\+\_\+\+T\+Data} $\ast$Buffer\+Ptr, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Specifies the number of data to receive. The method returns E\+R\+R\+\_\+\+B\+U\+SY until the specified number of characters is received. Method \mbox{[}Cancel\+Block\+Reception\mbox{]} can be used to cancel a running receive operation. If a receive operation is not in progress (the method was not called or a previous operation has already finished) all received characters will be lost without any notification. To prevent the loss of data call the method immediately after the last receive operation has finished (e.\+g. from the \mbox{[}On\+Block\+Received\mbox{]} event). This method finishes immediately after calling it -\/ it doesn\textquotesingle{}t wait the end of data reception. Use event \mbox{[}On\+Block\+Received\mbox{]} to check the end of data reception. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error} \hyperlink{group___a_serial_ldd3__module_gaaea04fed3f7352cabdf4899e4ca57a27}{A\+Serial\+Ldd3\+\_\+\+Send\+Block} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr, \hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{L\+D\+D\+\_\+\+T\+Data} $\ast$Buffer\+Ptr, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Sends a block of characters. The method returns E\+R\+R\+\_\+\+B\+U\+SY when the previous block transmission is not completed. Method \mbox{[}Cancel\+Block\+Transmission\mbox{]} can be used to cancel a transmit operation. This method is available only if the transmitter property is enabled. This method finishes immediately after calling it -\/ it doesn\textquotesingle{}t wait the end of data transmission. Use event \mbox{[}On\+Block\+Sent\mbox{]} to check the end of data transmission. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___a_serial_ldd3__module_ga45d165be1a142f81773e53c48aa85253}{A\+Serial\+Ldd3\+\_\+\+Get\+Received\+Data\+Num} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of received characters in the receive buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___a_serial_ldd3__module_gace789c8aece8f52c0d0cf425d546dab6}{A\+Serial\+Ldd3\+\_\+\+Get\+Sent\+Data\+Num} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of sent characters. \end{DoxyCompactList}\item 
+void \hyperlink{group___a_serial_ldd3__module_gab183715b7205fdc6f1290dfa1bd57990}{A\+Serial\+Ldd3\+\_\+\+Main} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method is available only in the polling mode (Interrupt service/event = \textquotesingle{}no\textquotesingle{}). If interrupt service is disabled this method replaces the interrupt handler. This method should be called if Receive/\+Send\+Block was invoked before in order to run the reception/transmission. The end of the receiving/transmitting is indicated by On\+Block\+Sent or On\+Block\+Received event. \end{DoxyCompactList}\item 
+\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error} \hyperlink{group___a_serial_ldd3__module_ga10af10bc94cda0207ddf457c72d3ccc4}{A\+Serial\+Ldd3\+\_\+\+Get\+Error} (\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$Device\+Data\+Ptr, \hyperlink{group___p_e___types__module_ga3bd5d57e02458ce220540d0ad0462e06}{L\+D\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+T\+Error} $\ast$Error\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method returns a set of asserted flags. The flags are accumulated in the set. After calling this method the set is returned and cleared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This component \char`\"{}\+Serial\+\_\+\+L\+D\+D\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial communication channel. 
+
+\begin{DoxyVersion}{Version}
+01.\+12 
+\end{DoxyVersion}

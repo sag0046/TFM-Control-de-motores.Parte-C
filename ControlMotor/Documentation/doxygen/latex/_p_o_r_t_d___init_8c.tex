@@ -1,0 +1,39 @@
+\hypertarget{_p_o_r_t_d___init_8c}{}\section{C\+:/\+Freescale/\+K\+D\+S\+\_\+2.0.0/eclipse/\+Processor\+Expert/lib/\+Kinetis/pdd2/\+M\+K64\+F\+N1\+M0\+L\+Q12/peripherals/\+P\+O\+R\+T\+D\+\_\+\+Init.c File Reference}
+\label{_p_o_r_t_d___init_8c}\index{C\+:/\+Freescale/\+K\+D\+S\+\_\+2.\+0.\+0/eclipse/\+Processor\+Expert/lib/\+Kinetis/pdd2/\+M\+K64\+F\+N1\+M0\+L\+Q12/peripherals/\+P\+O\+R\+T\+D\+\_\+\+Init.\+c@{C\+:/\+Freescale/\+K\+D\+S\+\_\+2.\+0.\+0/eclipse/\+Processor\+Expert/lib/\+Kinetis/pdd2/\+M\+K64\+F\+N1\+M0\+L\+Q12/peripherals/\+P\+O\+R\+T\+D\+\_\+\+Init.\+c}}
+
+
+This file implements the P\+O\+R\+TD module initialization according to the Peripheral Initialization settings, and defines interrupt service routines prototypes.  
+
+
+{\ttfamily \#include \char`\"{}P\+O\+R\+T\+D\+\_\+\+Init.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+K64\+F12.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Init\+\_\+\+Config.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries P\+O\+R\+T\+D\+\_\+\+Init} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file implements the P\+O\+R\+TD module initialization according to the Peripheral Initialization settings, and defines interrupt service routines prototypes. 
+
+\subparagraph*{}
+
+Filename \+: \hyperlink{_p_o_r_t_d___init_8c}{P\+O\+R\+T\+D\+\_\+\+Init.\+c} Processor \+: M\+K64\+F\+N1\+M0\+L\+Q12 Abstract \+: This file implements the P\+O\+R\+TD module initialization according to the Peripheral Initialization settings, and defines interrupt service routines prototypes.
+
+Contents \+: Int -\/ void P\+O\+R\+T\+D\+\_\+\+Init(void);
+
+Copyright \+: 1997 -\/ 2014 Freescale Semiconductor, Inc. All Rights Reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+o Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+o Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+o Neither the name of Freescale Semiconductor, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+http\+: www.\+freescale.\+com mail\+: \href{mailto:support@freescale.com}{\tt support@freescale.\+com} \subparagraph*{}

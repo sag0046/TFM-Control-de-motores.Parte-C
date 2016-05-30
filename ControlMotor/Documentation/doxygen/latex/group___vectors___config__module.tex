@@ -1,0 +1,317 @@
+\hypertarget{group___vectors___config__module}{}\section{Vectors\+\_\+\+Config module documentation}
+\label{group___vectors___config__module}\index{Vectors\+\_\+\+Config module documentation@{Vectors\+\_\+\+Config module documentation}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+T\+A\+B\+LE}~0x01\+U     /$\ast$ Vector table is managed by P\+Ex $\ast$/\hypertarget{group___vectors___config__module_ga86ba9b7f3506b4453dde1ccf7a431cd1}{}\label{group___vectors___config__module_ga86ba9b7f3506b4453dde1ccf7a431cd1}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+\+S\+P\+\_\+\+M\+A\+IN}~\&\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT                            /$\ast$ 0x00 -\/    iv\+I\+N\+T\+\_\+\+Initial\+\_\+\+Stack\+\_\+\+Pointer    used by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga97d593e7f4ecaa6076a50cc7a5573cc0}{}\label{group___vectors___config__module_ga97d593e7f4ecaa6076a50cc7a5573cc0}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+1}~(t\+Isr\+Func)\&\+\_\+\+\_\+thumb\+\_\+startup            /$\ast$ 0x01 -\/    iv\+I\+N\+T\+\_\+\+Initial\+\_\+\+Program\+\_\+\+Counter  used by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaed5f21cfee8dfea899c305667499f4f1}{}\label{group___vectors___config__module_gaed5f21cfee8dfea899c305667499f4f1}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+2}~(t\+Isr\+Func)\&Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt       /$\ast$ 0x02 -\/2   iv\+I\+N\+T\+\_\+\+N\+M\+I                      used by P\+E $\ast$/\hypertarget{group___vectors___config__module_gafc92baf1fd2bbd944f247a252af14582}{}\label{group___vectors___config__module_gafc92baf1fd2bbd944f247a252af14582}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+3}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x03 -\/1   iv\+I\+N\+T\+\_\+\+Hard\+\_\+\+Fault               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gab15e9cb9a2707f66fa1c48ee2f78589b}{}\label{group___vectors___config__module_gab15e9cb9a2707f66fa1c48ee2f78589b}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+4}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x04 -\/    iv\+I\+N\+T\+\_\+\+Mem\+\_\+\+Manage\+\_\+\+Fault         unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9d4290488014b4c0fa7f7471586c8271}{}\label{group___vectors___config__module_ga9d4290488014b4c0fa7f7471586c8271}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+5}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x05 -\/    iv\+I\+N\+T\+\_\+\+Bus\+\_\+\+Fault                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gac75a6110f89d3f34a5aab0f3cbb28748}{}\label{group___vectors___config__module_gac75a6110f89d3f34a5aab0f3cbb28748}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+6}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x06 -\/    iv\+I\+N\+T\+\_\+\+Usage\+\_\+\+Fault              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaef90142e11537f4811767198038d51f8}{}\label{group___vectors___config__module_gaef90142e11537f4811767198038d51f8}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+7}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x07 -\/    iv\+I\+N\+T\+\_\+\+Reserved7                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga0472a7d5c47fb836c416fb4f7951ce9b}{}\label{group___vectors___config__module_ga0472a7d5c47fb836c416fb4f7951ce9b}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+8}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x08 -\/    iv\+I\+N\+T\+\_\+\+Reserved8                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9cc5438d434e94a4b84de99f877503af}{}\label{group___vectors___config__module_ga9cc5438d434e94a4b84de99f877503af}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+9}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x09 -\/    iv\+I\+N\+T\+\_\+\+Reserved9                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9c6ad473364f8e083696c60007fe8e13}{}\label{group___vectors___config__module_ga9c6ad473364f8e083696c60007fe8e13}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+10}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+A -\/    iv\+I\+N\+T\+\_\+\+Reserved10               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga4e33673b419006fb4fa0e373e4ad460d}{}\label{group___vectors___config__module_ga4e33673b419006fb4fa0e373e4ad460d}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+11}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+B -\/    iv\+I\+N\+T\+\_\+\+S\+V\+Call                   unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga60f18fcfe2414811fa9a32c8a370e9e9}{}\label{group___vectors___config__module_ga60f18fcfe2414811fa9a32c8a370e9e9}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+12}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+C -\/    iv\+I\+N\+T\+\_\+\+Debug\+Monitor             unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga66adf4b9d317b22e92af1d9f36dfe79e}{}\label{group___vectors___config__module_ga66adf4b9d317b22e92af1d9f36dfe79e}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+13}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+D -\/    iv\+I\+N\+T\+\_\+\+Reserved13               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga045b0cf8ac9c11ae4b334ac8a875996c}{}\label{group___vectors___config__module_ga045b0cf8ac9c11ae4b334ac8a875996c}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+14}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+E -\/    iv\+I\+N\+T\+\_\+\+Pendable\+Srv\+Req           unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga4be26068bbd00472d90391c766d43dfe}{}\label{group___vectors___config__module_ga4be26068bbd00472d90391c766d43dfe}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+15}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+F -\/    iv\+I\+N\+T\+\_\+\+Sys\+Tick                  unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga4aee2f15a66604c282b5fefa9944368c}{}\label{group___vectors___config__module_ga4aee2f15a66604c282b5fefa9944368c}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+16}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x10 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga4acad800525fb6c1fe56a7cfa48d8d81}{}\label{group___vectors___config__module_ga4acad800525fb6c1fe56a7cfa48d8d81}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+17}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x11 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gae9942458a5468beda8c44e746510fe00}{}\label{group___vectors___config__module_gae9942458a5468beda8c44e746510fe00}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+18}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x12 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga2cfb8a764241bd252c9020ba0526e96f}{}\label{group___vectors___config__module_ga2cfb8a764241bd252c9020ba0526e96f}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+19}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x13 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A3                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga8aac991317db9701b4cbc7b1dd6c7098}{}\label{group___vectors___config__module_ga8aac991317db9701b4cbc7b1dd6c7098}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+20}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x14 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A4                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaeab1edc4c68b12ab81cac270c6778534}{}\label{group___vectors___config__module_gaeab1edc4c68b12ab81cac270c6778534}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+21}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x15 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A5                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9b8781351b79a3f7bdd5a95e49f7f3b1}{}\label{group___vectors___config__module_ga9b8781351b79a3f7bdd5a95e49f7f3b1}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+22}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x16 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A6                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga1e751fd5c4cb602c42a337b7a5ad2c4d}{}\label{group___vectors___config__module_ga1e751fd5c4cb602c42a337b7a5ad2c4d}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+23}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x17 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A7                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gace8a735c2f3a513ea87163e4526d1245}{}\label{group___vectors___config__module_gace8a735c2f3a513ea87163e4526d1245}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+24}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x18 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A8                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga43a0def76f5510268e2aa36e13a9ee27}{}\label{group___vectors___config__module_ga43a0def76f5510268e2aa36e13a9ee27}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+25}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x19 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A9                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga946786b12b40991e2f7dbcc864d860f3}{}\label{group___vectors___config__module_ga946786b12b40991e2f7dbcc864d860f3}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+26}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+A -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A10                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga79948ec9db3c5fcac1c075324c264b20}{}\label{group___vectors___config__module_ga79948ec9db3c5fcac1c075324c264b20}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+27}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+B -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A11                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9f10a3bf1d93e41f4021c7784ac56338}{}\label{group___vectors___config__module_ga9f10a3bf1d93e41f4021c7784ac56338}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+28}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+C -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A12                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9bc1cd45c7f503066f0fac6611d7c80a}{}\label{group___vectors___config__module_ga9bc1cd45c7f503066f0fac6611d7c80a}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+29}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+D -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A13                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga3d443bf1c5b9df62f443d81ea6352cf7}{}\label{group___vectors___config__module_ga3d443bf1c5b9df62f443d81ea6352cf7}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+30}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+E -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A14                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaa94e8ccbb4576ede1f233da44b5b9ff1}{}\label{group___vectors___config__module_gaa94e8ccbb4576ede1f233da44b5b9ff1}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+31}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+F -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A15                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga11270fc0ea1fcd79086a834ba67be1bb}{}\label{group___vectors___config__module_ga11270fc0ea1fcd79086a834ba67be1bb}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+32}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x20 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A\+\_\+\+Error                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga0269121a1928c479e78a0cf8389a8606}{}\label{group___vectors___config__module_ga0269121a1928c479e78a0cf8389a8606}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+33}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x21 -\/    iv\+I\+N\+T\+\_\+\+M\+C\+M                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gab9aad8beb1c40b9a86b606432ae918df}{}\label{group___vectors___config__module_gab9aad8beb1c40b9a86b606432ae918df}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+34}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x22 -\/    iv\+I\+N\+T\+\_\+\+F\+T\+F\+E                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gad92377670554ff5df8f4b91977b0b195}{}\label{group___vectors___config__module_gad92377670554ff5df8f4b91977b0b195}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+35}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x23 -\/    iv\+I\+N\+T\+\_\+\+Read\+\_\+\+Collision           unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gad764304b4aca3a0d8c2d88fcb6fec003}{}\label{group___vectors___config__module_gad764304b4aca3a0d8c2d88fcb6fec003}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+36}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x24 -\/    iv\+I\+N\+T\+\_\+\+L\+V\+D\+\_\+\+L\+V\+W                  unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga136b27607e165d1c8f943c43204f548e}{}\label{group___vectors___config__module_ga136b27607e165d1c8f943c43204f548e}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+37}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x25 -\/    iv\+I\+N\+T\+\_\+\+L\+L\+W                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga694dcf9993014544e98daa3486a1dee8}{}\label{group___vectors___config__module_ga694dcf9993014544e98daa3486a1dee8}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+38}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x26 -\/    iv\+I\+N\+T\+\_\+\+Watchdog                 unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga6759d235ac8ab259770668b95dd5b5c8}{}\label{group___vectors___config__module_ga6759d235ac8ab259770668b95dd5b5c8}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+39}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x27 -\/    iv\+I\+N\+T\+\_\+\+R\+N\+G                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga8e78b6f08f5736c7d27830555a5fc5af}{}\label{group___vectors___config__module_ga8e78b6f08f5736c7d27830555a5fc5af}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+40}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x28 -\/    iv\+I\+N\+T\+\_\+\+I2\+C0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gad5a354561b73a75ae5798b0e790ca397}{}\label{group___vectors___config__module_gad5a354561b73a75ae5798b0e790ca397}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+41}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x29 -\/    iv\+I\+N\+T\+\_\+\+I2\+C1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaac6fd477302bdfa30e4e053c69c0b920}{}\label{group___vectors___config__module_gaac6fd477302bdfa30e4e053c69c0b920}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+42}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+A -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9363b373824d22c83bd9974ebeca988a}{}\label{group___vectors___config__module_ga9363b373824d22c83bd9974ebeca988a}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+43}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+B -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga1b47c5a4269f149a70a1e8811cef0453}{}\label{group___vectors___config__module_ga1b47c5a4269f149a70a1e8811cef0453}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+44}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+C -\/    iv\+I\+N\+T\+\_\+\+I2\+S0\+\_\+\+Tx                  unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaa8ed1215ef9bb47f5115245fedc392fd}{}\label{group___vectors___config__module_gaa8ed1215ef9bb47f5115245fedc392fd}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+45}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+D -\/    iv\+I\+N\+T\+\_\+\+I2\+S0\+\_\+\+Rx                  unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gae9254fee55084aa3875280585ada77ec}{}\label{group___vectors___config__module_gae9254fee55084aa3875280585ada77ec}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+46}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+E -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+L\+O\+N                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga0955683f6d21817e6fab75c6bf61013b}{}\label{group___vectors___config__module_ga0955683f6d21817e6fab75c6bf61013b}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+47}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+F -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga2d2bb8622c5d3201ad156727b38ed7a0}{}\label{group___vectors___config__module_ga2d2bb8622c5d3201ad156727b38ed7a0}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+48}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x30 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+E\+R\+R                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga8511505744a449c258dca4b5f1e8ac58}{}\label{group___vectors___config__module_ga8511505744a449c258dca4b5f1e8ac58}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+49}~(t\+Isr\+Func)\&A\+Serial\+Ldd2\+\_\+\+Interrupt      /$\ast$ 0x31 112  iv\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+\_\+\+R\+X\+\_\+\+T\+X              used by P\+E $\ast$/\hypertarget{group___vectors___config__module_gae4feccebb173bdfa24b10de173fe60b7}{}\label{group___vectors___config__module_gae4feccebb173bdfa24b10de173fe60b7}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+50}~(t\+Isr\+Func)\&A\+Serial\+Ldd2\+\_\+\+Interrupt      /$\ast$ 0x32 112  iv\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+\_\+\+E\+R\+R                used by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaf27af6b70fcc0cee4d35bf8c93f84fd5}{}\label{group___vectors___config__module_gaf27af6b70fcc0cee4d35bf8c93f84fd5}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+51}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x33 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T2\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga266eebadddbcb840603b5f2dbca53e24}{}\label{group___vectors___config__module_ga266eebadddbcb840603b5f2dbca53e24}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+52}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x34 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T2\+\_\+\+E\+R\+R                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gac2db7afced828f466a43d0861c7d3878}{}\label{group___vectors___config__module_gac2db7afced828f466a43d0861c7d3878}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+53}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x35 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T3\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga12c5a6d85b16b6b0a635278195e453a5}{}\label{group___vectors___config__module_ga12c5a6d85b16b6b0a635278195e453a5}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+54}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x36 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T3\+\_\+\+E\+R\+R                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gadc720fab1fc87e7e330a545c81b1fd79}{}\label{group___vectors___config__module_gadc720fab1fc87e7e330a545c81b1fd79}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+55}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x37 -\/    iv\+I\+N\+T\+\_\+\+A\+D\+C0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gafd22db38d216e722f765ed3926f30788}{}\label{group___vectors___config__module_gafd22db38d216e722f765ed3926f30788}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+56}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x38 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga5d1266192e31481c65c49109ad9567ca}{}\label{group___vectors___config__module_ga5d1266192e31481c65c49109ad9567ca}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+57}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x39 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gae5abe627f4c588dfb2097164c7be0e23}{}\label{group___vectors___config__module_gae5abe627f4c588dfb2097164c7be0e23}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+58}~(t\+Isr\+Func)\&T\+U1\+\_\+\+Interrupt              /$\ast$ 0x3\+A 112  iv\+I\+N\+T\+\_\+\+F\+T\+M0                     used by P\+E $\ast$/\hypertarget{group___vectors___config__module_gab869c8d0cbe648552220094006fc1f73}{}\label{group___vectors___config__module_gab869c8d0cbe648552220094006fc1f73}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+59}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+B -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga764e27376f306de67b7164bcf558c31e}{}\label{group___vectors___config__module_ga764e27376f306de67b7164bcf558c31e}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+60}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+C -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga3340e193e95bf91be8c1acc05a88fdda}{}\label{group___vectors___config__module_ga3340e193e95bf91be8c1acc05a88fdda}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+61}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+D -\/    iv\+I\+N\+T\+\_\+\+C\+M\+T                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga1795f3c3aa0170f3a3b821bd6df54f3f}{}\label{group___vectors___config__module_ga1795f3c3aa0170f3a3b821bd6df54f3f}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+62}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+E -\/    iv\+I\+N\+T\+\_\+\+R\+T\+C                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga5423145a459e760cd5f1b5d384aabb33}{}\label{group___vectors___config__module_ga5423145a459e760cd5f1b5d384aabb33}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+63}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+F -\/    iv\+I\+N\+T\+\_\+\+R\+T\+C\+\_\+\+Seconds              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaeba2225b5183d8a5ebb2f71a1a9b26f7}{}\label{group___vectors___config__module_gaeba2225b5183d8a5ebb2f71a1a9b26f7}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+64}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x40 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga995e1029ff294bd72a3b65712839e405}{}\label{group___vectors___config__module_ga995e1029ff294bd72a3b65712839e405}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+65}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x41 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga2c788ce07ad4c2bb87c3b968880ff638}{}\label{group___vectors___config__module_ga2c788ce07ad4c2bb87c3b968880ff638}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+66}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x42 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gac5de241da923d15c094be7e8e6a6324b}{}\label{group___vectors___config__module_gac5de241da923d15c094be7e8e6a6324b}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+67}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x43 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T3                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga49210ab54714e44c3df038c6fb8bacc8}{}\label{group___vectors___config__module_ga49210ab54714e44c3df038c6fb8bacc8}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+68}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x44 -\/    iv\+I\+N\+T\+\_\+\+P\+D\+B0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga643f6e6de7094db948ac3b7598f9fe39}{}\label{group___vectors___config__module_ga643f6e6de7094db948ac3b7598f9fe39}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+69}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x45 -\/    iv\+I\+N\+T\+\_\+\+U\+S\+B0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga24d79840592c57bea150a9d1c2737e92}{}\label{group___vectors___config__module_ga24d79840592c57bea150a9d1c2737e92}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+70}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x46 -\/    iv\+I\+N\+T\+\_\+\+U\+S\+B\+D\+C\+D                   unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaf6d9665e333fe9f92e89582cc21f2651}{}\label{group___vectors___config__module_gaf6d9665e333fe9f92e89582cc21f2651}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+71}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x47 -\/    iv\+I\+N\+T\+\_\+\+Reserved71               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga3aef7583d550c502a3de238d739db1fd}{}\label{group___vectors___config__module_ga3aef7583d550c502a3de238d739db1fd}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+72}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x48 -\/    iv\+I\+N\+T\+\_\+\+D\+A\+C0                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga106ee13e56f09797738cdd6236e8804f}{}\label{group___vectors___config__module_ga106ee13e56f09797738cdd6236e8804f}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+73}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x49 -\/    iv\+I\+N\+T\+\_\+\+M\+C\+G                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaaef16635a52ec12ea01919a74eb3c341}{}\label{group___vectors___config__module_gaaef16635a52ec12ea01919a74eb3c341}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+74}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+A -\/    iv\+I\+N\+T\+\_\+\+L\+P\+Timer                  unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga2b8545255c6c33be2e2fcefc0cb2d043}{}\label{group___vectors___config__module_ga2b8545255c6c33be2e2fcefc0cb2d043}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+75}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+B -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+A                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga16f0ff98786bd2e1d4a7b7dd2f0059ab}{}\label{group___vectors___config__module_ga16f0ff98786bd2e1d4a7b7dd2f0059ab}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+76}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+C -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+B                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gad185a6cdfcb9a82bd56ce83084a29935}{}\label{group___vectors___config__module_gad185a6cdfcb9a82bd56ce83084a29935}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+77}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+D -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+C                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gafe5a83192da5a3b18caac8e0a6ea61f5}{}\label{group___vectors___config__module_gafe5a83192da5a3b18caac8e0a6ea61f5}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+78}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+E -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+D                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga94a7723d66a84b0bcf6b0439dbcb041a}{}\label{group___vectors___config__module_ga94a7723d66a84b0bcf6b0439dbcb041a}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+79}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+F -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+E                    unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga43deabcad3a82edec998de6f121784ca}{}\label{group___vectors___config__module_ga43deabcad3a82edec998de6f121784ca}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+80}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x50 -\/    iv\+I\+N\+T\+\_\+\+S\+W\+I                      unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga5572c810405314d6e7c33c25be3802b8}{}\label{group___vectors___config__module_ga5572c810405314d6e7c33c25be3802b8}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+81}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x51 -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gabc9e65f28dd467142034ba30140b5402}{}\label{group___vectors___config__module_gabc9e65f28dd467142034ba30140b5402}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+82}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x52 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T4\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga59ba6fe4b661421e68261ee13a2e91cd}{}\label{group___vectors___config__module_ga59ba6fe4b661421e68261ee13a2e91cd}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+83}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x53 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T4\+\_\+\+E\+R\+R                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gad02da3d3c101992f4c344ef00c971388}{}\label{group___vectors___config__module_gad02da3d3c101992f4c344ef00c971388}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+84}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x54 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T5\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga097e2a197d8c4e4ee108dd7b1c1c398b}{}\label{group___vectors___config__module_ga097e2a197d8c4e4ee108dd7b1c1c398b}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+85}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x55 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T5\+\_\+\+E\+R\+R                unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga7eb7770dde3df09c70a2fc25d41b9617}{}\label{group___vectors___config__module_ga7eb7770dde3df09c70a2fc25d41b9617}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+86}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x56 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga12553fffcde02241513d386fbbccef25}{}\label{group___vectors___config__module_ga12553fffcde02241513d386fbbccef25}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+87}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x57 -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M3                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaa8a95060ebd339c2915ff09afb8f2283}{}\label{group___vectors___config__module_gaa8a95060ebd339c2915ff09afb8f2283}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+88}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x58 -\/    iv\+I\+N\+T\+\_\+\+D\+A\+C1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaa2c1c67381622886d9fcddad806b8773}{}\label{group___vectors___config__module_gaa2c1c67381622886d9fcddad806b8773}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+89}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x59 -\/    iv\+I\+N\+T\+\_\+\+A\+D\+C1                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga9d91466a5e234c4c7ef35b52a268ef19}{}\label{group___vectors___config__module_ga9d91466a5e234c4c7ef35b52a268ef19}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+90}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+A -\/    iv\+I\+N\+T\+\_\+\+I2\+C2                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gab104ee8d8b2c48ff8c681467167a1661}{}\label{group___vectors___config__module_gab104ee8d8b2c48ff8c681467167a1661}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+91}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+B -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+O\+Red\+\_\+\+Message\+\_\+buffer unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga6a4058dba41db09a7008392c7c8189ee}{}\label{group___vectors___config__module_ga6a4058dba41db09a7008392c7c8189ee}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+92}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+C -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Bus\+\_\+\+Off             unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga0fa099e76322546aafbf682962110cb3}{}\label{group___vectors___config__module_ga0fa099e76322546aafbf682962110cb3}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+93}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+D -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Error               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gaee335d0a7a9960bcb57ff11a5f535a9a}{}\label{group___vectors___config__module_gaee335d0a7a9960bcb57ff11a5f535a9a}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+94}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+E -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Tx\+\_\+\+Warning          unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga94fc2609b059951c2d9f0ca482cf36af}{}\label{group___vectors___config__module_ga94fc2609b059951c2d9f0ca482cf36af}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+95}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+F -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Rx\+\_\+\+Warning          unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gadb53581b3b942110b4570a6bbd996005}{}\label{group___vectors___config__module_gadb53581b3b942110b4570a6bbd996005}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+96}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x60 -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Wake\+\_\+\+Up             unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga8dc4f822ce77b78c9baf44596fb4e976}{}\label{group___vectors___config__module_ga8dc4f822ce77b78c9baf44596fb4e976}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+97}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x61 -\/    iv\+I\+N\+T\+\_\+\+S\+D\+H\+C                     unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gacebf642612ec064d4e3acb28c3eb414d}{}\label{group___vectors___config__module_gacebf642612ec064d4e3acb28c3eb414d}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+98}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x62 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+1588\+\_\+\+Timer          unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga918a66a8cab8696c8d2081a8d318b10a}{}\label{group___vectors___config__module_ga918a66a8cab8696c8d2081a8d318b10a}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+99}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x63 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Transmit            unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga0931fc2eb1dd2ca4810d3b409d4458c9}{}\label{group___vectors___config__module_ga0931fc2eb1dd2ca4810d3b409d4458c9}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+100}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x64 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Receive             unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_ga773fc25c131e3257cecc2f4d6635b5c9}{}\label{group___vectors___config__module_ga773fc25c131e3257cecc2f4d6635b5c9}
+
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+101}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x65 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Error               unused by P\+E $\ast$/\hypertarget{group___vectors___config__module_gab79c328de6b18a44b6cd728947b1afb4}{}\label{group___vectors___config__module_gab79c328de6b18a44b6cd728947b1afb4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

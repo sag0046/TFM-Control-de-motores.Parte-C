@@ -1,0 +1,290 @@
+\hypertarget{_vectors___config_8h}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+Vectors\+\_\+\+Config.h File Reference}
+\label{_vectors___config_8h}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+Vectors\+\_\+\+Config.\+h@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+Vectors\+\_\+\+Config.\+h}}
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Pins1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+I1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Timer\+Int\+Ldd1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+U1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+R\+O\+J\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+A\+Z\+U\+L.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}L\+E\+D\+\_\+\+V\+E\+R\+D\+E.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+S3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Events.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+T\+A\+B\+LE}~0x01\+U     /$\ast$ Vector table is managed by P\+Ex $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+\+S\+P\+\_\+\+M\+A\+IN}~\&\+\_\+\+\_\+\+S\+P\+\_\+\+I\+N\+IT                            /$\ast$ 0x00 -\/    iv\+I\+N\+T\+\_\+\+Initial\+\_\+\+Stack\+\_\+\+Pointer    used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+1}~(t\+Isr\+Func)\&\+\_\+\+\_\+thumb\+\_\+startup            /$\ast$ 0x01 -\/    iv\+I\+N\+T\+\_\+\+Initial\+\_\+\+Program\+\_\+\+Counter  used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+2}~(t\+Isr\+Func)\&Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt       /$\ast$ 0x02 -\/2   iv\+I\+N\+T\+\_\+\+N\+M\+I                      used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+3}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x03 -\/1   iv\+I\+N\+T\+\_\+\+Hard\+\_\+\+Fault               unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+4}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x04 -\/    iv\+I\+N\+T\+\_\+\+Mem\+\_\+\+Manage\+\_\+\+Fault         unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+5}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x05 -\/    iv\+I\+N\+T\+\_\+\+Bus\+\_\+\+Fault                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+6}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x06 -\/    iv\+I\+N\+T\+\_\+\+Usage\+\_\+\+Fault              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+7}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x07 -\/    iv\+I\+N\+T\+\_\+\+Reserved7                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+8}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x08 -\/    iv\+I\+N\+T\+\_\+\+Reserved8                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+9}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x09 -\/    iv\+I\+N\+T\+\_\+\+Reserved9                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+10}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+A -\/    iv\+I\+N\+T\+\_\+\+Reserved10               unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+11}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+B -\/    iv\+I\+N\+T\+\_\+\+S\+V\+Call                   unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+12}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+C -\/    iv\+I\+N\+T\+\_\+\+Debug\+Monitor             unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+13}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+D -\/    iv\+I\+N\+T\+\_\+\+Reserved13               unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+14}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+E -\/    iv\+I\+N\+T\+\_\+\+Pendable\+Srv\+Req           unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+15}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x0\+F -\/    iv\+I\+N\+T\+\_\+\+Sys\+Tick                  unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+16}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x10 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+17}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x11 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+18}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x12 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+19}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x13 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A3                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+20}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x14 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A4                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+21}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x15 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A5                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+22}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x16 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A6                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+23}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x17 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A7                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+24}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x18 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A8                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+25}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x19 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A9                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+26}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+A -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A10                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+27}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+B -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A11                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+28}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+C -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A12                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+29}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+D -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A13                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+30}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+E -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A14                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+31}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x1\+F -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A15                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+32}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x20 -\/    iv\+I\+N\+T\+\_\+\+D\+M\+A\+\_\+\+Error                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+33}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x21 -\/    iv\+I\+N\+T\+\_\+\+M\+C\+M                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+34}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x22 -\/    iv\+I\+N\+T\+\_\+\+F\+T\+F\+E                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+35}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x23 -\/    iv\+I\+N\+T\+\_\+\+Read\+\_\+\+Collision           unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+36}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x24 -\/    iv\+I\+N\+T\+\_\+\+L\+V\+D\+\_\+\+L\+V\+W                  unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+37}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x25 -\/    iv\+I\+N\+T\+\_\+\+L\+L\+W                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+38}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x26 -\/    iv\+I\+N\+T\+\_\+\+Watchdog                 unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+39}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x27 -\/    iv\+I\+N\+T\+\_\+\+R\+N\+G                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+40}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x28 -\/    iv\+I\+N\+T\+\_\+\+I2\+C0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+41}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x29 -\/    iv\+I\+N\+T\+\_\+\+I2\+C1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+42}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+A -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+43}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+B -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+44}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+C -\/    iv\+I\+N\+T\+\_\+\+I2\+S0\+\_\+\+Tx                  unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+45}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+D -\/    iv\+I\+N\+T\+\_\+\+I2\+S0\+\_\+\+Rx                  unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+46}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+E -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+L\+O\+N                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+47}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x2\+F -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+48}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x30 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T0\+\_\+\+E\+R\+R                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+49}~(t\+Isr\+Func)\&A\+Serial\+Ldd2\+\_\+\+Interrupt      /$\ast$ 0x31 112  iv\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+\_\+\+R\+X\+\_\+\+T\+X              used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+50}~(t\+Isr\+Func)\&A\+Serial\+Ldd2\+\_\+\+Interrupt      /$\ast$ 0x32 112  iv\+I\+N\+T\+\_\+\+U\+A\+R\+T1\+\_\+\+E\+R\+R                used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+51}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x33 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T2\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+52}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x34 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T2\+\_\+\+E\+R\+R                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+53}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x35 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T3\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+54}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x36 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T3\+\_\+\+E\+R\+R                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+55}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x37 -\/    iv\+I\+N\+T\+\_\+\+A\+D\+C0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+56}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x38 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+57}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x39 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+58}~(t\+Isr\+Func)\&T\+U1\+\_\+\+Interrupt              /$\ast$ 0x3\+A 112  iv\+I\+N\+T\+\_\+\+F\+T\+M0                     used by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+59}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+B -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+60}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+C -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+61}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+D -\/    iv\+I\+N\+T\+\_\+\+C\+M\+T                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+62}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+E -\/    iv\+I\+N\+T\+\_\+\+R\+T\+C                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+63}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x3\+F -\/    iv\+I\+N\+T\+\_\+\+R\+T\+C\+\_\+\+Seconds              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+64}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x40 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+65}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x41 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+66}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x42 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+67}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x43 -\/    iv\+I\+N\+T\+\_\+\+P\+I\+T3                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+68}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x44 -\/    iv\+I\+N\+T\+\_\+\+P\+D\+B0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+69}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x45 -\/    iv\+I\+N\+T\+\_\+\+U\+S\+B0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+70}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x46 -\/    iv\+I\+N\+T\+\_\+\+U\+S\+B\+D\+C\+D                   unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+71}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x47 -\/    iv\+I\+N\+T\+\_\+\+Reserved71               unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+72}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x48 -\/    iv\+I\+N\+T\+\_\+\+D\+A\+C0                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+73}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x49 -\/    iv\+I\+N\+T\+\_\+\+M\+C\+G                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+74}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+A -\/    iv\+I\+N\+T\+\_\+\+L\+P\+Timer                  unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+75}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+B -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+A                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+76}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+C -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+B                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+77}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+D -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+C                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+78}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+E -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+D                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+79}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x4\+F -\/    iv\+I\+N\+T\+\_\+\+P\+O\+R\+T\+E                    unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+80}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x50 -\/    iv\+I\+N\+T\+\_\+\+S\+W\+I                      unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+81}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x51 -\/    iv\+I\+N\+T\+\_\+\+S\+P\+I2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+82}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x52 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T4\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+83}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x53 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T4\+\_\+\+E\+R\+R                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+84}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x54 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T5\+\_\+\+R\+X\+\_\+\+T\+X              unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+85}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x55 -\/    iv\+I\+N\+T\+\_\+\+U\+A\+R\+T5\+\_\+\+E\+R\+R                unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+86}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x56 -\/    iv\+I\+N\+T\+\_\+\+C\+M\+P2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+87}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x57 -\/    iv\+I\+N\+T\+\_\+\+F\+T\+M3                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+88}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x58 -\/    iv\+I\+N\+T\+\_\+\+D\+A\+C1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+89}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x59 -\/    iv\+I\+N\+T\+\_\+\+A\+D\+C1                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+90}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+A -\/    iv\+I\+N\+T\+\_\+\+I2\+C2                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+91}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+B -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+O\+Red\+\_\+\+Message\+\_\+buffer unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+92}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+C -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Bus\+\_\+\+Off             unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+93}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+D -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Error               unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+94}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+E -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Tx\+\_\+\+Warning          unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+95}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x5\+F -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Rx\+\_\+\+Warning          unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+96}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x60 -\/    iv\+I\+N\+T\+\_\+\+C\+A\+N0\+\_\+\+Wake\+\_\+\+Up             unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+97}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x61 -\/    iv\+I\+N\+T\+\_\+\+S\+D\+H\+C                     unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+98}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x62 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+1588\+\_\+\+Timer          unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+99}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x63 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Transmit            unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+100}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x64 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Receive             unused by P\+E $\ast$/
+\item 
+\#define {\bfseries V\+E\+C\+T\+O\+R\+\_\+101}~(t\+Isr\+Func)\&Unhandled\+Interrupt         /$\ast$ 0x65 -\/    iv\+I\+N\+T\+\_\+\+E\+N\+E\+T\+\_\+\+Error               unused by P\+E $\ast$/
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subparagraph*{}
+
+Filename \+: \hyperlink{_vectors___config_8h}{Vectors\+\_\+\+Config.\+h} Processor \+: M\+K64\+F\+N1\+M0\+V\+L\+Q12 Version \+: 1.\+00
+
+Copyright \+: 1997 -\/ 2014 Freescale Semiconductor, Inc. All Rights Reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+o Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+o Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+o Neither the name of Freescale Semiconductor, Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+http\+: www.\+freescale.\+com mail\+: \href{mailto:support@freescale.com}{\tt support@freescale.\+com} \subparagraph*{}
+
+\begin{DoxyVersion}{Version}
+01.\+00
+\end{DoxyVersion}
+\subparagraph*{}
+
+Filename \+: \hyperlink{_vectors___config_8h}{Vectors\+\_\+\+Config.\+h} Processor \+: M\+K64\+F\+N1\+M0\+V\+L\+Q12 Version \+: 1.\+00 Abstract \+:
+
+\begin{DoxyVerb}Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
+All Rights Reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+o Redistributions of source code must retain the above copyright notice, this list
+  of conditions and the following disclaimer.
+
+o Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+
+o Neither the name of Freescale Semiconductor, Inc. nor the names of its
+  contributors may be used to endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+http: www.freescale.com
+mail: support@freescale.com
+\end{DoxyVerb}
+ \subparagraph*{}
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

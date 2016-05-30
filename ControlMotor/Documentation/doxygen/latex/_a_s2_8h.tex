@@ -1,0 +1,61 @@
+\hypertarget{_a_s2_8h}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S2.h File Reference}
+\label{_a_s2_8h}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S2.\+h@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S2.\+h}}
+
+
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel.  
+
+
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_a_s2___t_error}{A\+S2\+\_\+\+T\+Error}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+A\+S2\+\_\+\+T\+Error}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+A\+S2\+\_\+\+T\+Com\+Data}
+\item 
+\#define {\bfseries A\+S2\+\_\+\+I\+N\+P\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~0x02\+U        /$\ast$ Length of the R\+X buffer $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef byte {\bfseries A\+S2\+\_\+\+T\+Com\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte {\bfseries A\+S2\+\_\+\+Recv\+Char} (A\+S2\+\_\+\+T\+Com\+Data $\ast$Chr)
+\item 
+byte {\bfseries A\+S2\+\_\+\+Send\+Char} (A\+S2\+\_\+\+T\+Com\+Data Chr)
+\item 
+byte {\bfseries A\+S2\+\_\+\+Recv\+Block} (A\+S2\+\_\+\+T\+Com\+Data $\ast$Ptr, word Size, word $\ast$Rcv)
+\item 
+byte {\bfseries A\+S2\+\_\+\+Clear\+Rx\+Buf} (void)
+\item 
+word {\bfseries A\+S2\+\_\+\+Get\+Chars\+In\+Rx\+Buf} (void)
+\item 
+word {\bfseries A\+S2\+\_\+\+Get\+Chars\+In\+Tx\+Buf} (void)
+\item 
+void {\bfseries A\+S2\+\_\+\+Init} (void)
+\item 
+void {\bfseries A\+Serial\+Ldd2\+\_\+\+On\+Block\+Received} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries A\+Serial\+Ldd2\+\_\+\+On\+Block\+Sent} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries A\+Serial\+Ldd2\+\_\+\+On\+Error} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries A\+Serial\+Ldd2\+\_\+\+On\+Break} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel. 
+
+\begin{DoxyVersion}{Version}
+01.\+01 
+\end{DoxyVersion}

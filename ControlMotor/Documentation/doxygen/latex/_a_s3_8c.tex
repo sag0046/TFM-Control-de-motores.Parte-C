@@ -1,0 +1,59 @@
+\hypertarget{_a_s3_8c}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S3.c File Reference}
+\label{_a_s3_8c}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S3.\+c@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S3.\+c}}
+
+
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel.  
+
+
+{\ttfamily \#include \char`\"{}A\+S3.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries O\+V\+E\+R\+R\+U\+N\+\_\+\+E\+RR}~0x01\+U         /$\ast$ Overrun error flag bit    $\ast$/
+\item 
+\#define {\bfseries F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+RR}~0x02\+U         /$\ast$ Framing error flag bit    $\ast$/
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+E\+RR}~0x04\+U         /$\ast$ Parity error flag bit     $\ast$/
+\item 
+\#define {\bfseries C\+H\+A\+R\+\_\+\+I\+N\+\_\+\+RX}~0x08\+U         /$\ast$ Char is in R\+X buffer      $\ast$/
+\item 
+\#define {\bfseries F\+U\+L\+L\+\_\+\+TX}~0x10\+U         /$\ast$ Full transmit buffer      $\ast$/
+\item 
+\#define {\bfseries R\+U\+N\+I\+N\+T\+\_\+\+F\+R\+O\+M\+\_\+\+TX}~0x20\+U         /$\ast$ Interrupt is in progress  $\ast$/
+\item 
+\#define {\bfseries F\+U\+L\+L\+\_\+\+RX}~0x40\+U         /$\ast$ Full receive buffer       $\ast$/
+\item 
+\#define {\bfseries N\+O\+I\+S\+E\+\_\+\+E\+RR}~0x80\+U         /$\ast$ Noise error flag bit      $\ast$/
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+E\+RR}~0x0100\+U       /$\ast$ Idle character flag bit   $\ast$/
+\item 
+\#define {\bfseries B\+R\+E\+A\+K\+\_\+\+E\+RR}~0x0200\+U       /$\ast$ Break detect              $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte {\bfseries A\+S3\+\_\+\+Recv\+Char} (A\+S3\+\_\+\+T\+Com\+Data $\ast$Chr)
+\item 
+byte {\bfseries A\+S3\+\_\+\+Send\+Char} (A\+S3\+\_\+\+T\+Com\+Data Chr)
+\item 
+word {\bfseries A\+S3\+\_\+\+Get\+Chars\+In\+Rx\+Buf} (void)
+\item 
+word {\bfseries A\+S3\+\_\+\+Get\+Chars\+In\+Tx\+Buf} (void)
+\item 
+void {\bfseries A\+S3\+\_\+\+Init} (void)
+\item 
+void {\bfseries A\+Serial\+Ldd3\+\_\+\+On\+Break} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ {\bfseries A\+Serial\+Ldd3\+\_\+\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel. 
+
+\begin{DoxyVersion}{Version}
+01.\+01 
+\end{DoxyVersion}

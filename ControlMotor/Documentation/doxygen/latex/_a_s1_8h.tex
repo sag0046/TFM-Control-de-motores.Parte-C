@@ -1,0 +1,42 @@
+\hypertarget{_a_s1_8h}{}\section{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S1.h File Reference}
+\label{_a_s1_8h}\index{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S1.\+h@{C\+:/\+Users/\+Sandra/\+Git\+Hub\+Kinetis/\+Control\+Motor/\+Control\+Motor/\+Generated\+\_\+\+Code/\+A\+S1.\+h}}
+
+
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel.  
+
+
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd1.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_a_s1___t_error}{A\+S1\+\_\+\+T\+Error}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef byte {\bfseries A\+S1\+\_\+\+T\+Com\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte {\bfseries A\+S1\+\_\+\+Recv\+Char} (A\+S1\+\_\+\+T\+Com\+Data $\ast$Chr)
+\item 
+byte {\bfseries A\+S1\+\_\+\+Send\+Char} (A\+S1\+\_\+\+T\+Com\+Data Chr)
+\item 
+word {\bfseries A\+S1\+\_\+\+Get\+Chars\+In\+Rx\+Buf} (void)
+\item 
+word {\bfseries A\+S1\+\_\+\+Get\+Chars\+In\+Tx\+Buf} (void)
+\item 
+void {\bfseries A\+S1\+\_\+\+Init} (void)
+\item 
+void {\bfseries A\+Serial\+Ldd1\+\_\+\+On\+Break} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This component \char`\"{}\+Asynchro\+Serial\char`\"{} implements an asynchronous serial communication. The component supports different settings of parity, word width, stop-\/bit and communication speed, user can select interrupt or polling handler. Communication speed can be changed also in runtime. The component requires one on-\/chip asynchronous serial channel. 
+
+\begin{DoxyVersion}{Version}
+01.\+01 
+\end{DoxyVersion}

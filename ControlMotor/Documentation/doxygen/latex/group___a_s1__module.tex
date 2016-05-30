@@ -1,0 +1,82 @@
+\hypertarget{group___a_s1__module}{}\section{A\+S1 module documentation}
+\label{group___a_s1__module}\index{A\+S1 module documentation@{A\+S1 module documentation}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_a_s1___t_error}{A\+S1\+\_\+\+T\+Error}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries O\+V\+E\+R\+R\+U\+N\+\_\+\+E\+RR}~0x01\+U         /$\ast$ Overrun error flag bit    $\ast$/\hypertarget{group___a_s1__module_ga59f58864bb61f9450d236b712214a9d0}{}\label{group___a_s1__module_ga59f58864bb61f9450d236b712214a9d0}
+
+\item 
+\#define {\bfseries F\+R\+A\+M\+I\+N\+G\+\_\+\+E\+RR}~0x02\+U         /$\ast$ Framing error flag bit    $\ast$/\hypertarget{group___a_s1__module_ga19cf3fb3576b5fa62d2a0d781e2a724b}{}\label{group___a_s1__module_ga19cf3fb3576b5fa62d2a0d781e2a724b}
+
+\item 
+\#define {\bfseries P\+A\+R\+I\+T\+Y\+\_\+\+E\+RR}~0x04\+U         /$\ast$ Parity error flag bit     $\ast$/\hypertarget{group___a_s1__module_gac8a34f3fae782b1f62195c0d8f1d5d38}{}\label{group___a_s1__module_gac8a34f3fae782b1f62195c0d8f1d5d38}
+
+\item 
+\#define {\bfseries C\+H\+A\+R\+\_\+\+I\+N\+\_\+\+RX}~0x08\+U         /$\ast$ Char is in R\+X buffer      $\ast$/\hypertarget{group___a_s1__module_ga99960abe909f47f501b4c31003fbcade}{}\label{group___a_s1__module_ga99960abe909f47f501b4c31003fbcade}
+
+\item 
+\#define {\bfseries F\+U\+L\+L\+\_\+\+TX}~0x10\+U         /$\ast$ Full transmit buffer      $\ast$/\hypertarget{group___a_s1__module_ga4642a25898b62e449c4f53559e7fdd5a}{}\label{group___a_s1__module_ga4642a25898b62e449c4f53559e7fdd5a}
+
+\item 
+\#define {\bfseries R\+U\+N\+I\+N\+T\+\_\+\+F\+R\+O\+M\+\_\+\+TX}~0x20\+U         /$\ast$ Interrupt is in progress  $\ast$/\hypertarget{group___a_s1__module_gaf4dcc39d70d3e855818d2a06f0f88adc}{}\label{group___a_s1__module_gaf4dcc39d70d3e855818d2a06f0f88adc}
+
+\item 
+\#define {\bfseries F\+U\+L\+L\+\_\+\+RX}~0x40\+U         /$\ast$ Full receive buffer       $\ast$/\hypertarget{group___a_s1__module_ga548b5122de8b4aa86a3098e1a45c447f}{}\label{group___a_s1__module_ga548b5122de8b4aa86a3098e1a45c447f}
+
+\item 
+\#define {\bfseries N\+O\+I\+S\+E\+\_\+\+E\+RR}~0x80\+U         /$\ast$ Noise error flag bit      $\ast$/\hypertarget{group___a_s1__module_ga826432ddfcc8e042fb9781a5b325d962}{}\label{group___a_s1__module_ga826432ddfcc8e042fb9781a5b325d962}
+
+\item 
+\#define {\bfseries I\+D\+L\+E\+\_\+\+E\+RR}~0x0100\+U       /$\ast$ Idle character flag bit   $\ast$/\hypertarget{group___a_s1__module_ga4584e89e739c19496724ba117e62aed9}{}\label{group___a_s1__module_ga4584e89e739c19496724ba117e62aed9}
+
+\item 
+\#define {\bfseries B\+R\+E\+A\+K\+\_\+\+E\+RR}~0x0200\+U       /$\ast$ Break detect              $\ast$/\hypertarget{group___a_s1__module_ga0cb4d61ee3347eb62142ca0eb1d02a53}{}\label{group___a_s1__module_ga0cb4d61ee3347eb62142ca0eb1d02a53}
+
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+A\+S1\+\_\+\+T\+Error}\hypertarget{group___a_s1__module_ga88b60b019dfe95745d800b2c9a0d2197}{}\label{group___a_s1__module_ga88b60b019dfe95745d800b2c9a0d2197}
+
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+A\+S1\+\_\+\+T\+Com\+Data}\hypertarget{group___a_s1__module_ga5deab30f29af11135db490a516abd823}{}\label{group___a_s1__module_ga5deab30f29af11135db490a516abd823}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef byte {\bfseries A\+S1\+\_\+\+T\+Com\+Data}\hypertarget{group___a_s1__module_ga621222f7d90195f6b0edb2abeb534e3b}{}\label{group___a_s1__module_ga621222f7d90195f6b0edb2abeb534e3b}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte {\bfseries A\+S1\+\_\+\+Recv\+Char} (A\+S1\+\_\+\+T\+Com\+Data $\ast$Chr)\hypertarget{group___a_s1__module_ga9b8f8ba49f2260fa77c5dc04d6d0b19c}{}\label{group___a_s1__module_ga9b8f8ba49f2260fa77c5dc04d6d0b19c}
+
+\item 
+byte {\bfseries A\+S1\+\_\+\+Send\+Char} (A\+S1\+\_\+\+T\+Com\+Data Chr)\hypertarget{group___a_s1__module_gadd3d17688519945b315fcc55a5459f92}{}\label{group___a_s1__module_gadd3d17688519945b315fcc55a5459f92}
+
+\item 
+word {\bfseries A\+S1\+\_\+\+Get\+Chars\+In\+Rx\+Buf} (void)\hypertarget{group___a_s1__module_ga7f982fbc183fdc49ae898b0cc9a05b4d}{}\label{group___a_s1__module_ga7f982fbc183fdc49ae898b0cc9a05b4d}
+
+\item 
+word {\bfseries A\+S1\+\_\+\+Get\+Chars\+In\+Tx\+Buf} (void)\hypertarget{group___a_s1__module_gada23618356da6913f8709b30d4defef6}{}\label{group___a_s1__module_gada23618356da6913f8709b30d4defef6}
+
+\item 
+void {\bfseries A\+S1\+\_\+\+Init} (void)\hypertarget{group___a_s1__module_ga38b6ab56f67ae07e420858f55a8aa7a1}{}\label{group___a_s1__module_ga38b6ab56f67ae07e420858f55a8aa7a1}
+
+\item 
+void {\bfseries A\+Serial\+Ldd1\+\_\+\+On\+Break} (\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data} $\ast$User\+Data\+Ptr)\hypertarget{group___a_s1__module_gaff0fe796ad334f68b2a86273f5ade786}{}\label{group___a_s1__module_gaff0fe796ad334f68b2a86273f5ade786}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data} $\ast$ {\bfseries A\+Serial\+Ldd1\+\_\+\+Device\+Data\+Ptr}\hypertarget{group___a_s1__module_ga19d4b715e209f6228d76c65b3d3e13b1}{}\label{group___a_s1__module_ga19d4b715e209f6228d76c65b3d3e13b1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

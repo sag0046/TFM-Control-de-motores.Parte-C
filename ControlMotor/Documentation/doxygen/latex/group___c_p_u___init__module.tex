@@ -1,0 +1,83 @@
+\hypertarget{group___c_p_u___init__module}{}\section{C\+P\+U\+\_\+\+Init module documentation}
+\label{group___c_p_u___init__module}\index{C\+P\+U\+\_\+\+Init module documentation@{C\+P\+U\+\_\+\+Init module documentation}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structt_vector_table}{t\+Vector\+Table}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$const {\bfseries t\+Isr\+Func}) (void)\hypertarget{group___c_p_u___init__module_gafea04d3e8135767c03ce099f02e97437}{}\label{group___c_p_u___init__module_gafea04d3e8135767c03ce099f02e97437}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Common\+\_\+\+Init} (void)\hypertarget{group___c_p_u___init__module_ga66dfb9b145f07aaf367bed34ab838e81}{}\label{group___c_p_u___init__module_ga66dfb9b145f07aaf367bed34ab838e81}
+
+\item 
+void {\bfseries Components\+\_\+\+Init} (void)\hypertarget{group___c_p_u___init__module_ga2050a66f3a2a54d567b252bc675f82cd}{}\label{group___c_p_u___init__module_ga2050a66f3a2a54d567b252bc675f82cd}
+
+\item 
+void \hyperlink{group___c_p_u___init__module_ga7fe8a131453ba765c5e85130a282eafb}{L\+D\+D\+\_\+\+Set\+Clock\+Configuration} (\hyperlink{group___p_e___types__module_ga369bcaf7f00caad5f994c72ac2629a37}{L\+D\+D\+\_\+\+T\+Clock\+Configuration} Clock\+Configuration)
+\begin{DoxyCompactList}\small\item\em Changes the clock configuration of all L\+DD components in a project. \end{DoxyCompactList}\item 
+P\+E\+X\+\_\+\+E\+N\+T\+R\+Y\+P\+O\+I\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+PE {\bfseries P\+E\+X\+\_\+\+E\+N\+T\+R\+Y\+P\+O\+I\+N\+T\+\_\+\+F\+U\+N\+C\+T\+I\+ON} ()\hypertarget{group___c_p_u___init__module_ga4545e2211c27d105066b8c8eb6609db7}{}\label{group___c_p_u___init__module_ga4545e2211c27d105066b8c8eb6609db7}
+
+\item 
+void {\bfseries P\+E\+\_\+low\+\_\+level\+\_\+init} (void)\hypertarget{group___c_p_u___init__module_ga95039f54c45f24c1b4ed640fa2f63f11}{}\label{group___c_p_u___init__module_ga95039f54c45f24c1b4ed640fa2f63f11}
+
+\item 
+C\+P\+U\+\_\+\+T\+Clock\+Gen\+Mode {\bfseries C\+P\+U\+\_\+\+Get\+Clock\+Gen\+Mode} (void)\hypertarget{group___c_p_u___init__module_ga08072325fa55f8316916808bf38a1463}{}\label{group___c_p_u___init__module_ga08072325fa55f8316916808bf38a1463}
+
+\item 
+void {\bfseries C\+P\+U\+\_\+\+Set\+Clock\+Config\+Gen\+Mode} (\hyperlink{group___p_e___types__module_ga369bcaf7f00caad5f994c72ac2629a37}{L\+D\+D\+\_\+\+T\+Clock\+Configuration} Config\+ID)\hypertarget{group___c_p_u___init__module_ga4a978c61c9083d69ebccbeec10626f94}{}\label{group___c_p_u___init__module_ga4a978c61c9083d69ebccbeec10626f94}
+
+\item 
+void {\bfseries \+\_\+\+\_\+init\+\_\+hardware} (void)\hypertarget{group___c_p_u___init__module_ga32a8d86789a3326b3120bf1e1c1d4252}{}\label{group___c_p_u___init__module_ga32a8d86789a3326b3120bf1e1c1d4252}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+reg}\hypertarget{group___c_p_u___init__module_ga326c16dd0db38f80ec48c7727d764481}{}\label{group___c_p_u___init__module_ga326c16dd0db38f80ec48c7727d764481}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+lock} = 0x00U\hypertarget{group___c_p_u___init__module_ga08ee8b0f642aeef5bbbce3bb4ec1bb28}{}\label{group___c_p_u___init__module_ga08ee8b0f642aeef5bbbce3bb4ec1bb28}
+
+\item 
+\hyperlink{group___p_e___types__module_ga369bcaf7f00caad5f994c72ac2629a37}{L\+D\+D\+\_\+\+T\+Clock\+Configuration} {\bfseries Clock\+Configuration\+ID} = C\+P\+U\+\_\+\+C\+L\+O\+C\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+0\hypertarget{group___c_p_u___init__module_ga70d1987e99aada66291a145f052c90fa}{}\label{group___c_p_u___init__module_ga70d1987e99aada66291a145f052c90fa}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+reg}\hypertarget{group___c_p_u___init__module_ga326c16dd0db38f80ec48c7727d764481}{}\label{group___c_p_u___init__module_ga326c16dd0db38f80ec48c7727d764481}
+
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+lock}\hypertarget{group___c_p_u___init__module_ga08ee8b0f642aeef5bbbce3bb4ec1bb28}{}\label{group___c_p_u___init__module_ga08ee8b0f642aeef5bbbce3bb4ec1bb28}
+
+\item 
+const \hyperlink{structt_vector_table}{t\+Vector\+Table} {\bfseries \+\_\+\+\_\+vect\+\_\+table}\hypertarget{group___c_p_u___init__module_ga17baaa5ab2c8895394c51a01248c5195}{}\label{group___c_p_u___init__module_ga17baaa5ab2c8895394c51a01248c5195}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\index{C\+P\+U\+\_\+\+Init module documentation@{C\+P\+U\+\_\+\+Init module documentation}!L\+D\+D\+\_\+\+Set\+Clock\+Configuration@{L\+D\+D\+\_\+\+Set\+Clock\+Configuration}}
+\index{L\+D\+D\+\_\+\+Set\+Clock\+Configuration@{L\+D\+D\+\_\+\+Set\+Clock\+Configuration}!C\+P\+U\+\_\+\+Init module documentation@{C\+P\+U\+\_\+\+Init module documentation}}
+\subsubsection[{\texorpdfstring{L\+D\+D\+\_\+\+Set\+Clock\+Configuration(\+L\+D\+D\+\_\+\+T\+Clock\+Configuration Clock\+Configuration)}{LDD_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)}}]{\setlength{\rightskip}{0pt plus 5cm}void L\+D\+D\+\_\+\+Set\+Clock\+Configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+D\+D\+\_\+\+T\+Clock\+Configuration}}]{Clock\+Configuration}
+\end{DoxyParamCaption}
+)}\hypertarget{group___c_p_u___init__module_ga7fe8a131453ba765c5e85130a282eafb}{}\label{group___c_p_u___init__module_ga7fe8a131453ba765c5e85130a282eafb}
+
+
+Changes the clock configuration of all L\+DD components in a project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Clock\+Configuration} & -\/ New C\+PU clock configuration changed by C\+PU Set\+Clock\+Configuration method. \\
+\hline
+\end{DoxyParams}
+$<$ Parameter is not used, suppress unused argument warning 
