@@ -18,7 +18,7 @@
 ** @file Events.h
 ** @version 01.00
 ** @brief
-**         Modulo de eventos del usuario.
+**         Contiene las declaraciones de las funciones de la clase events
 **
 */         
 /*!

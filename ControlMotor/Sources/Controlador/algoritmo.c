@@ -1,5 +1,5 @@
 /**
- * Clase que se encarga de la implementación del algoritmo PID.
+ * @brief Clase que se encarga de la implementacion del algoritmo PID.
  * @file Controlador/algoritmo.c
  * @author Sandra Ajates Gonzalez
  * @date Junio/2016

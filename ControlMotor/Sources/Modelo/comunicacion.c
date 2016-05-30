@@ -1,4 +1,5 @@
-/**Clase que controla la comunicacion tanto con los motores como con el modulo bluetooth.
+/**
+ * @brief Clase que controla la comunicacion tanto con los motores como con el modulo bluetooth.
  * @file Modelo/comunicacion.c
  * @author Sandra Ajates Gonzalez
  * @date Junio/2016

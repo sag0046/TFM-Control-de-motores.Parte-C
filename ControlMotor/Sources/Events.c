@@ -18,8 +18,7 @@
 ** @file Events.c
 ** @version 01.00
 ** @brief
-**         This is user's event module.
-**         Put your event handler code here.
+**         Clase encargada de los eventos del programa.
 */         
 /*!
 **  @addtogroup Events_module Events module documentation
@@ -39,40 +38,30 @@ extern "C" {
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-/*
-** ===================================================================
-**     Event       :  Cpu_OnNMI (module Events)
-**
-**     Component   :  Cpu [MK64FN1M0LQ12]
-*/
-/*!
-**     @brief
-**         This event is called when the Non maskable interrupt had
-**         occurred. This event is automatically enabled when the [NMI
-**         interrupt] property is set to 'Enabled'.
-*/
-/* ===================================================================*/
+
 void Cpu_OnNMI(void)
 {
   /* Write your code here ... */
 }
+
 
 /*
 ** ===================================================================
 **     Event       :  TI1_OnInterrupt (module Events)
 **
 **     Component   :  TI1 [TimerInt]
-**     Description :
-**         When a timer interrupt occurs this event is called (only
-**         when the component is enabled - <Enable> and the events are
-**         enabled - <EnableEvent>). This event is enabled only if a
-**         <interrupt service/event> is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
 */
+/*!
+**     @brief
+**         Cuando se produce una interrupción del temporizador
+**         se llama a este evento.
+**
+*/
+/* ===================================================================*/
+
 int ti=0;
 bool llamada;
+
 void TI1_OnInterrupt(void)
 {
   /* Write your code here ... */
