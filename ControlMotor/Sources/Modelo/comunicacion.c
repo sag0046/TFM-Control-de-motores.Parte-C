@@ -28,7 +28,7 @@ void UART_Write_Numero_Int(unsigned int velocidad){
  * @brief Envío velocidad Bluetooth.
  *
  * Envío de la velocidad por el puerto de Bluetooth.
- * @param velocidad Valor recibido del motor.
+ * @param velocidadEnvio Valor recibido del motor.
  */
 void enviarVelocidad(int velocidadEnvio){
 	if(velocidadEnvio == ERR_OK){
